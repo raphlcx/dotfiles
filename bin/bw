@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Update brew and cask
+brew update \
+  && brew upgrade \
+  && csc \
+  && brew cleanup -s \
+  && brew prune \
+  && brew cask cleanup

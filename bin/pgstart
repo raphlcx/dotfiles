@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Start postgresql
+pg_ctl -D /usr/local/var/postgres start "$@"

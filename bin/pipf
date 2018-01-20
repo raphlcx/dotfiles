@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# List installed Python packages as dependencies for requirements.txt
+pip list --not-required --format freeze | sed '/^pip/d; /^setuptools/d; /^wheel/d; /^distribute/d'

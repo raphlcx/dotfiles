@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Remove vim plugin from git submodule
+name=$1
+dir=~/.vim
+
+git -C $dir submodule deinit -f $dir/bundle/$name
+git -C $dir rm -rf $dir/bundle/$name
+rm -rf $dir/.git/modules/bundle/$name

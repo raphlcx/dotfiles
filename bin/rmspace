@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Substitute all space with underscore in file name for all
+# files in current working directory
+for i in *; do mv "$i" $(echo "$i" | sed 's/ /_/g'); done

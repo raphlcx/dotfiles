@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Update all installed Python packages
+pip list --format=legacy -o | cut -d " " -f 1 | xargs pip install -U

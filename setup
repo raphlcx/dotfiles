@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+cwd=`pwd`
+
+echo ' [*] Setting up dotfiles ...'
+
+echo ' [*] user bin directory ...'
+mkdir -p ~/.local
+ln -s $cwd/bin ~/.local/bin
+
+echo ' [*] bash ...'
+ln -s $cwd/bash/bash_profile ~/.bash_profile
+
+echo ' [*] git ...'
+ln -s $cwd/git/gitconfig ~/.gitconfig
+ln -s $cwd/git/gitignore ~/.gitignore
+
+echo ' [*] ruby ...'
+ln -s $cwd/ruby/gemrc ~/.gemrc
+ln -s $cwd/ruby/irbrc ~/.irbrc
+mkdir -p ~/.bundle
+ln -s $cwd/ruby/bundler-config ~/.bundle/config
+
+echo ' [*] tmux ...'
+ln -s $cwd/tmux/tmux.conf ~/.tmux.conf
+
+echo ' [*] vim ...'
+ln -s $cwd/vim/vimrc ~/.vimrc
+
+echo ' [*] Setup completed!'

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Audit a Cask
+if [ -z "$1" ]
+then
+  echo "Usage: $0 <cask_file>"
+  exit 1
+fi
+
+brew cask audit --download "$1"
+brew cask style --fix "$1"
