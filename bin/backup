@@ -66,7 +66,7 @@ echo " [*] Backing up to $backup_dir ..."
 # Other user files
 ## .gnupg
 ## .ssh
-7z a -mx=0 $backup_dir/osx \
+7z a -mx=0 $backup_dir/macos \
   ~/.gnupg \
   ~/.ssh
 
