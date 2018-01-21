@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Source bash profile
-source ~/.bash_profile
