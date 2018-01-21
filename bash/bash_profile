@@ -22,7 +22,8 @@ export GPG_TTY=$(tty)
 export PS1="\n\w\n$ "
 
 ## Homebrew editor
-export HOMEBREW_EDITOR='vim'
+export EDITOR='vim'
+export HOMEBREW_EDITOR=$EDITOR
 
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
