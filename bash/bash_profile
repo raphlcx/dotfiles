@@ -6,8 +6,9 @@ then
 fi
 
 # Aliases
-alias ll="ls -al"
-alias g=hub
+alias be='bundle exec'
+alias g='hub'
+alias ll='ls -al'
 
 # Environment variables
 ## cli color
