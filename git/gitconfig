@@ -44,3 +44,5 @@
 	autosquash = true
 [fetch]
 	prune = true
+[diff]
+	tool = vimdiff
