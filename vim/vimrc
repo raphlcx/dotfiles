@@ -93,6 +93,11 @@ let mapleader = ","
 nnoremap <Leader>n :nohl<CR>
 nnoremap <Leader>q :FZF<CR>
 nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>2 @:<CR>
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 " netrw
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " Show line number in netrw
