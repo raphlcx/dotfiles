@@ -120,7 +120,7 @@ nnoremap <C-l> <C-W>l
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " Show line number in netrw
 let g:netrw_banner = 0    " Hide netrw banner
 
-" Plugin - robertmeta/nofrils
+" Plugin - Raphx/nofrils
 let g:nofrils_heavylinenumbers = 1
 colorscheme nofrils-light
 
