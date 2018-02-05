@@ -88,6 +88,10 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" autocmd
+au BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4
+au BufRead,BufNewFile *.rs set softtabstop=4 shiftwidth=4
+
 " Leader
 let mapleader = ","
 
