@@ -126,7 +126,7 @@ colorscheme nofrils-light
 
 " Plugin - w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
-let g:ale_linter_aliases = { 'vue': ['javascript', 'css'] }
+let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 
 " Plugin - takac/vim-hardtime
