@@ -5,4 +5,4 @@ url=$1
 name=$(basename $url)
 name=${name%.git}
 
-git -c ~/.vim submodule add $url bundle/$name
+git -C ~/.vim submodule add $url bundle/$name
