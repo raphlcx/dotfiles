@@ -54,6 +54,10 @@ set wrapscan               " Searches wrap around end-of-file.
 set report      =0         " Always report changed lines.
 set synmaxcol   =200       " Only highlight the first 200 columns.
 
+set noerrorbells           " Turn off bell ringing for error messages
+set visualbell             " Use visual bell
+set t_vb=                  " Clear visual bell terminal code
+
 set spelllang   =en        " Set spell check language to English
 
 set list                   " Show non-printable characters.
