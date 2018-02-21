@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# Start Windows 8.1 virtual machine
-VBoxManage startvm w81
+# Start Windows 10 virtual machine
+VBoxManage startvm w10
