@@ -104,6 +104,7 @@ nnoremap <Leader>n :nohl<CR>
 nnoremap <Leader>q :FZF<CR>
 nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>2 @:<CR>
+nnoremap <Leader>' "_
 
 function! ToggleSpellCheck()
   set spell!
