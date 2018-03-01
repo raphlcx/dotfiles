@@ -7,3 +7,7 @@ brew update \
   && brew cleanup -s \
   && brew prune \
   && brew cask cleanup
+
+# Update tldr
+echo 'Updating tldr local database ...'
+tldr -u
