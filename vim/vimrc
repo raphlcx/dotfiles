@@ -1,80 +1,155 @@
-" Obtained originally from
-" https://github.com/mhinz/vim-galore/blob/master/contents/minimal-vimrc.vim
-"
-" A (not so) minimal vimrc.
-"
+" Modified from
+" https://github.com/mhinz/vim-galore/blob/master/static/minimal-vimrc.vim
 
-" You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
-" We set it explicitely to make our position clear!
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Prelude
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Explicitly set nocompatible to always use Vim
 set nocompatible
 
 " Pathogen - tpope/vim-pathogen
 execute pathogen#infect()
 
-set encoding     =utf-8    " The encoding displayed.
-set fileencoding =utf-8    " The encoding written to file.
+" The encoding displayed
+set encoding=utf-8
 
-filetype plugin indent on  " Load plugins according to detected filetype.
-syntax on                  " Enable syntax highlighting.
+" Leader
+let mapleader = ","
 
-set autoindent             " Indent according to previous line.
-set expandtab              " Use spaces instead of tabs.
-set tabstop     =2         " Display tab as 2 spaces.
-set softtabstop =2         " Tab key indents by 2 spaces.
-set shiftwidth  =2         " >> indents by 2 spaces.
-set shiftround             " >> indents to next multiple of 'shiftwidth'.
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Spacing and indent
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent according to previous line
+set autoindent
 
-set backspace   =indent,eol,start  " Make backspace work as you would expect.
-set hidden                 " Switch between buffers without having to save first.
-set laststatus  =2         " Always show statusline.
-set display     =lastline  " Show as much as possible of the last line.
+" Use spaces instead of tabs
+set expandtab
 
-set showmode               " Show current mode in command-line.
-set showcmd                " Show already typed keys when more are expected.
-set ruler                  " Show ruler.
-set number                 " Show line number.
-set relativenumber         " Use relative line mumber.
+" Display tab as 2 spaces
+set tabstop=2
 
-set autoread               " Automatically load file on change.
-set pastetoggle=<F2>       " Key for toggling paste mode
+" Tab key indents by 2 spaces
+set softtabstop=2
 
-set ignorecase             " Case-insensitive search
-set smartcase              " Intelligently switch between case sensitivity in search
-set incsearch              " Highlight while searching with / or ?.
-set hlsearch               " Keep matches highlighted.
+" >> indents by 2 spaces
+set shiftwidth=2
 
-set ttyfast                " Faster redrawing.
-set lazyredraw             " Only redraw when necessary.
+" >> indents to next multiple of 'shiftwidth'
+set shiftround
 
-set splitbelow             " Open new windows below the current window.
-set splitright             " Open new windows right of the current window.
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Editing
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make backspace work as you would expect
+set backspace=indent,eol,start
 
-set cursorline             " Find the current line quickly.
-set wrapscan               " Searches wrap around end-of-file.
-set report      =0         " Always report changed lines.
-set synmaxcol   =200       " Only highlight the first 200 columns.
+" Switch between buffers without having to save first
+set hidden
 
-set noerrorbells           " Turn off bell ringing for error messages
-set visualbell             " Use visual bell
-set t_vb=                  " Clear visual bell terminal code
+" Automatically load file on change
+set autoread
 
-set spelllang   =en        " Set spell check language to English
+" Key for toggling paste mode
+set pastetoggle=<F2>
 
-set list                   " Show non-printable characters.
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Case-insensitive search
+set ignorecase
+
+" Intelligently switch between case sensitivity in search
+set smartcase
+
+" Highlight while searching with / or ?
+set incsearch
+
+" Keep matches highlighted
+set hlsearch
+
+" Searches wrap around end-of-file
+set wrapscan
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load plugins according to detected filetype
+filetype plugin indent on
+
+" Enable syntax highlighting
+syntax on
+
+" Show ruler
+set ruler
+
+" Show line number
+set number
+
+" Use relative line mumber
+set relativenumber
+
+" Find the current line quickly
+set cursorline
+
+" Always show statusline
+set laststatus=2
+
+" Show as much as possible of the last line
+set display=lastline
+
+" Show current mode in command-line
+set showmode
+
+" Show already typed keys when more are expected
+set showcmd
+
+" Always report changed lines
+set report=0
+
+" Turn off audio and visual bells
+set noerrorbells
+set visualbell
+set t_vb=
+
+" Show non-printable characters
+set list
 if has('multi_byte') && &encoding ==# 'utf-8'
   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
-" The fish shell is not very compatible to other shells and unexpectedly
-" breaks things that use 'shell'.
-if &shell =~# 'fish$'
-  set shell=/bin/bash
-endif
+" Enhance command-line completion
+set wildmenu
 
-" Put all temporary files under the same directory.
-" https://github.com/mhinz/vim-galore#handling-backup-swap-undo-and-viminfo-files
+" Only highlight the first 200 columns
+set synmaxcol=200
+
+" Faster redrawing
+set ttyfast
+
+" Only redraw when necessary
+set lazyredraw
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Windowing
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Open new windows below the current window
+set splitbelow
+
+" Open new windows right of the current window
+set splitright
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Spell check
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set spell check language to English
+set spelllang=en
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Temporary files and backups
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Put all temporary files under the same directory
 if exists('*mkdir') && !isdirectory($HOME.'/.vim/files')
   call mkdir($HOME.'/.vim/files/backup', 'p')
   call mkdir($HOME.'/.vim/files/swap', 'p')
@@ -92,20 +167,31 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
-" autocmd
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype-specific settings
+""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4
 au BufRead,BufNewFile *.rs set softtabstop=4 shiftwidth=4
 
-" Leader
-let mapleader = ","
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Clear search highlight
+nnoremap <Leader>n :nohlsearch<CR>
 
-" Key mapping
-nnoremap <Leader>n :nohl<CR>
+" Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
+
+" Start ack.vim - mileszs/ack.vim
 nnoremap <Leader>a :Ack!<Space>
+
+" Repeat last command
 nnoremap <Leader>2 @:<CR>
+
+" Use black hole register
 nnoremap <Leader>' "_
 
+" Toggle spell check
 function! ToggleSpellCheck()
   set spell!
   if &spell
@@ -116,38 +202,45 @@ function! ToggleSpellCheck()
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
+" Easily switch between Vim split windows
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
-" netrw
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " Show line number in netrw
-let g:netrw_banner = 0    " Hide netrw banner
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"" netrw
+" Show line number in netrw
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
-" Plugin - Raphx/nofrils
+" Hide netrw banner
+let g:netrw_banner = 0
+
+"" Raphx/nofrils
 let g:nofrils_heavylinenumbers = 1
 colorscheme nofrils-light
 
-" Plugin - w0rp/ale
+"" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
 let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 
-" Plugin - takac/vim-hardtime
+"" takac/vim-hardtime
 let g:hardtime_default_on = 1
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
-" Plugin - posva/vim-vue
+"" posva/vim-vue
 autocmd FileType vue syntax sync fromstart
 let g:vue_disable_pre_processors = 1
 
-" Plugin - junegunn/fzf
+"" junegunn/fzf
 set rtp+=/usr/local/opt/fzf
 
-" Plugin - mileszs/ack.vim
+"" mileszs/ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
