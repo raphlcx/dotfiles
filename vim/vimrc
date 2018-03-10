@@ -234,6 +234,19 @@ let g:ale_lint_on_insert_leave = 1
 
 "" takac/vim-hardtime
 let g:hardtime_default_on = 1
+let g:list_of_normal_keys = [
+      \"h",
+      \"j",
+      \"k",
+      \"l",
+      \"-",
+      \"+",
+      \"<c-n>",
+      \"<c-p>",
+      \"<BS>",
+      \"<Enter>",
+      \"<Space>"
+\]
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 "" posva/vim-vue
