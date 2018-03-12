@@ -248,6 +248,7 @@ let g:list_of_normal_keys = [
       \"<Space>"
 \]
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:hardtime_ignore_quickfix = 1
 
 "" posva/vim-vue
 autocmd FileType vue syntax sync fromstart
