@@ -3,25 +3,18 @@
 # Backup files in an archive file, and optionally move the archive
 # to external drive
 
-# CLI usage message
-usage="Usage: $0 [-c] [-e] [-m]
+usage="Usage: $0 [-e] [-m]
 
 Options:
 
-  -c    Clean OS attribute files from directories
   -e    Eject external drive after script execution
   -m    Move backup files to external drive
 
   -h    Show this help message"
 
-# CLI arguments
 for i in "$@"
 do
 case $i in
--c)
-  backup_clean=1
-  shift
-  ;;
 -e)
   eject_drive=1
   shift
@@ -41,20 +34,8 @@ case $i in
 esac
 done
 
-# OS attribute files cleanup
-if [ $backup_clean ]
-then
-  echo " [*] Cleaning up OS attribute files ..."
-
-  osfiles=".DS_Store "
-  for f in $osfiles
-  do
-    find ~/Downloads -name "$f" -print -delete
-  done
-fi
-
 # The backup directory
-backup_dirname="osx-bk"
+backup_dirname="arch-bk"
 backup_dir=~/Downloads/$backup_dirname
 mkdir -p $backup_dir
 
@@ -66,14 +47,14 @@ echo " [*] Backing up to $backup_dir ..."
 # Other user files
 ## .gnupg
 ## .ssh
-7z a -mx=0 $backup_dir/macos \
+7z a -mx=0 $backup_dir/arch \
   ~/.gnupg \
   ~/.ssh
 
 # Move backup files to external drive
 if [ $backup_move ]
 then
-  external_dir="/Volumes/Rph093/backup"
+  external_dir="/mnt/backup"
 
   echo " [*] Removing old backup at $external_dir/$backup_dirname ..."
   rm -r "$external_dir/$backup_dirname"
@@ -86,5 +67,5 @@ fi
 if [ $eject_drive ]
 then
   echo " [*] Ejecting external drive ..."
-  diskutil eject Rph093
+  sudo umount -R /mnt
 fi
