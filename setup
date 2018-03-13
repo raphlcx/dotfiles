@@ -9,7 +9,7 @@ mkdir -p ~/.local
 ln -s $cwd/bin ~/.local/bin
 
 echo ' [*] bash ...'
-ln -s $cwd/bash/bash_profile ~/.bash_profile
+ln -s $cwd/bash/bashrc ~/.bashrc
 
 echo ' [*] git ...'
 ln -s $cwd/git/gitconfig ~/.gitconfig

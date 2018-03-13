@@ -1,0 +1,37 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Aliases
+alias be='bundle exec'
+alias g='hub'
+alias ls='ls --color=auto'
+alias ll='ls -al'
+
+# Environment variables
+## gpg
+export GPG_TTY=$(tty)
+
+## shell prompt
+export PS1="\n\w\n$ "
+
+## fzf include hidden files and exclude certain directories
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+## user home bin
+export PATH="$HOME/.local/bin:$PATH"
+
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+## pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
+
+## nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="$HOME/.nodenv/shims:$PATH"
