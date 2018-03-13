@@ -1,5 +1,7 @@
 # Dotfiles
 
+dotfiles for GNU/Linux.
+
 Setup symlinks:
 
 ```shell
