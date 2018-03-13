@@ -12,7 +12,7 @@ shopt -s autocd
 alias be='bundle exec'
 alias g='hub'
 alias ls='ls --color=auto'
-alias ll='ls -al'
+alias ll='ls -alv'
 
 # Environment variables
 ## gpg
