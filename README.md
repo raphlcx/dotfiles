@@ -1,5 +1,7 @@
 # Dotfiles
 
+This branch contains the dotfiles specific for macOSS.
+
 Setup symlinks:
 
 ```shell
