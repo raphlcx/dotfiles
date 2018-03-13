@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Start Windows 10 virtual machine
-VBoxManage startvm w10
