@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Shell options
+shopt -s autocd
+
 # Aliases
 alias be='bundle exec'
 alias g='hub'
