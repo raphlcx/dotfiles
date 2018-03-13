@@ -19,6 +19,9 @@ echo ' [*] python ...'
 mkdir -p ~/.pip
 ln -s $cwd/python/pip.conf ~/.pip/pip.conf
 
+echo ' [*] readline ...'
+ln -s $cwd/readline/inputrc ~/.inputrc
+
 echo ' [*] ruby ...'
 ln -s $cwd/ruby/gemrc ~/.gemrc
 ln -s $cwd/ruby/irbrc ~/.irbrc
