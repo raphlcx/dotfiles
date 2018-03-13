@@ -35,3 +35,9 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 ## nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="$HOME/.nodenv/shims:$PATH"
+
+# Tab completions
+source /usr/share/bash-completion/bash_completion
+
+## tab completion for `g' alias
+complete -o default -o nospace -F _git g
