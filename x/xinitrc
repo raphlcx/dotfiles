@@ -1,2 +1,18 @@
 xrdb -merge ~/.Xresources
+
+! Keyboard
+! Caps lock to Escape
+setxkbmap -option caps:escape
+
+! Typematic delay and rate
+xset r rate 200 30
+
+! Trackpad
+! Tapping Enabled
+xinput set-prop 13 293 1
+
+! Natural Scrolling Enabled
+xinput set-prop 13 275 1
+
+! Start i3 window manager
 exec i3
