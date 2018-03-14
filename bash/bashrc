@@ -44,3 +44,11 @@ source /usr/share/bash-completion/bash_completion
 
 ## tab completion for `g' alias
 complete -o default -o nospace -F _git g
+
+# SSH agent
+if [ ! -S ~/.ssh/ssh_auth_sock ]
+then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
