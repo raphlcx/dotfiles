@@ -3,6 +3,7 @@ Xft.dpi: 180
 
 # uxterm
 UXTerm*termName: xterm-256color
+UXTerm*Background: #eeeeee
 UXTerm*faceName: DejaVu Sans Mono
 UXTerm*faceSize: 10.0
 UXTerm*renderFont: true
