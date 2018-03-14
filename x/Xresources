@@ -1,6 +1,11 @@
+# DPI scaling
 Xft.dpi: 180
 
-xterm.termname: xterm-256color
-xterm.faceName: xft:DejaVu Sans Mono:pixelsize=12
-xterm.faceSize: 12.0
-xterm.renderFont: true
+# uxterm
+UXTerm*termName: xterm-256color
+UXTerm*faceName: DejaVu Sans Mono
+UXTerm*faceSize: 10.0
+UXTerm*renderFont: true
+UXTerm*translations: #override \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
