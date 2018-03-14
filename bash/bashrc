@@ -13,6 +13,7 @@ alias be='bundle exec'
 alias g='hub'
 alias ls='ls --color=auto'
 alias ll='ls -alv'
+alias lock='i3lock -e -c 000000'
 
 # Environment variables
 ## gpg
