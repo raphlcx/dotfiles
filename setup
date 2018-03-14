@@ -42,4 +42,8 @@ ln -s $cwd/tmux/tmux.conf ~/.tmux.conf
 echo ' [*] vim ...'
 ln -s $cwd/vim/vimrc ~/.vimrc
 
+echo ' [*] x ...'
+ln -s $cwd/x/Xresources ~/.Xresources
+ln -s $cwd/x/xinitrc ~/.xinitrc
+
 echo ' [*] Setup completed!'

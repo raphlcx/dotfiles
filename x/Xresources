@@ -1,0 +1,6 @@
+Xft.dpi: 180
+
+xterm.termname: xterm-256color
+xterm.faceName: xft:DejaVu Sans Mono:pixelsize=12
+xterm.faceSize: 12.0
+xterm.renderFont: true
