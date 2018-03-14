@@ -19,10 +19,6 @@ echo ' [*] gnupg ...'
 mkdir -p ~/.gnupg
 ln -s $cwd/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-echo ' [*] i3 ...'
-mkdir -p ~/.config/i3
-ln -s $cwd/i3/config ~/.config/i3/config
-
 echo ' [*] python ...'
 mkdir -p ~/.pip
 ln -s $cwd/python/pip.conf ~/.pip/pip.conf
@@ -45,5 +41,7 @@ ln -s $cwd/vim/vimrc ~/.vimrc
 echo ' [*] x ...'
 ln -s $cwd/x/Xresources ~/.Xresources
 ln -s $cwd/x/xinitrc ~/.xinitrc
+mkdir -p ~/.config/i3
+ln -s $cwd/x/i3-config ~/.config/i3/config
 
 echo ' [*] Setup completed!'
