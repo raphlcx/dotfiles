@@ -254,9 +254,6 @@ let g:hardtime_ignore_quickfix = 1
 autocmd FileType vue syntax sync fromstart
 let g:vue_disable_pre_processors = 1
 
-"" junegunn/fzf
-set rtp+=/usr/local/opt/fzf
-
 "" mileszs/ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
