@@ -179,6 +179,9 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Write buffer to root-owned file
+cnoremap w!! :w !sudo tee > /dev/null %
+
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
 
