@@ -11,7 +11,6 @@ shopt -s autocd
 # Aliases
 alias be='bundle exec'
 alias g='hub'
-alias ls='ls --color=auto'
 alias ll='ls -alv'
 alias lock='i3lock -e -c 000000'
 alias locks='i3lock -e -c d3d3d3 && systemctl suspend'
