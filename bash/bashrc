@@ -44,7 +44,8 @@ export PATH="$HOME/.nodenv/shims:$PATH"
 source /usr/share/bash-completion/bash_completion
 
 ## tab completion for `g' alias
-complete -o default -o nospace -F _git g
+_completion_loader hub
+complete -o bashdefault -o default -o nospace -F _git g
 
 # SSH agent
 if [ ! -S ~/.ssh/ssh_auth_sock ]
