@@ -1,0 +1,45 @@
+#
+# ~/.bash_profile
+#
+
+#
+# Environment variable
+#
+## gpg
+export GPG_TTY=$(tty)
+
+## shell prompt
+export PS1="\n\w\n$ "
+
+## fzf include hidden files and exclude certain directories
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+## user home bin
+export PATH="$HOME/.local/bin:$PATH"
+
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+## pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
+
+## nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="$HOME/.nodenv/shims:$PATH"
+
+## rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#
+# SSH agent
+#
+if [ ! -S ~/.ssh/ssh_auth_sock ]
+then
+  eval `ssh-agent` 1>/dev/null
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

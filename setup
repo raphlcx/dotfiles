@@ -10,6 +10,7 @@ ln -s $cwd/bin ~/.local/bin
 
 echo '  bash'
 ln -s $cwd/bash/bashrc ~/.bashrc
+ln -s $cwd/bash/bash_profile ~/.bash_profile
 
 echo '  git'
 ln -s $cwd/git/gitconfig ~/.gitconfig
