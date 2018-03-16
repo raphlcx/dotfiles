@@ -54,9 +54,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #
 # Tab completion
 #
-source /usr/share/bash-completion/bash_completion
-
-## tab completion for `g' alias
+## completion for `g' alias
 _completion_loader hub
 complete -o bashdefault -o default -o nospace -F _git g
 
