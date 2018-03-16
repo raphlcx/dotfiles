@@ -1,6 +1,27 @@
 #!/usr/bin/env bash
 
-# Add vim plugin as git submodule
+usage="Usage: $0 <git_ssh_url>
+
+Add vim plugin as git submodule.
+
+Arguments:
+
+  git_ssh_url    Git SSH URL
+
+Options:
+
+  -h    Show this help message"
+
+for i in "$@"
+do
+case $i in
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+esac
+done
+
 url=$1
 name=$(basename $url)
 name=${name%.git}

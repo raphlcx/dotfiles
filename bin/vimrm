@@ -1,6 +1,28 @@
 #!/usr/bin/env bash
 
-# Remove vim plugin from git submodule
+usage="Usage: $0 <plugin_name>
+
+Remove vim plugin from git submodule.
+
+Arguments:
+
+  plugin_name    The name of plugin, usually it is the name
+                 of the plugin's GitHub repository.
+
+Options:
+
+  -h    Show this help message"
+
+for i in "$@"
+do
+case $i in
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+esac
+done
+
 name=$1
 dir=~/.vim
 

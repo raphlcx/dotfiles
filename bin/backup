@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Backup files in an archive file, and optionally move the archive
-# to external drive
-
 usage="Usage: $0 [-e] [-m]
+
+Backup files in an archive file, and optionally move the archive
+to external drive.
 
 Options:
 
