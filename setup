@@ -2,46 +2,46 @@
 
 cwd=`pwd`
 
-echo ' [*] Setting up dotfiles ...'
+echo 'Setting up dotfiles ...'
 
-echo ' [*] user bin directory ...'
+echo '  user bin directory'
 mkdir -p ~/.local
 ln -s $cwd/bin ~/.local/bin
 
-echo ' [*] bash ...'
+echo '  bash'
 ln -s $cwd/bash/bashrc ~/.bashrc
 
-echo ' [*] git ...'
+echo '  git'
 ln -s $cwd/git/gitconfig ~/.gitconfig
 ln -s $cwd/git/gitignore ~/.gitignore
 
-echo ' [*] gnupg ...'
+echo '  gnupg'
 mkdir -p ~/.gnupg
 ln -s $cwd/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-echo ' [*] python ...'
+echo '  python'
 mkdir -p ~/.pip
 ln -s $cwd/python/pip.conf ~/.pip/pip.conf
 
-echo ' [*] readline ...'
+echo '  readline'
 ln -s $cwd/readline/inputrc ~/.inputrc
 
-echo ' [*] ruby ...'
+echo '  ruby'
 ln -s $cwd/ruby/gemrc ~/.gemrc
 ln -s $cwd/ruby/irbrc ~/.irbrc
 mkdir -p ~/.bundle
 ln -s $cwd/ruby/bundler-config ~/.bundle/config
 
-echo ' [*] tmux ...'
+echo '  tmux'
 ln -s $cwd/tmux/tmux.conf ~/.tmux.conf
 
-echo ' [*] vim ...'
+echo '  vim'
 ln -s $cwd/vim/vimrc ~/.vimrc
 
-echo ' [*] x ...'
+echo '  x'
 ln -s $cwd/x/Xresources ~/.Xresources
 ln -s $cwd/x/xinitrc ~/.xinitrc
 mkdir -p ~/.config/i3
 ln -s $cwd/x/i3-config ~/.config/i3/config
 
-echo ' [*] Setup completed!'
+echo 'Done.'
