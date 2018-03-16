@@ -1,5 +1,29 @@
 #!/usr/bin/env bash
 
-# Substitute all space with underscore in file name for all
-# files in current working directory
-for i in *; do mv "$i" $(echo "$i" | sed 's/ /_/g'); done
+usage="Usage: $0 [-c char]
+
+Substitute all space with underscore in file name for all
+files in current working directory. A 'char' can be supplied
+instead to be used in place of underscore.
+
+Options:
+
+  -c CHAR    Character to be used for space character substitution.
+
+  -h         Show this help message"
+
+for i in "$@"
+do
+case $i in
+-c)
+  shift
+  rmspace_s_char="$@"
+  ;;
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+esac
+done
+
+for i in *; do mv "$i" $(echo "$i" | sed "s/ /${rmspace_s_char-_}/g"); done
