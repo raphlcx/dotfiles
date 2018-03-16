@@ -5,17 +5,24 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Shell options
+#
+# Shell option
+#
 shopt -s autocd
 
-# Aliases
+#
+# Alias
+#
+alias ll='ls -alv'
+alias pig='ping google.com'
 alias be='bundle exec'
 alias g='hub'
-alias ll='ls -alv'
 alias lock='i3lock -e -c 000000'
 alias locks='i3lock -e -c d3d3d3 && systemctl suspend'
 
-# Environment variables
+#
+# Environment variable
+#
 ## gpg
 export GPG_TTY=$(tty)
 
@@ -40,14 +47,18 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="$HOME/.nodenv/shims:$PATH"
 
-# Tab completions
+#
+# Tab completion
+#
 source /usr/share/bash-completion/bash_completion
 
 ## tab completion for `g' alias
 _completion_loader hub
 complete -o bashdefault -o default -o nospace -F _git g
 
+#
 # SSH agent
+#
 if [ ! -S ~/.ssh/ssh_auth_sock ]
 then
   eval `ssh-agent` 1>/dev/null
