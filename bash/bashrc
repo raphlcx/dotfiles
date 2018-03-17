@@ -6,6 +6,11 @@
 [[ $- != *i* ]] && return
 
 #
+# Shell prompt
+#
+PS1="\n\w\n$ "
+
+#
 # Shell option
 #
 shopt -s autocd

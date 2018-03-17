@@ -8,9 +8,6 @@
 ## gpg
 export GPG_TTY=$(tty)
 
-## shell prompt
-export PS1="\n\w\n$ "
-
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
