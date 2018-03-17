@@ -226,7 +226,7 @@ let g:netrw_banner = 0
 
 "" Raphx/nofrils
 let g:nofrils_heavylinenumbers = 1
-colorscheme nofrils-light
+colorscheme nofrils-dark
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
