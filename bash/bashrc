@@ -24,6 +24,7 @@ export GPG_TTY=$(tty)
 #
 # Alias
 #
+alias ls='ls --color=auto'
 alias ll='ls -alv'
 alias pig='ping google.com'
 alias be='bundle exec'
