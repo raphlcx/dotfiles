@@ -10,7 +10,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -125,8 +125,8 @@ set $mode_app_launcher Launch [f]irefox [g]oogle-chrome-stable
 bindsym $mod+x mode $mode_app_launcher
 
 mode "$mode_app_launcher" {
-  bindsym f exec firefox
-  bindsym g exec google-chrome-stable
+  bindsym f exec --no-startup-id firefox
+  bindsym g exec --no-startup-id google-chrome-stable
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
