@@ -5,9 +5,6 @@
 #
 # Environment variable
 #
-## gpg
-export GPG_TTY=$(tty)
-
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 

@@ -16,6 +16,12 @@ PS1="\n\w\n$ "
 shopt -s autocd
 
 #
+# Environment variable
+#
+## gpg
+export GPG_TTY=$(tty)
+
+#
 # Alias
 #
 alias ll='ls -alv'
