@@ -6,7 +6,7 @@
 # Environment variable
 #
 ## ls colors
-export LS_COLORS='rs=0:di=01;34:ln=00;35:ex=00;31'
+export LS_COLORS='rs=0:di=01;34:ln=00;35:ex=00;32'
 
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
