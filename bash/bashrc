@@ -27,6 +27,7 @@ export GPG_TTY=$(tty)
 alias ls='ls --color=auto'
 alias ll='ls -alv'
 alias pig='ping google.com'
+alias ns='netctl start'
 alias be='bundle exec'
 alias g='hub'
 alias xclip='xclip -selection c'
