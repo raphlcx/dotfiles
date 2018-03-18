@@ -14,5 +14,8 @@ xinput set-prop --type=int --format=8 bcm5974 'libinput Tapping Enabled' 1
 ! Natural Scrolling Enabled
 xinput set-prop --type=int --format=8 bcm5974 'libinput Natural Scrolling Enabled' 1
 
+! Start ibus
+ibus-daemon -drx
+
 ! Start i3 window manager
 exec i3
