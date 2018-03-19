@@ -234,6 +234,7 @@ let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
 
 "" takac/vim-hardtime
 let g:hardtime_default_on = 1
