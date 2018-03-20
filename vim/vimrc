@@ -224,9 +224,8 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 " Hide netrw banner
 let g:netrw_banner = 0
 
-"" Raphx/nofrils
-let g:nofrils_heavylinenumbers = 1
-colorscheme nofrils-dark
+"" Raphx/modest
+colorscheme modest-dark
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
