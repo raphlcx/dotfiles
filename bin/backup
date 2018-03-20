@@ -36,18 +36,18 @@ done
 
 # The backup directory
 backup_dirname="arch-bk"
-backup_dir=~/Downloads/$backup_dirname
-mkdir -p $backup_dir
+backup_dir="$HOME/Downloads/$backup_dirname"
+mkdir -p "$backup_dir"
 
 echo "  Backing up to $backup_dir ..."
 
 # Project files
-7z a -mx=0 $backup_dir/p ~/Downloads/p
+7z a -mx=0 "$backup_dir/p" ~/Downloads/p
 
 # Other user files
 ## .gnupg
 ## .ssh
-7z a -mx=0 $backup_dir/arch \
+7z a -mx=0 "$backup_dir/arch" \
   ~/.gnupg \
   ~/.ssh
 
