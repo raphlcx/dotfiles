@@ -13,6 +13,12 @@ Options:
 
   -h    Show this help message"
 
+if [ $# -ne 1 ]
+then
+  echo "$usage"
+  exit 1
+fi
+
 for i in "$@"
 do
 case $i in
@@ -24,8 +30,8 @@ esac
 done
 
 name=$1
-dir=~/.vim
+vimdir=~/.vim
 
-git -C $dir submodule deinit -f $dir/bundle/$name
-git -C $dir rm -rf $dir/bundle/$name
-rm -rf $dir/.git/modules/bundle/$name
+git -C $vimdir submodule deinit -f $vimdir/bundle/$name
+git -C $vimdir rm -rf $vimdir/bundle/$name
+rm -rf $vimdir/.git/modules/bundle/$name

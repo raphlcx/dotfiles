@@ -12,6 +12,12 @@ Options:
 
   -h    Show this help message"
 
+if [ $# -ne 1 ]
+then
+  echo "$usage"
+  exit 1
+fi
+
 for i in "$@"
 do
 case $i in
