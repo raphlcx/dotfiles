@@ -3,8 +3,9 @@ Xft.dpi: 180
 
 # uxterm
 UXTerm.termName: xterm-256color
-UXTerm*vt100.Background: black
-UXTerm*vt100.Foreground: white
+UXTerm*vt100.background: black
+UXTerm*vt100.foreground: white
+UXTerm*vt100.cursorColor: gray
 UXTerm*vt100.faceName: DejaVu Sans Mono
 UXTerm*vt100.faceSize: 10.0
 UXTerm*vt100.metaSendsEscape: true
