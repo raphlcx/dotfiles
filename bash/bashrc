@@ -31,7 +31,7 @@ alias ns='netctl start'
 alias be='bundle exec'
 alias g='hub'
 alias xclip='xclip -selection c'
-alias lock='i3lock -e -c 000000'
+alias zz='i3lock -e -c 000000 && xset dpms force off'
 
 #
 # Tab completion
