@@ -1,1 +1,6 @@
+set bell-style none
+set editing-mode vi
 set mark-symlinked-directories on
+set show-mode-in-prompt on
+set vi-cmd-mode-string "-C "
+set vi-ins-mode-string "-I "
