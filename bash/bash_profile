@@ -5,6 +5,9 @@
 #
 # Environment variable
 #
+## Global editor
+export EDITOR=vim
+
 ## ls colors
 export LS_COLORS='rs=0:di=01;34:ln=00;36:ex=00;32'
 
