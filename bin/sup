@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# System upgrade script
+sudo pacman -Syyu
+sudo pacman -Sc --noconfirm
+tldr -u
+rustup update
