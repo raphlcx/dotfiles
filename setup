@@ -44,5 +44,7 @@ ln -s $cwd/x/Xresources ~/.Xresources
 ln -s $cwd/x/xinitrc ~/.xinitrc
 mkdir -p ~/.config/i3
 ln -s $cwd/x/i3-config ~/.config/i3/config
+mkdir -p ~/.config/i3status
+ln -s $cwd/x/i3status-config ~/.config/i3status/config
 
 echo 'Done.'
