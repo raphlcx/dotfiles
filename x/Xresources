@@ -6,8 +6,8 @@ UXTerm.termName: xterm-256color
 UXTerm*vt100.background: black
 UXTerm*vt100.foreground: white
 UXTerm*vt100.cursorColor: gray
-UXTerm*vt100.faceName: Ubuntu Mono
-UXTerm*vt100.faceSize: 10.0
+UXTerm*vt100.faceName: Noto Mono
+UXTerm*vt100.faceSize: 9.0
 UXTerm*vt100.metaSendsEscape: true
 UXTerm*vt100.renderFont: true
 UXTerm*vt100.translations: #override \n\
