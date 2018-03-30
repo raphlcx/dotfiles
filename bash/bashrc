@@ -40,3 +40,10 @@ alias zz='i3lock -e && xset dpms force off'
 ## completion for `g' alias
 _completion_loader hub
 complete -o bashdefault -o default -o nospace -F _git g
+
+#
+# Chruby
+#
+[ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ] || return
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
