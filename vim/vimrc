@@ -201,6 +201,9 @@ nnoremap <Leader>' "_
 " of the file being edited
 nnoremap <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 
+" Toggle ALE - w0rp/ale
+nmap <Leader>l <Plug>(ale_toggle)
+
 " Toggle spell check
 function! ToggleSpellCheck()
   set spell!
@@ -238,6 +241,7 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_enabled = 0
 
 "" takac/vim-hardtime
 let g:hardtime_default_on = 1
