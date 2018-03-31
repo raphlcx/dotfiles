@@ -1,0 +1,8 @@
+bcwc-pcie-git
+chruby
+facetimehd-firmware
+google-chrome
+mbpfan-git
+nodejs-n
+ruby-install
+tealdeer
