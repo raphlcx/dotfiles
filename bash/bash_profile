@@ -14,12 +14,11 @@ export LS_COLORS='rs=0:di=01;34:ln=00;36:ex=00;32'
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
+## n - nodejs version manager
+export N_PREFIX=$HOME/.nodejs
+
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
-
-## nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-export PATH="$HOME/.nodenv/shims:$PATH"
 
 ## rustup
 export PATH="$HOME/.cargo/bin:$PATH"
