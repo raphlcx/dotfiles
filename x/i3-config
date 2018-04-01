@@ -141,6 +141,9 @@ client.unfocused        #808080 #808080 #ffffff #000000 #000000
 # hide all borders
 hide_edge_borders both
 
+# Interative screen capture
+bindsym --release $mod+Mod1+4 exec scrot -s -e 'mv $f ~/Downloads/'
+
 # hide border for xterm
 for_window [class="URxvt"] border none
 
