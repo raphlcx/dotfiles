@@ -20,9 +20,6 @@ export N_PREFIX=$HOME/.nodejs
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
 
-## rustup
-export PATH="$HOME/.cargo/bin:$PATH"
-
 #
 # SSH agent
 #

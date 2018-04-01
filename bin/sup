@@ -9,8 +9,5 @@ sudo pacman -Sc --noconfirm
 # tldr local database
 tldr -u
 
-# rustup and rust toolchain
-rustup update
-
 # vim plugins
 git -C ~/.vim submodule foreach git pull origin master
