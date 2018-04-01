@@ -4,5 +4,5 @@ Xft.dpi: 180
 # urxvt
 URxvt.background: black
 URxvt.foreground: white
-URxvt.font: xft:NotoMono:size=9
+URxvt.font: xft:Noto Mono:size=9, xft:Noto Sans Symbols2
 URxvt.scrollBar: False
