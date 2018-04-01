@@ -5,4 +5,5 @@ google-chrome
 mbpfan-git
 nodejs-n
 ruby-install
+rxvt-unicode-cvs-patched-wideglyphs
 tealdeer
