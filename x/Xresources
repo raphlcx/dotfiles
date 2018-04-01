@@ -1,15 +1,8 @@
 # DPI scaling
 Xft.dpi: 180
 
-# uxterm
-UXTerm.termName: xterm-256color
-UXTerm*vt100.background: black
-UXTerm*vt100.foreground: white
-UXTerm*vt100.cursorColor: gray
-UXTerm*vt100.faceName: Noto Mono
-UXTerm*vt100.faceSize: 9.0
-UXTerm*vt100.metaSendsEscape: true
-UXTerm*vt100.renderFont: true
-UXTerm*vt100.translations: #override \n\
-  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+# urxvt
+URxvt.background: black
+URxvt.foreground: white
+URxvt.font: xft:NotoMono:size=9
+URxvt.scrollBar: False
