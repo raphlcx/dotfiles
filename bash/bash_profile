@@ -9,7 +9,7 @@
 export EDITOR=vim
 
 ## ls colors
-export LS_COLORS='rs=0:di=01;37:ex=00;32'
+export LS_COLORS='rs=0:ex=00;32'
 
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
