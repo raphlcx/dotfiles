@@ -147,6 +147,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym --release $mod+Mod1+4 exec scrot -s -e 'mv $f ~/Downloads/'
 
 # Volume control
+bindsym $mod+F10 exec amixer set Master toggle
 bindsym $mod+F11 exec amixer set Master 5%-
 bindsym $mod+F12 exec amixer set Master 5%+
 
