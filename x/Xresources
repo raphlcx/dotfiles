@@ -5,5 +5,6 @@ Xft.dpi: 180
 URxvt.background: black
 URxvt.foreground: white
 URxvt.font: xft:Noto Mono:size=9, xft:Noto Sans Symbols2
+URxvt.letterSpace: -1
 URxvt.scrollBar: False
 URxvt.color12: #1e90ff
