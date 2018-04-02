@@ -1,11 +1,11 @@
-# DPI scaling
+! DPI scaling
 Xft.dpi: 180
 
-# urxvt
+! urxvt
 URxvt.background: black
 URxvt.foreground: white
-URxvt.font: xft:Noto Mono:size=9:antialias=false,\
-            xft:Noto Sans Symbols2:antialias=false
+URxvt.font: xft:Meslo LG S DZ:size=9:antialias=false
+URxvt.letterSpace: 0
 URxvt.saveLines: 0
 URxvt.scrollBar: False
 URxvt.color12: #1e90ff
