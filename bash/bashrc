@@ -46,13 +46,11 @@ source /usr/share/chruby/auto.sh
 #
 # Activate or deactivate n
 #
-n-set ()
-{
+n-set () {
   PATH="$N_PREFIX/bin:$PATH"
 }
 
-n-unset ()
-{
+n-unset () {
   PATH="${PATH//$N_PREFIX\/bin:/}"
   hash -r
 }
