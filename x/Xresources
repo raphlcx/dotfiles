@@ -9,6 +9,8 @@ URxvt.font: xft:Meslo LG S DZ:size=9:antialias=false
 URxvt.letterSpace: 0
 URxvt.saveLines: 0
 URxvt.scrollBar: False
+URxvt.pointerBlank: True
+URxvt.pointerBlankDelay: 987654321
 URxvt.color12: #1e90ff
 URxvt.iso14755: False
 URxvt.iso14755_52: False
