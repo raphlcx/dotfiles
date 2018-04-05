@@ -17,6 +17,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 ## n - nodejs version manager
 export N_PREFIX=$HOME/.nodejs
 
+## p - python version manager
+export P_PREFIX=$HOME/.python
+
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
 
