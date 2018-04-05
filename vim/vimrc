@@ -244,24 +244,6 @@ let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
 
-"" takac/vim-hardtime
-let g:hardtime_default_on = 1
-let g:list_of_normal_keys = [
-      \"h",
-      \"j",
-      \"k",
-      \"l",
-      \"-",
-      \"+",
-      \"<c-n>",
-      \"<c-p>",
-      \"<BS>",
-      \"<Enter>",
-      \"<Space>"
-\]
-let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:hardtime_ignore_quickfix = 1
-
 "" posva/vim-vue
 autocmd FileType vue syntax sync fromstart
 let g:vue_disable_pre_processors = 1
