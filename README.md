@@ -16,6 +16,8 @@ pacman -S - < pkglist.txt
 
 ## Maintenance
 
+### pacman packages
+
 To prepare `pkglist.txt`:
 
 ```
@@ -27,3 +29,11 @@ For `pkglist-aur.txt`:
 ```
 pacman -Qqm > pkglist-aur.txt
 ```
+
+### Fonts
+
+Font configurations are found in multiple locations:
+
+ - `fontconfig` for global font configuration
+ - `x/i3-config` for i3 font
+ - `x/Xresources` for urxvt font

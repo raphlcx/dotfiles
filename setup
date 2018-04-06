@@ -12,6 +12,10 @@ echo '  bash'
 ln -s $cwd/bash/bashrc ~/.bashrc
 ln -s $cwd/bash/bash_profile ~/.bash_profile
 
+echo ' fontconfig'
+mkdir -p ~/.config/fontconfig
+ln -s $cwd/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
+
 echo '  git'
 ln -s $cwd/git/gitconfig ~/.gitconfig
 ln -s $cwd/git/gitignore ~/.gitignore
