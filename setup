@@ -1,54 +1,67 @@
 #!/usr/bin/env bash
 
-cwd=`pwd`
+## Full path of script
+cwd=$(dirname $(realpath $0))
 
-echo 'Setting up dotfiles ...'
+## Commands
+log='echo'
+create='mkdir -p'
+link='ln -sf'
 
-echo '  user bin directory'
-mkdir -p ~/.local
-ln -s $cwd/bin ~/.local/bin
+## Start setup
+$log 'Setting up dotfiles ...'
 
-echo '  bash'
-ln -s $cwd/bash/bashrc ~/.bashrc
-ln -s $cwd/bash/bash_profile ~/.bash_profile
+$log '  user bin directory'
+$create ~/.local
+$link $cwd/bin ~/.local/bin
 
-echo ' fontconfig'
-mkdir -p ~/.config/fontconfig
-ln -s $cwd/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
+$log '  bash'
+$link $cwd/bash/bashrc ~/.bashrc
+$link $cwd/bash/bash_profile ~/.bash_profile
 
-echo '  git'
-ln -s $cwd/git/gitconfig ~/.gitconfig
-ln -s $cwd/git/gitignore ~/.gitignore
+$log '  fontconfig'
+$create ~/.config/fontconfig
+$link $cwd/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
 
-echo '  gnupg'
-mkdir -p ~/.gnupg
-ln -s $cwd/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+$log '  git'
+$link $cwd/git/gitconfig ~/.gitconfig
+$link $cwd/git/gitignore ~/.gitignore
 
-echo '  python'
-mkdir -p ~/.pip
-ln -s $cwd/python/pip.conf ~/.pip/pip.conf
+$log '  gnupg'
+$create ~/.gnupg
+$link $cwd/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-echo '  readline'
-ln -s $cwd/readline/inputrc ~/.inputrc
+$log '  python'
+$create ~/.pip
+$link $cwd/python/pip.conf ~/.pip/pip.conf
 
-echo '  ruby'
-ln -s $cwd/ruby/gemrc ~/.gemrc
-ln -s $cwd/ruby/irbrc ~/.irbrc
-mkdir -p ~/.bundle
-ln -s $cwd/ruby/bundler-config ~/.bundle/config
+$log '  readline'
+$link $cwd/readline/inputrc ~/.inputrc
 
-echo '  tmux'
-ln -s $cwd/tmux/tmux.conf ~/.tmux.conf
+$log '  ruby'
+$link $cwd/ruby/gemrc ~/.gemrc
+$link $cwd/ruby/irbrc ~/.irbrc
 
-echo '  vim'
-ln -s $cwd/vim/vimrc ~/.vimrc
+$log '  ruby (bundler)'
+$create ~/.bundle
+$link $cwd/ruby/bundler-config ~/.bundle/config
 
-echo '  x'
-ln -s $cwd/x/Xresources ~/.Xresources
-ln -s $cwd/x/xinitrc ~/.xinitrc
-mkdir -p ~/.config/i3
-ln -s $cwd/x/i3-config ~/.config/i3/config
-mkdir -p ~/.config/i3status
-ln -s $cwd/x/i3status-config ~/.config/i3status/config
+$log '  tmux'
+$link $cwd/tmux/tmux.conf ~/.tmux.conf
 
-echo 'Done.'
+$log '  vim'
+$link $cwd/vim/vimrc ~/.vimrc
+
+$log '  x'
+$link $cwd/x/Xresources ~/.Xresources
+$link $cwd/x/xinitrc ~/.xinitrc
+
+$log '  x (i3)'
+$create ~/.config/i3
+$link $cwd/x/i3-config ~/.config/i3/config
+
+$log '  x (i3status)'
+$create ~/.config/i3status
+$link $cwd/x/i3status-config ~/.config/i3status/config
+
+$log 'Done.'
