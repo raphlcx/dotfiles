@@ -6,7 +6,7 @@ cwd=$(dirname $(realpath $0))
 ## Commands
 log='echo'
 create='mkdir -p'
-link='ln -sf'
+link='ln -sfn'
 
 ## Start setup
 $log 'Setting up dotfiles ...'
