@@ -14,6 +14,12 @@ Install system dependencies:
 pacman -S - < pkglist.txt
 ```
 
+Start ssh-agent on shell login:
+
+```
+systemctl --user enable ssh-agent.service
+```
+
 ## Maintenance
 
 ### pacman packages
