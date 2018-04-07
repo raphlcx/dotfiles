@@ -46,6 +46,10 @@ $log '  ruby (bundler)'
 $create ~/.bundle
 $link $cwd/ruby/bundler-config ~/.bundle/config
 
+$log '  systemd'
+$create ~/.config/systemd/user
+$link $cwd/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+
 $log '  tmux'
 $link $cwd/tmux/tmux.conf ~/.tmux.conf
 
