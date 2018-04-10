@@ -6,7 +6,7 @@ URxvt.background: black
 URxvt.foreground: white
 URxvt.cursorColor: gray
 
-URxvt.font: xft:Meslo LG S DZ:size=9:antialias=false
+URxvt.font: xft:Hack:size=9:antialias=false
 URxvt.letterSpace: 0
 
 URxvt.saveLines: 0
