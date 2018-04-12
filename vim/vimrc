@@ -202,7 +202,15 @@ nnoremap <Leader>' "_
 nnoremap <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Toggle ALE - w0rp/ale
-nmap <Leader>l <Plug>(ale_toggle)
+function! ToggleALE()
+  ALEToggle
+  if g:ale_enabled == 1
+    echo 'ALE ON'
+  else
+    echo 'ALE OFF'
+  end
+endfunction
+nmap <silent> <Leader>l :call ToggleALE()<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
