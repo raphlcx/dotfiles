@@ -4,7 +4,9 @@ android-tools
 android-udev
 bash-completion
 ctags
+desmume
 dmenu
+elixir
 exfat-utils
 fcitx-configtool
 fcitx-gtk3
@@ -20,14 +22,16 @@ i3status
 intel-ucode
 libva-intel-driver
 libvdpau-va-gl
+libxslt
+libyaml
 linux-headers
-mpv
+mongodb
+nodejs
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
 p7zip
 postgresql
-ppsspp
 pulseaudio-alsa
 redis
 rustup
@@ -35,6 +39,8 @@ scrot
 the_silver_searcher
 tlp
 tmux
+tree
+ttf-hack
 vim
 wpa_supplicant
 xclip
@@ -43,3 +49,4 @@ xorg-server
 xorg-xbacklight
 xorg-xinit
 xorg-xinput
+xorg-xset

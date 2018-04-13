@@ -3,6 +3,7 @@ chruby
 facetimehd-firmware
 google-chrome
 mbpfan-git
+mpv-light
 nodejs-n
 ruby-install
 rxvt-unicode-cvs-patched-wideglyphs
