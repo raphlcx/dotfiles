@@ -59,10 +59,10 @@ n-unset () {
 # Activate or deactivate p
 #
 p-set () {
-  PATH="$P_PREFIX/p/versions/python:$PATH"
+  PATH="$P_PREFIX/p/versions/bin:$PATH"
 }
 
 p-unset () {
-  PATH="${PATH//$P_PREFIX\/p\/versions\/python:/}"
+  PATH="${PATH//$P_PREFIX\/p\/versions\/bin:/}"
   hash -r
 }
