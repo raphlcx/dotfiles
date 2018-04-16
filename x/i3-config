@@ -144,7 +144,7 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+d exec --no-startup-id dmenu_run
 
 # Interative screen capture
-bindsym --release $mod+Mod1+4 exec scrot -s -e 'mv $f ~/Downloads/'
+bindsym --release $mod+Mod1+4 exec scrot '%F-%H%M%S_$wx$h.png' -s -e 'mv $f ~/Downloads/'
 
 # Volume control
 bindsym $mod+F10 exec amixer set Master toggle
