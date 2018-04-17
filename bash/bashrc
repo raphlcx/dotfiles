@@ -20,7 +20,7 @@ export GPG_TTY=$(tty)
 # Alias
 #
 alias ls='ls --color=auto'
-alias ll='ls -alv'
+alias ll='ls -alv --group-directories-first'
 alias pig='ping google.com'
 alias ns='netctl start'
 alias nst='netctl stop'
