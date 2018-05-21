@@ -37,9 +37,16 @@ _completion_loader hub
 complete -o bashdefault -o default -o nospace -F _git g
 
 #
-# Activate asdf
+# Activate / deactivate asdf
 #
 asdf-set () {
   . $HOME/.asdf/asdf.sh
   . $HOME/.asdf/completions/asdf.bash
+}
+
+asdf-unset () {
+  PATH="${PATH//$HOME\/.asdf\/bin:/}"
+  PATH="${PATH//$HOME\/.asdf\/shims:/}"
+  complete -r asdf
+  hash -r
 }
