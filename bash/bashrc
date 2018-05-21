@@ -37,32 +37,9 @@ _completion_loader hub
 complete -o bashdefault -o default -o nospace -F _git g
 
 #
-# Chruby
+# Activate asdf
 #
-[ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ] || return
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
-
-#
-# Activate or deactivate n
-#
-n-set () {
-  PATH="$N_PREFIX/bin:$PATH"
-}
-
-n-unset () {
-  PATH="${PATH//$N_PREFIX\/bin:/}"
-  hash -r
-}
-
-#
-# Activate or deactivate p
-#
-p-set () {
-  PATH="$P_PREFIX/p/versions/bin:$PATH"
-}
-
-p-unset () {
-  PATH="${PATH//$P_PREFIX\/p\/versions\/bin:/}"
-  hash -r
+asdf-set () {
+  . $HOME/.asdf/asdf.sh
+  . $HOME/.asdf/completions/asdf.bash
 }
