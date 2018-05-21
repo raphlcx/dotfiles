@@ -4,7 +4,7 @@ android-tools
 android-udev
 bash-completion
 ctags
-desmume
+cups
 dmenu
 elixir
 exfat-utils
@@ -19,6 +19,7 @@ i3blocks
 i3-gaps
 i3lock
 i3status
+inotify-tools
 intel-ucode
 libva-intel-driver
 libvdpau-va-gl
@@ -26,7 +27,6 @@ libxslt
 libyaml
 linux-headers
 mongodb
-nodejs
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
