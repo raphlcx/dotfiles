@@ -176,6 +176,9 @@ augroup filetypespecificsettings
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
 augroup END
 
+" Disable special text rendering on html
+let html_no_rendering = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
