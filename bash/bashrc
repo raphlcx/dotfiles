@@ -26,6 +26,7 @@ alias ns='netctl start'
 alias nst='netctl stop'
 alias be='bundle exec'
 alias g='hub'
+alias hdev='ssh-add ~/.ssh/dev'
 alias xclip='xclip -selection c'
 alias zz='i3lock -e && xset dpms force off'
 
