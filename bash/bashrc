@@ -28,7 +28,8 @@ alias be='bundle exec'
 alias g='hub'
 alias hdev='ssh-add ~/.ssh/dev'
 alias xclip='xclip -selection c'
-alias zz='i3lock -e && xset dpms force off'
+alias zz='xset dpms force off'
+alias zzl='i3lock -e && xset dpms force off'
 
 #
 # Tab completion
