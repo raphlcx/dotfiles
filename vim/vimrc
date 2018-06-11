@@ -183,7 +183,13 @@ let html_no_rendering = 1
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Write buffer to root-owned file
-cnoremap w!! :w !sudo tee > /dev/null %
+cnoremap w!! w !sudo tee > /dev/null %
+
+" View Git commit history of the current file
+cnoremap glog !git log -p --follow %
+
+" Run Git blame on the current file
+cnoremap gblame !git blame %
 
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
