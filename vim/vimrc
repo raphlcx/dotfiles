@@ -247,7 +247,7 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 let g:netrw_banner = 0
 
 "" Raphx/modest
-colorscheme modest-dark
+colorscheme modest-light
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
