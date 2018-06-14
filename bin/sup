@@ -13,7 +13,18 @@ sudo pacman -Sc --noconfirm
 
 echo ""
 echo "======================================"
-echo "   tealdeer"
+echo "   AUR repositories"
+echo "======================================"
+echo ""
+
+for i in $HOME/Downloads/aur/*;
+do
+  git -C "$i" pull;
+done
+
+echo ""
+echo "======================================"
+echo "   tealdeer local cache"
 echo "======================================"
 echo ""
 
@@ -34,4 +45,4 @@ echo "   vim plugins"
 echo "======================================"
 echo ""
 
-git -C ~/.vim submodule foreach git pull origin master
+git -C "$HOME/.vim" submodule foreach git pull origin master
