@@ -2,28 +2,36 @@
 
 # System upgrade script
 
+echo ""
 echo "======================================"
 echo "   System upgrade"
 echo "======================================"
+echo ""
 
 sudo pacman -Syyu
 sudo pacman -Sc --noconfirm
 
+echo ""
 echo "======================================"
 echo "   tealdeer"
 echo "======================================"
+echo ""
 
 tldr -u
 
+echo ""
 echo "======================================"
 echo "   asdf and its plugins"
 echo "======================================"
+echo ""
 
 asdf update
 asdf plugin-update --all
 
+echo ""
 echo "======================================"
 echo "   vim plugins"
 echo "======================================"
+echo ""
 
 git -C ~/.vim submodule foreach git pull origin master
