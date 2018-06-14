@@ -259,18 +259,12 @@ let g:netrw_banner = 0
 colorscheme modest-light
 
 "" w0rp/ale
-let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
-let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
-
-"" posva/vim-vue
-autocmd FileType vue syntax sync fromstart
-let g:vue_disable_pre_processors = 1
 
 "" mileszs/ack.vim
 if executable('ag')
