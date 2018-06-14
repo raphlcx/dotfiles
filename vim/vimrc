@@ -226,7 +226,7 @@ function! ToggleALE()
     echo 'ALE OFF'
   end
 endfunction
-nmap <silent> <Leader>l :call ToggleALE()<CR>
+nnoremap <silent> <Leader>l :call ToggleALE()<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
