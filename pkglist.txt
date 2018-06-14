@@ -26,7 +26,6 @@ libvdpau-va-gl
 libxslt
 libyaml
 linux-headers
-mongodb
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
@@ -42,6 +41,7 @@ tmux
 tree
 ttf-hack
 vim
+whois
 wpa_supplicant
 xclip
 xf86-video-intel
