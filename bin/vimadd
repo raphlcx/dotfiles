@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-usage="Usage: $0 <git_ssh_url>
+usage="Usage: $0 <git_repository_url>
 
 Add vim plugin as git submodule.
 
 Arguments:
 
-  git_ssh_url    Git SSH URL
+  git_repository_url    Git SSH / HTTPS URL
 
 Options:
 
