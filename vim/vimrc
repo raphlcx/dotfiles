@@ -191,6 +191,9 @@ cnoremap glog !git log -p --follow %
 " Run Git blame on the current file
 cnoremap gblame !git blame %
 
+" Run mix format for Elixir source file
+cnoremap mixf !mix format %
+
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
 
