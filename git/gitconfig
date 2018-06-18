@@ -23,7 +23,7 @@
 	dc = diff --cached
 	lo = log --oneline
 	upbr = "!f() { git fetch && git stash && git rebase ${1-origin/master} && git stash pop && git push -f ;}; f"
-	pr = pull-request
+	plr = pull-request
 	b = branch
 	s = status --short --branch
 	lg = log --graph --oneline
