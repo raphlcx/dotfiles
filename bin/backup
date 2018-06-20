@@ -42,14 +42,14 @@ mkdir -p "$backup_dir"
 echo "  Backing up to $backup_dir ..."
 
 # Project files
-7z a -mx=0 "$backup_dir/p" ~/Downloads/p
+7z a -mx=0 "$backup_dir/p" "$HOME/Downloads/p"
 
 # Other user files
 ## .gnupg
 ## .ssh
 7z a -mx=0 "$backup_dir/arch" \
-  ~/.gnupg \
-  ~/.ssh
+  "$HOME/.gnupg" \
+  "$HOME/.ssh"
 
 # Move backup files to external drive
 if [ $backup_move ]

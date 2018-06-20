@@ -26,7 +26,7 @@ alias ns='netctl start'
 alias nst='netctl stop'
 alias be='bundle exec'
 alias g='hub'
-alias hdev='ssh-add ~/.ssh/dev'
+alias hdev="ssh-add $HOME/.ssh/dev"
 alias xclip='xclip -selection c'
 alias zz='xset dpms force off'
 alias zzl='xset dpms force off && i3lock -e'
@@ -41,8 +41,8 @@ complete -o bashdefault -o default -o nospace -F _git g
 #
 # Activate asdf
 #
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
 
 asdf-unset () {
   PATH="${PATH//$HOME\/.asdf\/bin:/}"

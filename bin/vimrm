@@ -30,8 +30,8 @@ esac
 done
 
 name=$1
-vimdir=~/.vim
+vimdir="$HOME/.vim"
 
-git -C $vimdir submodule deinit -f $vimdir/bundle/$name
-git -C $vimdir rm -rf $vimdir/bundle/$name
-rm -rf $vimdir/.git/modules/bundle/$name
+git -C "$vimdir" submodule deinit -f "$vimdir/bundle/$name"
+git -C "$vimdir" rm -rf "$vimdir/bundle/$name"
+rm -rf "$vimdir/.git/modules/bundle/$name"

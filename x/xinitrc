@@ -1,4 +1,4 @@
-xrdb -merge ~/.Xresources
+xrdb -merge "$HOME/.Xresources"
 
 ! Keyboard
 ! Caps lock to Escape

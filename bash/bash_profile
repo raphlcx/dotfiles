@@ -23,4 +23,4 @@ export PATH="$HOME/.local/bin:$PATH"
 #
 # Source bashrc
 #
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
