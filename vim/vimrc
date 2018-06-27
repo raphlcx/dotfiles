@@ -209,14 +209,6 @@ nnoremap <Leader>2 @:<CR>
 " Use black hole register
 nnoremap <Leader>' "_
 
-" Range from current line
-nnoremap <Leader>- :,-
-nnoremap <Leader>+ :,+
-
-" Change current directory for active window to that
-" of the file being edited
-nnoremap <Leader>cd :lcd %:p:h<CR>:pwd<CR>
-
 " Toggle ALE - w0rp/ale
 function! ToggleALE()
   ALEToggle
