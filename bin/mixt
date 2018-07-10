@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# For Elixir Mix project, watch for file changes and run tests
+
+inotifywait -m -e MODIFY -r lib/ test/ | mix test --stale --listen-on-stdin "$1"
