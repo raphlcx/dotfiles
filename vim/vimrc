@@ -186,16 +186,16 @@ let html_no_rendering = 1
 cnoremap w!! w !sudo tee > /dev/null %
 
 " View Git commit history of the current file
-cnoremap gl !git log -p --follow %
+nnoremap <Leader>gl :!git log -p --follow %<CR>
 
 " Run Git blame on the current file
-cnoremap gb !git blame %
+nnoremap <Leader>gb :!git blame %<CR>
 
 " Run Git diff on the current file
-cnoremap gd !git diff %
+nnoremap <Leader>gd :!git diff %<CR>
 
 " Run mix format for Elixir source file
-cnoremap mixf !mix format %
+nnoremap <Leader>mixf :!mix format %<CR>
 
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
