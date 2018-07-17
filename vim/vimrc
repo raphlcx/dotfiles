@@ -180,26 +180,22 @@ augroup END
 let html_no_rendering = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Abbreviations
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" View Git commit history of the current file
-cabbrev gl !git log -p --follow %
-
-" Run Git blame on the current file
-cabbrev gb !git blame %
-
-" Run Git diff on the current file
-cabbrev gd !git diff %
-
-" Run mix format for Elixir source file
-cabbrev mixf !mix format %<CR>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Write buffer to root-owned file
 cnoremap w!! w !sudo tee > /dev/null %
+
+" View Git commit history of the current file
+nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
+
+" Run Git blame on the current file
+nnoremap <Leader>gb<CR> :!git blame %<CR>
+
+" Run Git diff on the current file
+nnoremap <Leader>gd<CR> :!git diff %<CR>
+
+" Run mix format for Elixir source file
+nnoremap <Leader>mixf<CR> :!mix format %<CR>
 
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
