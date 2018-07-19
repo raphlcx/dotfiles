@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 # Generate tag file
+
 ctags -R --exclude=node_modules --exclude=vendor/bundle
