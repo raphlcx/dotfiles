@@ -3,5 +3,4 @@ facetimehd-firmware
 google-chrome
 mbpfan-git
 mpv-light
-rxvt-unicode-cvs-patched-wideglyphs
 tealdeer
