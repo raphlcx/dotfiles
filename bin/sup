@@ -19,6 +19,7 @@ echo ""
 
 for i in $HOME/Downloads/aur/*;
 do
+  echo "Checking $(basename "$i")..."
   git -C "$i" pull;
 done
 
