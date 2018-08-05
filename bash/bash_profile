@@ -8,6 +8,9 @@
 ## Global editor
 export EDITOR=vim
 
+## Terminal
+export TERMINAL=urxvt
+
 ## ls colors
 export LS_COLORS='rs=0:ex=00;32'
 
