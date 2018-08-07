@@ -170,6 +170,12 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Disable auto-inserting of comment leader
+augroup disablecommentleaderformatting
+  au!
+  au BufNewFile,BufRead * setlocal formatoptions-=cro
+augroup END
+
 augroup filetypespecificsettings
   au!
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
