@@ -189,6 +189,9 @@ let html_no_rendering = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Save visual selection to clipboard (xclip)
+vnoremap <Leader>cp :w ! xclip -selection c<CR>
+
 " Write buffer to root-owned file
 cnoremap w!! w !sudo tee > /dev/null %
 
