@@ -28,6 +28,7 @@
 	s = status --short --branch
 	lg = log --graph --oneline
 	bb = !git rev-parse --abbrev-ref HEAD
+	ri = rebase -i
 [push]
 	default = simple
 [commit]
