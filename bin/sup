@@ -19,8 +19,9 @@ echo ""
 
 for i in $HOME/Downloads/aur/*;
 do
-  echo "Checking $(basename "$i")..."
-  git -C "$i" pull;
+  echo "Cleaning and checking $(basename "$i")..."
+  git -C "$i" clean -qf
+  git -C "$i" pull
 done
 
 echo ""
