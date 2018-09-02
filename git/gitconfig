@@ -29,6 +29,7 @@
 	lg = log --graph --oneline
 	bb = !git rev-parse --abbrev-ref HEAD
 	ri = rebase -i
+	cp = cherry-pick
 [push]
 	default = simple
 [commit]
