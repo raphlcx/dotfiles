@@ -1,0 +1,37 @@
+# Generic
+set ssl_force_tls
+set sleep_time = 0
+set timeout = 15
+set mail_check = 60
+set header_cache = ~/.cache/mutt
+set message_cachedir = ~/.cache/mutt
+set fast_reply
+set delete
+unset help
+unset mark_old
+unset user_agent
+
+# Index view
+set sort = threads
+
+# Pager view
+set pager_stop
+set tilde
+unset markers
+
+# Key bindings
+bind index k previous-entry
+bind index j next-entry
+bind index g first-entry
+bind index G last-entry
+bind index ^ imap-fetch-mail
+bind pager k previous-line
+bind pager j next-line
+bind pager \Cu half-up
+bind pager \Cd half-down
+bind pager b previous-page
+bind pager g top
+bind pager G bottom
+
+# Server configurations
+source ~/.mutt/account

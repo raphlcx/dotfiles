@@ -31,6 +31,11 @@ $log '  gnupg'
 $create ~/.gnupg
 $link $cwd/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
+$log '  mutt'
+$create ~/.mutt
+$create ~/.cache/mutt
+$link $cwd/mutt/muttrc ~/.mutt/muttrc
+
 $log '  python'
 $create ~/.pip
 $link $cwd/python/pip.conf ~/.pip/pip.conf
