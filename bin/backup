@@ -47,9 +47,11 @@ echo "  Backing up to $backup_dir ..."
 # Other user files
 ## .gnupg
 ## .ssh
+## .mutt
 7z a -mx=0 "$backup_dir/arch" \
   "$HOME/.gnupg" \
-  "$HOME/.ssh"
+  "$HOME/.ssh" \
+  "$HOME/.mutt"
 
 # Move backup files to external drive
 if [ $backup_move ]
