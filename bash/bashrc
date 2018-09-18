@@ -22,8 +22,9 @@ export GPG_TTY=$(tty)
 alias ls='ls --color=auto'
 alias ll='ls -alv --group-directories-first'
 alias pig='ping google.com'
-alias ns='netctl start'
-alias nst='netctl stop'
+alias ns='sudo netctl start'
+alias nsr='sudo netctl restart'
+alias nst='sudo netctl stop'
 alias be='bundle exec'
 alias g='hub'
 alias hdev="ssh-add $HOME/.ssh/dev"
