@@ -58,6 +58,8 @@ if [ $backup_move ]
 then
   external_dir="/mnt/backup"
 
+  mkdir -p "$external_dir"
+
   echo "  Removing old backup at $external_dir/$backup_dirname ..."
   rm -r "$external_dir/$backup_dirname"
 
