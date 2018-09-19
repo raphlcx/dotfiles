@@ -3,9 +3,9 @@ alsa-utils
 android-tools
 android-udev
 bash-completion
+dialog
 dmenu
 erlang-nox
-exfat-utils
 fcitx-configtool
 fcitx-gtk3
 fd
@@ -25,6 +25,7 @@ libvdpau-va-gl
 libxslt
 libyaml
 linux-headers
+mutt
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
@@ -32,7 +33,6 @@ p7zip
 postgresql
 pulseaudio-alsa
 redis
-rustup
 rxvt-unicode
 scrot
 the_silver_searcher
