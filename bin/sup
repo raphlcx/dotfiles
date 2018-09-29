@@ -17,7 +17,7 @@ echo "   AUR repositories"
 echo "======================================"
 echo ""
 
-for i in $HOME/Downloads/aur/*;
+for i in "$HOME/.aur/"*;
 do
   echo "Cleaning and checking $(basename "$i")..."
   git -C "$i" clean -qf
