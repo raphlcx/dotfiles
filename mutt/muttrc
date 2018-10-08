@@ -25,8 +25,8 @@ bind index j next-entry
 bind index g first-entry
 bind index G last-entry
 bind index ^ imap-fetch-mail
-bind pager k previous-line
-bind pager j next-line
+bind pager \Cy previous-line
+bind pager \Ce next-line
 bind pager \Cu half-up
 bind pager \Cd half-down
 bind pager b previous-page
