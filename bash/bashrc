@@ -8,7 +8,7 @@
 #
 # Shell prompt
 #
-PS1="\n\w\n"
+PS1="\n\w\n$ "
 
 #
 # Environment variable
