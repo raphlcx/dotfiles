@@ -49,6 +49,3 @@
 	prune = true
 [diff]
 	tool = vimdiff
-[color]
-	status = false
-	branch = false
