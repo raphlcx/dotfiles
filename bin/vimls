@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# List all installed vim plugins
-
-git -C "$HOME/.vim" submodule

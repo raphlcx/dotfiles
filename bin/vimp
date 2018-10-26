@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+usage="
+Install, remove, and list installed vim plugins.
+
+Usage:
+
+  $(basename "$0") [options] <subcommand>
+
+Subcommands:
+
+  i <url>     Install a plugin. Accepts a Git SSH or HTTPS URL
+  u <name>    Remove an installed plugin. Accepts the name of the plugin,
+              which is the Git repository name
+  l           List all installed plugins
+
+Options:
+
+  -h    Show this help message"
+
+_install () {
+  local url="$1"
+  local name
+  name=$(basename "$url")
+  name=${name%.git}
+
+  git -C "$HOME/.vim" submodule add "$url" "bundle/$name"
+}
+
+_uninstall () {
+  local name="$1"
+  local vimdir="$HOME/.vim"
+
+  git -C "$vimdir" submodule deinit -f "$vimdir/bundle/$name"
+  git -C "$vimdir" rm -rf "$vimdir/bundle/$name"
+  rm -rf "$vimdir/.git/modules/bundle/$name"
+}
+
+_list () {
+  git -C "$HOME/.vim" submodule
+}
+
+if [ $# -eq 0 ]
+then
+  echo "$usage"
+  exit 1
+fi
+
+for arg in "$@"
+do
+case $arg in
+i)
+  shift
+  [ -z "$1" ] && echo "$usage" && exit 1
+  _install "$1"
+  exit 0
+  ;;
+u)
+  shift
+  [ -z "$1" ] && echo "$usage" && exit 1
+  _uninstall "$1"
+  exit 0
+  ;;
+l)
+  _list
+  exit 0
+  ;;
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+*)
+  echo "$usage"
+  exit 1
+  ;;
+esac
+done
