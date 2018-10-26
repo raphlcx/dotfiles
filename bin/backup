@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-usage="Usage: $0 [-e] [-m]
-
-Backup files in an archive file, and optionally move the archive
+usage="
+Backup files to an archive file, and optionally move the archive
 to external drive.
+
+Usage:
+
+  $(basename "$0") [options]
 
 Options:
 
@@ -12,9 +15,9 @@ Options:
 
   -h    Show this help message"
 
-for i in "$@"
+for arg in "$@"
 do
-case $i in
+case $arg in
 -e)
   eject_drive=1
   shift
@@ -61,7 +64,7 @@ then
   mkdir -p "$external_dir"
 
   echo "  Removing old backup at $external_dir/$backup_dirname ..."
-  rm -r "$external_dir/$backup_dirname"
+  rm -r "${external_dir:?}/$backup_dirname"
 
   echo "  Moving backup from $backup_dir to $external_dir ..."
   mv "$backup_dir" "$external_dir"

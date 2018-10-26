@@ -17,11 +17,11 @@ echo "   AUR repositories"
 echo "======================================"
 echo ""
 
-for i in "$HOME/.aur/"*;
+for dir in "$HOME/.aur/"*;
 do
-  echo "Cleaning and checking $(basename "$i")..."
-  git -C "$i" clean -qf
-  git -C "$i" pull
+  echo "Cleaning and checking $(basename "$dir")..."
+  git -C "$dir" clean -qf
+  git -C "$dir" pull
 done
 
 echo ""
