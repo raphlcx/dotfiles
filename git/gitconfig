@@ -44,7 +44,8 @@
 	resolveConflict = false
 	detachedHead = false
 [rebase]
-	autosquash = true
+	autoSquash = true
+	autoStash = true
 [fetch]
 	prune = true
 [diff]
