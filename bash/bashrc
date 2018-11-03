@@ -23,14 +23,11 @@ alias ls='ls --color=never'
 alias ll='ls -alv --group-directories-first'
 alias pig='ping google.com'
 alias ns='sudo netctl start'
-alias nsr='sudo netctl restart'
-alias nst='sudo netctl stop'
 alias be='bundle exec'
 alias g='hub'
 alias hdev="ssh-add $HOME/.ssh/dev"
 alias xclip='xclip -selection c'
 alias zz='xset dpms force off'
-alias zzl='xset dpms force off && i3lock -e'
 
 #
 # Tab completion
