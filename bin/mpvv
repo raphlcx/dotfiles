@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# Play video in fullscreen with subtitle file
-
-mpv --fs "$1" --sub-file "$2"
