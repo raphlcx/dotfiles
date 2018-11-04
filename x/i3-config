@@ -140,9 +140,6 @@ mode "$mode_app_launcher" {
 # start a terminal
 bindsym $mod+Return exec --no-startup-id urxvt
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-
 # Screen capture
 bindsym $mod+Mod1+3 exec scrot '%F-%H%M%S_$wx$h.png' -e 'mv $f ~/Downloads/'
 
