@@ -1,6 +1,13 @@
+# Disable terminal bell
 set bell-style none
+
+# Use vi key bindings
 set editing-mode vi
+
+# Append slash to symlink directory completion
 set mark-symlinked-directories on
 
+# on vi insert mode
 set keymap vi-insert
+# Control-L to clear screen
 \C-l: clear-screen
