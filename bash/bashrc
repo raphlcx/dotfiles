@@ -30,13 +30,6 @@ alias xclip='xclip -selection c'
 alias zz='xset dpms force off'
 
 #
-# Tab completion
-#
-## completion for `g' alias
-_completion_loader hub
-complete -o bashdefault -o default -o nospace -F _git g
-
-#
 # Activate asdf
 #
 . "$HOME/.asdf/asdf.sh"

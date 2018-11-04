@@ -18,6 +18,7 @@ $link $cwd/bin ~/.local/bin
 $log '  bash'
 $link $cwd/bash/bashrc ~/.bashrc
 $link $cwd/bash/bash_profile ~/.bash_profile
+$link $cwd/bash/bash_completion ~/.bash_completion
 
 $log '  fontconfig'
 $create ~/.config/fontconfig

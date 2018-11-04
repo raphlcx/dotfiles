@@ -1,0 +1,9 @@
+# `hub' command completion for the `g' alias
+_g () {
+  if ! declare -F _git > /dev/null && declare -F _completion_loader > /dev/null; then
+    _completion_loader hub
+  fi
+  _git
+}
+
+complete -o bashdefault -o default -o nospace -F _g g
