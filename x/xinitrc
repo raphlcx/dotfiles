@@ -1,26 +1,26 @@
 xrdb -merge "$HOME/.Xresources"
 
-! Keyboard
-! Caps lock to Escape
+# Keyboard
+## Caps lock to Escape
 setxkbmap -option caps:escape
 
-! Typematic delay and rate
+# Typematic delay and rate
 xset r rate 200 30
 
-! Trackpad
-! Tapping Enabled
+# Trackpad
+## Tapping Enabled
 xinput set-prop --type=int --format=8 bcm5974 'libinput Tapping Enabled' 1
 
-! Natural Scrolling Enabled
+## Natural Scrolling Enabled
 xinput set-prop --type=int --format=8 bcm5974 'libinput Natural Scrolling Enabled' 1
 
-! Input method modules
+# Input method modules
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-! Start fcitx
+# Start fcitx
 fcitx-autostart &
 
-! Start i3 window manager
+# Start i3 window manager
 exec i3
