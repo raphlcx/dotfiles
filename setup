@@ -18,7 +18,10 @@ $link "$cwd/bin" "$HOME/.local/bin"
 $log '  bash'
 $link "$cwd/bash/bashrc" "$HOME/.bashrc"
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
-$link "$cwd/bash/bash_completion" "$HOME/.bash_completion"
+
+$log '  bash (completions)'
+$create "$HOME/.local/share/bash-completion"
+$link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
 
 $log '  fontconfig'
 $create "$HOME/.config/fontconfig"
