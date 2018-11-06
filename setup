@@ -69,12 +69,12 @@ $log '  x'
 $link "$cwd/x/Xresources" "$HOME/.Xresources"
 $link "$cwd/x/xinitrc" "$HOME/.xinitrc"
 
-$log '  x (i3)'
+$log '  i3'
 $create "$HOME/.config/i3"
-$link "$cwd/x/i3-config" "$HOME/.config/i3/config"
+$link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
 
-$log '  x (i3status)'
+$log '  i3status'
 $create "$HOME/.config/i3status"
-$link "$cwd/x/i3status-config" "$HOME/.config/i3status/config"
+$link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
 $log 'Done.'
