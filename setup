@@ -77,4 +77,8 @@ $log '  i3status'
 $create "$HOME/.config/i3status"
 $link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
+$log '  gtk3'
+$create "$HOME/.config/gtk-3.0"
+$link "$cwd/gtk3/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
+
 $log 'Done.'
