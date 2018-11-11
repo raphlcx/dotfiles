@@ -134,7 +134,7 @@ mode "$mode_app_launcher" {
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
-  bindsym $mod+r mode "default"
+  bindsym $mod+x mode "default"
 }
 
 # start a terminal
