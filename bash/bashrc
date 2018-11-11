@@ -37,3 +37,10 @@ alias zz='xset dpms force off'
 . "$HOME/.asdf/asdf.sh"
 # shellcheck source=/dev/null
 . "$HOME/.asdf/completions/asdf.bash"
+
+asdf-unset () {
+  PATH="${PATH//$HOME\/.asdf\/bin:/}"
+  PATH="${PATH//$HOME\/.asdf\/shims:/}"
+  complete -r asdf
+  hash -r
+}
