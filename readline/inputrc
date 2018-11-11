@@ -7,6 +7,18 @@ set editing-mode vi
 # Append slash to symlink directory completion
 set mark-symlinked-directories on
 
+# Disable arrow keys in vi mode
+$if mode=vi
+  "\eOD":""
+  "\e[D":""
+  "\eOC":""
+  "\e[C":""
+  "\eOA":""
+  "\e[A":""
+  "\eOB":""
+  "\e[B":""
+$endif
+
 # on vi insert mode
 set keymap vi-insert
 # Control-L to clear screen
