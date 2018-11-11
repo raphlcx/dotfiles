@@ -124,13 +124,16 @@ mode "$mode_resize" {
 }
 
 # application launch
-set $mode_app_launcher Launch [f]irefox [g]oogle-chrome-stable
+set $mode_app_launcher Launch [F][f]irefox [G][g]oogle-chrome-stable
 
 bindsym $mod+x mode $mode_app_launcher
 
 mode "$mode_app_launcher" {
   bindsym f exec --no-startup-id firefox; mode "default"
+  bindsym Shift+f exec --no-startup-id firefox --private-window; mode "default"
+
   bindsym g exec --no-startup-id google-chrome-stable; mode "default"
+  bindsym Shift+g exec --no-startup-id google-chrome-stable --incognito; mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
