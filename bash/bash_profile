@@ -5,8 +5,11 @@
 #
 # Environment variable
 #
-## Global editor
+## Editor
 export EDITOR=vim
+
+## Pager
+export PAGER=less
 
 ## Terminal
 export TERMINAL=urxvt
