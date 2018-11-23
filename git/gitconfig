@@ -30,6 +30,7 @@
 	bb = !git rev-parse --abbrev-ref HEAD
 	ri = rebase -i
 	cp = cherry-pick
+	sta = stash apply
 [push]
 	default = simple
 [commit]
