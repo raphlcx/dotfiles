@@ -16,6 +16,7 @@ URxvt.scrollBar: False
 URxvt.pointerBlank: True
 URxvt.pointerBlankDelay: 987654321
 
+URxvt.color4: #187fe2
 URxvt.color12: #1e90ff
 
 URxvt.iso14755: False
