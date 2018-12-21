@@ -27,7 +27,7 @@ systemctl --user enable ssh-agent.service
 To prepare `pkglist.txt`:
 
 ```
-comm -23 <(pacman -Qqntt | sort) <(pacman -Sqg base base-devel | sort) > pkglist.txt
+comm -23 <(pacman -Qqntte | sort) <(pacman -Sqg base base-devel | sort) > pkglist.txt
 ```
 
 For `pkglist-aur.txt`:
