@@ -88,9 +88,6 @@ set number
 " Use relative line mumber
 set relativenumber
 
-" Find the current line quickly
-set cursorline
-
 " Always show statusline
 set laststatus=2
 
