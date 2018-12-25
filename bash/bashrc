@@ -28,7 +28,6 @@ alias ls='ls --color=never'
 alias ns='sudo netctl start'
 alias pig='ping google.com'
 alias xclip='xclip -selection c'
-alias zz='xset dpms force off'
 
 #
 # Activate asdf
