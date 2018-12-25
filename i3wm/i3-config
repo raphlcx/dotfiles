@@ -61,7 +61,7 @@ for_window [class="URxvt"] border none
 # Layout
 #
   # Split in horizontal orientation
-  bindsym $mod+g split h
+  bindsym $mod+b split h
 
   # Split in vertical orientation
   bindsym $mod+v split v
