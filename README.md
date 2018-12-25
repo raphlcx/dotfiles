@@ -41,5 +41,5 @@ pacman -Qqm > pkglist-aur.txt
 Font configurations are found in multiple locations:
 
  - `fontconfig/fonts.conf` for global serif, sans, and monospace font configurations on applications that use fontconfig
- - `x/i3-config` for i3 font
+ - `i3wm/i3-config` for i3 font
  - `x/Xresources` for urxvt font
