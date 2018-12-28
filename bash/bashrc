@@ -30,16 +30,36 @@ alias pig='ping google.com'
 alias xclip='xclip -selection c'
 
 #
-# Activate asdf
+# asdf
 #
-# shellcheck source=/dev/null
-. "$HOME/.asdf/asdf.sh"
-# shellcheck source=/dev/null
-. "$HOME/.asdf/completions/asdf.bash"
+# Activate or deactivate asdf based on the presence of
+# .tool-versions file. Guard is added to prevent unnecessary
+# activation and deactivation, if asdf is already activated
+# or deactivated respectively.
+_ASDF_ACTIVE=0
 
-asdf-unset () {
-  PATH="${PATH//$HOME\/.asdf\/bin:/}"
-  PATH="${PATH//$HOME\/.asdf\/shims:/}"
-  complete -r asdf
-  hash -r
+_asdf_auto () {
+  if [ -f "$PWD/.tool-versions" ]
+  then
+    [ $_ASDF_ACTIVE -eq 1 ] && return
+
+    # shellcheck source=/dev/null
+    . "$HOME/.asdf/asdf.sh"
+    # shellcheck source=/dev/null
+    . "$HOME/.asdf/completions/asdf.bash"
+
+    _ASDF_ACTIVE=1
+  else
+    [ $_ASDF_ACTIVE -eq 0 ] && return
+
+    PATH="${PATH//$HOME\/.asdf\/bin:/}"
+    PATH="${PATH//$HOME\/.asdf\/shims:/}"
+    complete -r asdf
+    hash -r
+
+    _ASDF_ACTIVE=0
+  fi
 }
+
+# Trigger asdf activation or otherwise after command execution
+trap '[ "$BASH_COMMAND" = "$PROMPT_COMMAND" ] && _asdf_auto' DEBUG

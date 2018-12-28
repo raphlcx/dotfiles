@@ -38,8 +38,8 @@ echo "   asdf and its plugins"
 echo "======================================"
 echo ""
 
-asdf update
-asdf plugin-update --all
+"$HOME/.asdf/bin/asdf" update
+"$HOME/.asdf/bin/asdf" plugin-update --all
 
 echo ""
 echo "======================================"
