@@ -175,6 +175,8 @@ augroup filetypespecificsettings
 
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
+
+  au BufRead,BufNewFile *.bats set ft=sh
 augroup END
 
 " Disable special text rendering on html
