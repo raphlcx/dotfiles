@@ -20,8 +20,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 ## SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-## Disable less history
+## Disable history files
 export LESSHISTFILE=-
+export NODE_REPL_HISTORY=""
+export PSQL_HISTORY=/dev/null
 
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
