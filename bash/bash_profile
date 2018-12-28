@@ -3,15 +3,17 @@
 #
 
 #
+# Shell options
+#
+## Append to history file when shell exits
+shopt -s histappend
+
+#
 # Environment variable
 #
-## Editor
+## Standard programs
 export EDITOR=vim
-
-## Pager
 export PAGER=less
-
-## Terminal
 export TERMINAL=urxvt
 
 ## fzf include hidden files and exclude certain directories
@@ -20,7 +22,12 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 ## SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-## Disable history files
+## Increase bash history saves
+export HISTSIZE=5000
+## Ignore bash history duplicates
+export HISTCONTROL=ignoredups:erasedups
+
+## Disable program history files
 export LESSHISTFILE=-
 export NODE_REPL_HISTORY=""
 export PSQL_HISTORY=/dev/null
