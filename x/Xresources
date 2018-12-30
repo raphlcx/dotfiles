@@ -1,25 +1,2 @@
 ! DPI scaling
 Xft.dpi: 180
-
-! urxvt
-URxvt.background: black
-URxvt.foreground: white
-URxvt.cursorColor: gray
-
-URxvt.font: xft:Hack:size=9:antialias=false,autohint=false
-URxvt.letterSpace: 0
-
-URxvt.saveLines: 0
-URxvt.scrollBar: False
-
-URxvt.pointerBlank: True
-URxvt.pointerBlankDelay: 987654321
-
-URxvt.color4: #187fe2
-URxvt.color12: #1e90ff
-
-URxvt.iso14755: False
-URxvt.iso14755_52: False
-
-URxvt.perl-ext:
-URxvt.perl-ext-common:

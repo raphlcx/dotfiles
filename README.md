@@ -14,6 +14,14 @@ Install system dependencies:
 pacman -S - < pkglist.txt
 ```
 
+Install custom build of st terminal:
+
+```
+cd st
+makepkg -sirc
+git clean -f .
+```
+
 Start ssh-agent on shell login:
 
 ```
@@ -42,4 +50,4 @@ Font configurations are found in multiple locations:
 
  - `fontconfig/fonts.conf` for global serif, sans, and monospace font configurations on applications that use fontconfig
  - `i3wm/i3-config` for i3 font
- - `x/Xresources` for urxvt font
+ - `st/config.h` for st terminal font

@@ -23,14 +23,14 @@ client.unfocused        #808080 #808080 #ffffff #000000 #000000
 hide_edge_borders both
 
 # Hide border for terminal emulator
-for_window [class="URxvt"] border none
+for_window [class="st"] border none
 
 ## Key bindings
 #
 # Basics
 #
 # Start terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id st
 
 # Kill focused window
 bindsym $mod+Shift+q kill
