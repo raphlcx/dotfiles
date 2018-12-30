@@ -257,7 +257,11 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 let g:netrw_banner = 0
 
 "" Raphx/modest
-colorscheme modest-light
+if &term == 'linux'
+  colorscheme modest-dark
+else
+  colorscheme modest-light
+endif
 
 "" w0rp/ale
 let g:ale_set_highlights = 0
