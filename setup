@@ -19,7 +19,7 @@ $log '  bash'
 $link "$cwd/bash/bashrc" "$HOME/.bashrc"
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
 
-$log '  bash (completions)'
+$log '  bash completions'
 $create "$HOME/.local/share/bash-completion"
 $link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
 
@@ -47,7 +47,7 @@ $log '  ruby'
 $link "$cwd/ruby/gemrc" "$HOME/.gemrc"
 $link "$cwd/ruby/irbrc" "$HOME/.irbrc"
 
-$log '  ruby (bundler)'
+$log '  ruby bundler'
 $create "$HOME/.bundle"
 $link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
 
