@@ -40,10 +40,6 @@ $create "$HOME/.mutt"
 $create "$HOME/.cache/mutt"
 $link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
 
-$log '  python'
-$create "$HOME/.config/pip"
-$link "$cwd/python/pip.conf" "$HOME/.config/pip/pip.conf"
-
 $log '  readline'
 $link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
