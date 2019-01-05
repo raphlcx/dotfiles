@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Start QEMU virtual machine
+
+# hv_* options are Windows Hyper-V related
+
+img_path="$HOME/Downloads/vm/$1.qcow2"
+
+QEMU_AUDIO_DRV=alsa \
+  qemu-system-x86_64 \
+    -enable-kvm \
+    -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
+    -smp cores=2 \
+    -m 4096 \
+    -soundhw hda \
+    "$img_path"
