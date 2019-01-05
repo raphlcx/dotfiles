@@ -24,15 +24,15 @@ linux-headers
 mutt
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 openssh
 p7zip
 postgresql
+qemu
 redis
-rxvt-unicode
 scrot
 the_silver_searcher
 tmux
-tree
 ttf-hack
 unzip
 vim
