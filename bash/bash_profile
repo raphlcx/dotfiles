@@ -32,6 +32,9 @@ export LESSHISTFILE=-
 export NODE_REPL_HISTORY=""
 export PSQL_HISTORY=/dev/null
 
+## GTK DPI scaling
+export GDK_SCALE=2
+
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
 

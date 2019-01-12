@@ -62,7 +62,6 @@ $log '  vim'
 $link "$cwd/vim/vimrc" "$HOME/.vimrc"
 
 $log '  x'
-$link "$cwd/x/Xresources" "$HOME/.Xresources"
 $link "$cwd/x/xinitrc" "$HOME/.xinitrc"
 
 $log '  i3'
