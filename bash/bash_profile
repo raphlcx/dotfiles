@@ -35,6 +35,11 @@ export PSQL_HISTORY=/dev/null
 ## GTK DPI scaling
 export GDK_SCALE=2
 
+## Input method framework
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 ## user home bin
 export PATH="$HOME/.local/bin:$PATH"
 

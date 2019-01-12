@@ -17,13 +17,8 @@ xinput set-prop --type=int --format=8 bcm5974 'libinput Tapping Enabled' 1
 xinput set-prop --type=int --format=8 bcm5974 'libinput Natural Scrolling Enabled' 1
 
 #
-# Input method
-#
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
 # Start fcitx
+#
 fcitx-autostart &
 
 #
