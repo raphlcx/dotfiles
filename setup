@@ -11,10 +11,6 @@ link='ln -sfn'
 ## Start setup
 $log 'Setting up dotfiles ...'
 
-$log '  user bin directory'
-$create "$HOME/.local"
-$link "$cwd/bin" "$HOME/.local/bin"
-
 $log '  bash'
 $link "$cwd/bash/bashrc" "$HOME/.bashrc"
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
@@ -22,6 +18,10 @@ $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
 $log '  bash completions'
 $create "$HOME/.local/share/bash-completion"
 $link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
+
+$log '  user bin directory'
+$create "$HOME/.local"
+$link "$cwd/bin" "$HOME/.local/bin"
 
 $log '  fontconfig'
 $create "$HOME/.config/fontconfig"
@@ -34,6 +34,18 @@ $link "$cwd/git/gitignore" "$HOME/.gitignore"
 $log '  gnupg'
 $create "$HOME/.gnupg"
 $link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+
+$log '  gtk3'
+$create "$HOME/.config/gtk-3.0"
+$link "$cwd/gtk3/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
+
+$log '  i3wm'
+$create "$HOME/.config/i3"
+$link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
+
+$log '  i3wm i3status'
+$create "$HOME/.config/i3status"
+$link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
 $log '  mutt'
 $create "$HOME/.mutt"
@@ -63,17 +75,5 @@ $link "$cwd/vim/vimrc" "$HOME/.vimrc"
 
 $log '  x'
 $link "$cwd/x/xinitrc" "$HOME/.xinitrc"
-
-$log '  i3'
-$create "$HOME/.config/i3"
-$link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
-
-$log '  i3status'
-$create "$HOME/.config/i3status"
-$link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
-
-$log '  gtk3'
-$create "$HOME/.config/gtk-3.0"
-$link "$cwd/gtk3/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 
 $log 'Done.'
