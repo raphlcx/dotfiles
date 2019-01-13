@@ -52,6 +52,10 @@ $create "$HOME/.mutt"
 $create "$HOME/.cache/mutt"
 $link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
 
+$log '  pacman'
+$create "$HOME/.config/pacman"
+$link "$cwd/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
+
 $log '  readline'
 $link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
