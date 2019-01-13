@@ -56,3 +56,4 @@ Font configurations are found in multiple locations:
 
  - `fontconfig/fonts.conf` contains global serif, sans-serif, and monospace font configurations for applications that support fontconfig
  - `i3wm/i3-config` for i3 font
+ - `st/config.h` for st font
