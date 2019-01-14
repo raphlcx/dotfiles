@@ -8,8 +8,10 @@ echo "   System upgrade"
 echo "======================================"
 echo ""
 
-sudo pacman -Syyu
-sudo pacman -Sc --noconfirm
+sudo -s -- <<EOF
+pacman -Syyu --noconfirm
+pacman -Sc --noconfirm
+EOF
 
 echo ""
 echo "======================================"
