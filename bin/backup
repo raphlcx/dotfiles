@@ -67,7 +67,7 @@ then
   rm -r "${external_dir:?}/$backup_dirname"
 
   echo "  Moving backup from $backup_dir to $external_dir ..."
-  mv "$backup_dir" "$external_dir"
+  mv "$backup_dir" "$external_dir" && sync
 fi
 
 # Eject external drive
