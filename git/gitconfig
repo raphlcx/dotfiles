@@ -2,7 +2,7 @@
 [user]
 	name = Raphx
 	email = rcxng93@hotmail.com
-	signingkey = 8067129DF46243BF
+	signingkey = F3FCA7B45C2CCD0A
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	c = commit
