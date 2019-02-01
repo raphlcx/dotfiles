@@ -147,22 +147,25 @@ set spelllang=en
 " Temporary files and backups
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Put all temporary files under the same directory
-if exists('*mkdir') && !isdirectory($HOME.'/.vim/files')
-  call mkdir($HOME.'/.vim/files/backup', 'p')
-  call mkdir($HOME.'/.vim/files/swap', 'p')
-  call mkdir($HOME.'/.vim/files/undo', 'p')
-  call mkdir($HOME.'/.vim/files/info', 'p')
-endif
-
 set backup
-set backupdir   =$HOME/.vim/files/backup/
-set backupext   =-vimbackup
+set backupdir   =$HOME/.cache/vim/backup//
+set backupext   =.vimbackup
 set backupskip  =
-set directory   =$HOME/.vim/files/swap//
+set directory   =$HOME/.cache/vim/swap//
 set updatecount =100
 set undofile
-set undodir     =$HOME/.vim/files/undo/
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+set undodir     =$HOME/.cache/vim/undo//
+set viminfo     ='100,n$HOME/.cache/vim/viminfo
+
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, 'p', 0700)
+endif
+if !isdirectory(&directory)
+  call mkdir(&directory, 'p', 0700)
+endif
+if !isdirectory(&undodir)
+  call mkdir(&undodir, 'p', 0700)
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
