@@ -11,7 +11,7 @@ Setup symlinks:
 Install system dependencies:
 
 ```
-pacman -S - < pkglist.txt
+pacman -S --needed - < pkglist.txt
 ```
 
 Install custom build of st terminal:
