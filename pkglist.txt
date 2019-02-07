@@ -4,6 +4,7 @@ android-tools
 android-udev
 bash-completion
 dialog
+docker
 erlang-nox
 fcitx-configtool
 fcitx-gtk3
@@ -18,12 +19,11 @@ inotify-tools
 intel-ucode
 libva-intel-driver
 libvdpau-va-gl
-libxslt
 libyaml
 linux-headers
 mutt
+nmap
 noto-fonts-cjk
-noto-fonts-emoji
 npm
 openssh
 p7zip
@@ -33,9 +33,11 @@ redis
 scrot
 the_silver_searcher
 tmux
+tree
 ttf-hack
 unzip
 vim
+whois
 wpa_supplicant
 xclip
 xf86-video-intel
