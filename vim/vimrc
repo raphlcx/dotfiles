@@ -172,13 +172,8 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""
 augroup filetypespecificsettings
   au!
-  " Disable auto-inserting of comment leader,
-  " except on insert mode
-  au BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=o
-
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
-
   au BufRead,BufNewFile *.bats set ft=sh
 augroup END
 
