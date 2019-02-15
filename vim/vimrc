@@ -175,6 +175,7 @@ augroup filetypespecificsettings
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.bats set ft=sh
+  au BufRead,BufNewFile *.vue syntax sync fromstart
 augroup END
 
 " Disable special text rendering on html
@@ -265,12 +266,17 @@ else
 endif
 
 "" w0rp/ale
+let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
+let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
+
+"" posva/vim-vue
+let g:vue_disable_pre_processors = 1
 
 "" mileszs/ack.vim
 if executable('ag')
