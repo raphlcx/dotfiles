@@ -214,9 +214,6 @@ nnoremap <Leader>a :Ack!<Space>
 " Repeat last command
 nnoremap <Leader>2 @:<CR>
 
-" Use black hole register
-nnoremap <Leader>' "_
-
 " Toggle ALE - w0rp/ale
 function! ToggleALE()
   ALEToggle
