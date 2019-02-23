@@ -40,10 +40,10 @@ echo "   asdf and its plugins"
 echo "======================================"
 echo ""
 
-pushd "$HOME/.asdf"
+pushd "$HOME/.asdf" > /dev/null
 bin/asdf update
 bin/asdf plugin-update --all
-popd
+popd > /dev/null
 
 echo ""
 echo "======================================"
