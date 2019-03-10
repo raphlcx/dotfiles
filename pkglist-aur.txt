@@ -6,3 +6,4 @@ mpv-light
 shellcheck-static
 st
 tealdeer
+timescaledb
