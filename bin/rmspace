@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 usage="
-Substitute all space with underscore in file name for all
-files in current working directory. A custom character can be
-supplied instead to be used in place of underscore.
+Substitute all space characters with underscores for all file
+names in the current working directory.
 
 Usage:
 
@@ -12,6 +11,7 @@ Usage:
 Options:
 
   -c <char>    Character to be used for space character substitution.
+               Defaults to underscore.
 
   -h           Show this help message"
 
