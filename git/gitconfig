@@ -12,7 +12,6 @@
 	r = rebase
 	f = fetch
 	p = push
-	cf = config
 	l = log
 	ck = checkout
 	pl = pull
@@ -22,7 +21,6 @@
 	stl = stash list
 	dc = diff --cached
 	lo = log --oneline
-	upbr = "!f() { git fetch && git stash && git rebase ${1-origin/master} && git stash pop && git push -f ;}; f"
 	plr = pull-request --push
 	b = branch
 	s = status --short --branch
