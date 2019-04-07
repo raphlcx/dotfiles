@@ -6,6 +6,7 @@
 general {
   colors = true
   interval = 1
+  separator = ""
 }
 
 order += "wireless _first_"
