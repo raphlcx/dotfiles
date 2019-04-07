@@ -14,7 +14,7 @@ shopt -s histappend
 ## Standard programs
 export EDITOR=vim
 export PAGER=less
-export TERMINAL=st
+export TERMINAL=alacritty
 
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

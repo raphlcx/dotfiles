@@ -11,6 +11,10 @@ link='ln -sfn'
 ## Start setup
 $log 'Setting up dotfiles ...'
 
+$log '  alacritty'
+$create "$HOME/.config/alacritty"
+$link "$cwd/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+
 $log '  bash'
 $link "$cwd/bash/bashrc" "$HOME/.bashrc"
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"

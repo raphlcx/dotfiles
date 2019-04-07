@@ -22,15 +22,12 @@ client.unfocused        #808080 #808080 #ffffff #000000 #000000
 # Hide all borders
 hide_edge_borders both
 
-# Hide border for terminal emulator
-for_window [class="st"] border none
-
 ## Key bindings
 #
 # Basics
 #
 # Start terminal
-bindsym $mod+Return exec --no-startup-id st
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
