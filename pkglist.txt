@@ -1,4 +1,5 @@
 acpi
+alacritty
 alsa-utils
 android-tools
 android-udev
@@ -38,7 +39,6 @@ unzip
 vim
 whois
 wpa_supplicant
-xclip
 xf86-video-intel
 xorg-server
 xorg-xbacklight
