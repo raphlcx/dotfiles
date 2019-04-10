@@ -39,7 +39,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
 #
 # Navigational
@@ -163,29 +163,29 @@ bindsym $mod+x mode "$mode_app_launcher"
 # Screen capture
 #
 # Full screen capture
-bindsym $mod+Mod1+3 exec scrot '%F-%H%M%S_$wx$h.png' -e 'mv $f ~/Downloads/'
+bindsym $mod+Mod1+3 exec --no-startup-id scrot '%F-%H%M%S_$wx$h.png' -e 'mv $f ~/Downloads/'
 
 # Interative screen capture
-bindsym --release $mod+Mod1+4 exec scrot '%F-%H%M%S_$wx$h.png' -s -e 'mv $f ~/Downloads/'
+bindsym --release $mod+Mod1+4 exec --no-startup-id scrot '%F-%H%M%S_$wx$h.png' -s -e 'mv $f ~/Downloads/'
 
 #
 # Volume control
 #
-bindsym $mod+F10 exec amixer set Master toggle
-bindsym $mod+F11 exec amixer set Master 5%-
-bindsym $mod+F12 exec amixer set Master 5%+
+bindsym $mod+F10 exec --no-startup-id amixer set Master toggle
+bindsym $mod+F11 exec --no-startup-id amixer set Master 5%-
+bindsym $mod+F12 exec --no-startup-id amixer set Master 5%+
 
 #
 # Screen brightness control
 #
-bindsym $mod+F1 exec xbacklight -dec 5
-bindsym $mod+F2 exec xbacklight -inc 5
+bindsym $mod+F1 exec --no-startup-id xbacklight -dec 5
+bindsym $mod+F2 exec --no-startup-id xbacklight -inc 5
 
 #
 # DPMS
 #
 # Turn display off
-bindsym $mod+F3 exec xset dpms force off
+bindsym $mod+F3 exec --no-startup-id xset dpms force off
 
 ## Status Bar
 #
