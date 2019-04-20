@@ -42,7 +42,7 @@ backup_dirname="arch-bk"
 backup_dir="$HOME/Downloads/$backup_dirname"
 mkdir -p "$backup_dir"
 
-echo "  Backing up to $backup_dir ..."
+echo "Backing up to $backup_dir ..."
 
 # Project files
 7z a -mx=0 "$backup_dir/p" "$HOME/Downloads/p"
@@ -63,16 +63,16 @@ then
 
   mkdir -p "$external_dir"
 
-  echo "  Removing old backup at $external_dir/$backup_dirname ..."
+  echo "Removing old backup at $external_dir/$backup_dirname ..."
   rm -r "${external_dir:?}/$backup_dirname"
 
-  echo "  Moving backup from $backup_dir to $external_dir ..."
+  echo "Moving backup from $backup_dir to $external_dir ..."
   mv "$backup_dir" "$external_dir" && sync
 fi
 
 # Eject external drive
 if [ $eject_drive ]
 then
-  echo "  Ejecting external drive ..."
+  echo "Ejecting external drive ..."
   sudo umount -R /mnt
 fi
