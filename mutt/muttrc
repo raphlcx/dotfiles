@@ -20,18 +20,10 @@ set tilde
 unset markers
 
 # Key bindings
-bind index k previous-entry
-bind index j next-entry
-bind index g first-entry
-bind index G last-entry
-bind index ^ imap-fetch-mail
 bind pager \Cy previous-line
 bind pager \Ce next-line
 bind pager \Cu half-up
 bind pager \Cd half-down
-bind pager b previous-page
-bind pager g top
-bind pager G bottom
 
 # Server configurations
 source ~/.mutt/account
