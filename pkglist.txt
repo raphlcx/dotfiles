@@ -1,11 +1,11 @@
 acpi
 alacritty
+alacritty-terminfo
 alsa-utils
 android-tools
 android-udev
 bash-completion
 dialog
-docker
 erlang-nox
 exfat-utils
 fcitx-configtool
@@ -13,6 +13,7 @@ fcitx-gtk3
 fd
 firefox
 fzf
+grim
 hub
 hunspell
 i3status
@@ -22,6 +23,7 @@ intel-ucode
 libva-intel-driver
 libvdpau-va-gl
 libyaml
+light
 linux-headers
 mutt
 nmap
@@ -31,6 +33,8 @@ openssh
 p7zip
 redis
 scrot
+slurp
+sway
 the_silver_searcher
 tmux
 tree
@@ -38,9 +42,11 @@ ttf-hack
 unzip
 vim
 whois
+wl-clipboard
 wpa_supplicant
 xf86-video-intel
 xorg-server
+xorg-server-xwayland
 xorg-xbacklight
 xorg-xinit
 xorg-xinput
