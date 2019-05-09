@@ -14,14 +14,6 @@ Install system dependencies:
 pacman -S --needed - < pkglist.txt
 ```
 
-Install custom build of st terminal:
-
-```
-cd st
-makepkg -sirc
-git clean -f .
-```
-
 Install AUR packages manually, each installation is done with:
 
 ```
@@ -56,4 +48,3 @@ Font configurations are found in multiple locations:
 
  - `fontconfig/fonts.conf` contains global serif, sans-serif, and monospace font configurations for applications that support fontconfig
  - `i3wm/i3-config` for i3 font
- - `st/config.h` for st font
