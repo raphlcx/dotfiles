@@ -19,7 +19,7 @@ client.focused          #000000 #000000 #ffffff #000000 #000000
 client.focused_inactive #808080 #808080 #ffffff #000000 #000000
 client.unfocused        #808080 #808080 #ffffff #000000 #000000
 
-# Hide all borders
+# Hide edge borders
 hide_edge_borders both
 
 ## Key bindings
