@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-## Full path of script
+# Full path of script
 cwd="$(dirname "$(realpath "$0")")"
 
-## Commands
+# Commands
 log='echo'
 create='mkdir -p'
 link='ln -sfn'
 
-## Start setup
+# Start setup
 $log 'Setting up dotfiles ...'
 
 $log '  alacritty'
