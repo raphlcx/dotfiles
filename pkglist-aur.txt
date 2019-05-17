@@ -4,5 +4,4 @@ google-chrome
 mbpfan-git
 mpv-light
 shellcheck-static
-timescaledb
 tldr-cpp-client

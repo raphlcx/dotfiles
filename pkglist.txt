@@ -6,7 +6,6 @@ android-tools
 android-udev
 bash-completion
 dialog
-erlang-nox
 exfat-utils
 fcitx-configtool
 fcitx-gtk3
@@ -18,20 +17,16 @@ hub
 hunspell
 i3status
 i3-wm
-inotify-tools
 intel-ucode
 libva-intel-driver
 libvdpau-va-gl
-libyaml
 light
 linux-headers
 mutt
 nmap
 noto-fonts-cjk
-npm
 openssh
 p7zip
-redis
 scrot
 slurp
 sway
@@ -39,7 +34,6 @@ the_silver_searcher
 tmux
 tree
 ttf-hack
-unzip
 vim
 whois
 wl-clipboard
@@ -51,4 +45,3 @@ xorg-xbacklight
 xorg-xinit
 xorg-xinput
 xorg-xset
-yarn
