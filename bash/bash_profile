@@ -8,6 +8,9 @@
 ## Append to history file when shell exits
 shopt -s histappend
 
+# umask
+umask 077
+
 #
 # Environment variable
 #
