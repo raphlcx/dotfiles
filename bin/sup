@@ -36,17 +36,6 @@ tldr -u
 
 echo ""
 echo "======================================"
-echo "   asdf and its plugins"
-echo "======================================"
-echo ""
-
-pushd "$HOME/.asdf" > /dev/null
-bin/asdf update
-bin/asdf plugin-update --all
-popd > /dev/null
-
-echo ""
-echo "======================================"
 echo "   vim plugins"
 echo "======================================"
 echo ""
