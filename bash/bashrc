@@ -29,7 +29,6 @@ export GPG_TTY
 alias be='bundle exec'
 alias clip='xclip -selection c'
 alias g='hub'
-alias hdev='ssh-add $HOME/.ssh/dev'
 alias ll='ls -alv --group-directories-first'
 alias ls='ls --color=never'
 alias ns='sudo netctl start'
