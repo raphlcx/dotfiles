@@ -23,7 +23,7 @@ $log '  bash completions'
 $create "$HOME/.local/share/bash-completion"
 $link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
 
-$log '  user bin directory'
+$log '  bin directory'
 $create "$HOME/.local"
 $link "$cwd/bin" "$HOME/.local/bin"
 
@@ -38,10 +38,6 @@ $link "$cwd/git/gitignore" "$HOME/.gitignore"
 $log '  gnupg'
 $create "$HOME/.gnupg"
 $link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
-
-$log '  gtk3'
-$create "$HOME/.config/gtk-3.0"
-$link "$cwd/gtk3/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 
 $log '  i3wm'
 $create "$HOME/.config/i3"
