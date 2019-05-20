@@ -32,8 +32,9 @@ $create "$HOME/.config/fontconfig"
 $link "$cwd/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 
 $log '  git'
-$link "$cwd/git/gitconfig" "$HOME/.gitconfig"
-$link "$cwd/git/gitignore" "$HOME/.gitignore"
+$create "$HOME/.config/git"
+$link "$cwd/git/config" "$HOME/.config/git/config"
+$link "$cwd/git/ignore" "$HOME/.config/git/ignore"
 
 $log '  gnupg'
 $create "$HOME/.gnupg"

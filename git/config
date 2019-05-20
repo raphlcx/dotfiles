@@ -34,7 +34,6 @@
 [commit]
 	gpgsign = true
 [core]
-	excludesfile = /home/raphx/.gitignore
 	editor = vim
 [advice]
 	pushUpdateRejected = false
