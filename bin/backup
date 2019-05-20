@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 usage="
-Backup files to an archive file, and optionally move the archive
-to external drive.
+Backup files to an archive, and optionally move the archive to
+external drive.
 
 Usage:
 
@@ -10,7 +10,6 @@ Usage:
 
 Options:
 
-  -e    Eject external drive after script execution
   -m    Move backup files to external drive
 
   -h    Show this help message"
@@ -18,10 +17,6 @@ Options:
 for arg in "$@"
 do
 case $arg in
--e)
-  eject_drive=1
-  shift
-  ;;
 -m)
   backup_move=1
   shift
@@ -37,42 +32,29 @@ case $arg in
 esac
 done
 
-# The backup directory
-backup_dirname="arch-bk"
-backup_dir="$HOME/Downloads/$backup_dirname"
-mkdir -p "$backup_dir"
+# Directories
+directory='arch-bk'
+source="$HOME/$directory"
+destination='/mnt'
 
-echo "Backing up to $backup_dir ..."
+# Create source directory
+mkdir -p "$source"
 
-# Project files
-7z a -mx=0 "$backup_dir/p" "$HOME/Downloads/p"
+# Begin backup to source directory
+7z a -mx=0 "$source/documents" \
+  "$HOME/Documents"
 
-# Other user files
-## .gnupg
-## .ssh
-## .mutt
-7z a -mx=0 "$backup_dir/arch" \
+7z a -mx=0 "$source/arch" \
   "$HOME/.gnupg" \
   "$HOME/.ssh" \
   "$HOME/.mutt"
 
-# Move backup files to external drive
 if [ $backup_move ]
 then
-  external_dir="/mnt/backup"
+  # Remove old backup
+  old="${destination:?}/$directory"
+  [ -d "$old" ] && rm -r "$old"
 
-  mkdir -p "$external_dir"
-
-  echo "Removing old backup at $external_dir/$backup_dirname ..."
-  rm -r "${external_dir:?}/$backup_dirname"
-
-  echo "Moving backup from $backup_dir to $external_dir ..."
-  mv "$backup_dir" "$external_dir" && sync
-fi
-
-# Eject external drive
-if [ $eject_drive ]
-then
-  echo "Ejecting external drive ..."
-  sudo umount -R /mnt
+  # Move backup files to destination
+  mv "$source" "$destination" && sync
 fi
