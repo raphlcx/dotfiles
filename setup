@@ -79,6 +79,7 @@ $log '  vim'
 $link "$cwd/vim/vimrc" "$HOME/.vimrc"
 
 $log '  x'
+$link "$cwd/x/xserverrc" "$HOME/.xserverrc"
 $link "$cwd/x/xinitrc" "$HOME/.xinitrc"
 
 $log 'Done.'
