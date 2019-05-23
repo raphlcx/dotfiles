@@ -196,3 +196,8 @@ bindsym $mod+F3 exec --no-startup-id xset dpms force off
 bar {
   status_command i3status
 }
+
+## Startup programs
+#
+# fcitx
+exec --no-startup-id fcitx-autostart
