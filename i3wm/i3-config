@@ -21,13 +21,15 @@ client.unfocused        #808080 #808080 #ffffff #000000 #000000
 
 # Hide edge borders
 hide_edge_borders both
+# Hide window borders for terminal
+for_window [class="Termite"] border none
 
 ## Key bindings
 #
 # Basics
 #
 # Start terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id termite
 
 # Kill focused window
 bindsym $mod+Shift+q kill

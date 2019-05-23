@@ -11,10 +11,6 @@ link='ln -sfn'
 # Start setup
 $log 'Setting up dotfiles ...'
 
-$log '  alacritty'
-$create "$HOME/.config/alacritty"
-$link "$cwd/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
-
 $log '  bash'
 $link "$cwd/bash/bashrc" "$HOME/.bashrc"
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
@@ -71,6 +67,10 @@ $link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
 $log '  systemd'
 $create "$HOME/.config/systemd/user"
 $link "$cwd/systemd/user/ssh-agent.service" "$HOME/.config/systemd/user/ssh-agent.service"
+
+$log '  termite'
+$create "$HOME/.config/termite"
+$link "$cwd/termite/config" "$HOME/.config/termite/config"
 
 $log '  tmux'
 $link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
