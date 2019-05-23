@@ -17,7 +17,7 @@ umask 077
 ## Standard programs
 export EDITOR=vim
 export PAGER=less
-export TERMINAL=termite
+export TERMINAL=xterm
 
 ## fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

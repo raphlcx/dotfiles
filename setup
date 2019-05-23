@@ -68,10 +68,6 @@ $log '  systemd'
 $create "$HOME/.config/systemd/user"
 $link "$cwd/systemd/user/ssh-agent.service" "$HOME/.config/systemd/user/ssh-agent.service"
 
-$log '  termite'
-$create "$HOME/.config/termite"
-$link "$cwd/termite/config" "$HOME/.config/termite/config"
-
 $log '  tmux'
 $link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
 
@@ -81,5 +77,6 @@ $link "$cwd/vim/vimrc" "$HOME/.vimrc"
 $log '  x'
 $link "$cwd/x/xserverrc" "$HOME/.xserverrc"
 $link "$cwd/x/xinitrc" "$HOME/.xinitrc"
+$link "$cwd/x/Xresources" "$HOME/.Xresources"
 
 $log 'Done.'
