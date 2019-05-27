@@ -1,7 +1,9 @@
 XTerm.termName: xterm-256color
 XTerm.vt100.background: black
 XTerm.vt100.foreground: white
-XTerm.vt100.cursorColor: #bebebe
+XTerm.vt100.cursorBlink: true
+XTerm.vt100.cursorUnderLine: true
+XTerm.vt100.cursorOnTime: 300
 XTerm.vt100.faceName: Hack:size=6
 XTerm.vt100.renderFont: true
 XTerm.vt100.saveLines: 0
