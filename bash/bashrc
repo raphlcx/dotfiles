@@ -5,21 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#
 # Shell prompt
-#
 PS1='\n\w\n$ '
 
-#
-# Environment variable
-#
-## gpg
+# gpg-agent tty
 GPG_TTY=$(tty)
 export GPG_TTY
 
-#
-# Alias
-#
+# Aliases
 alias be='bundle exec'
 alias clip='xclip -selection c'
 alias g='hub'

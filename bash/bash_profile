@@ -2,51 +2,35 @@
 # ~/.bash_profile
 #
 
-#
-# Shell options
-#
-## Append to history file when shell exits
+# Append to history file when shell exits
 shopt -s histappend
 
-# umask
+# Restrictive umask
 umask 077
 
-#
-# Environment variable
-#
-## Standard programs
+# Standard programs
 export EDITOR=vim
 export PAGER=less
 export TERMINAL=xterm
-
-## fzf include hidden files and exclude certain directories
+# fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-
-## SSH agent
+# SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
-## Increase bash history saves
+# Increase bash history saves
 export HISTSIZE=5000
-## Ignore bash history duplicates
+# Ignore bash history duplicates
 export HISTCONTROL=ignoredups:erasedups
-
-## Disable program history files
+# Disable program history files
 export LESSHISTFILE=-
 export NODE_REPL_HISTORY=""
 export PSQL_HISTORY=/dev/null
-
-## GTK DPI scaling
+# GTK DPI scaling
 export GDK_SCALE=2
-
-## Input method framework
+# Input method framework
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-
-## user home bin
+# user home bin
 export PATH="$HOME/.local/bin:$PATH"
 
-#
-# Source bashrc
-#
 [[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
