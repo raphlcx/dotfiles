@@ -203,7 +203,7 @@ nnoremap <Leader>gb<CR> :!git blame %<CR>
 nnoremap <Leader>gd<CR> :!git diff %<CR>
 
 " Clear search highlight
-nnoremap <Leader>a :nohlsearch<CR>
+nnoremap <Leader>w :nohlsearch<CR>
 
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
@@ -217,7 +217,7 @@ function! ToggleALE()
     echo 'ALE OFF'
   end
 endfunction
-nnoremap <silent> <Leader>w :call ToggleALE()<CR>
+nnoremap <silent> <Leader>a :call ToggleALE()<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
