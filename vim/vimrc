@@ -13,9 +13,6 @@ execute pathogen#infect()
 " The encoding displayed
 set encoding=utf-8
 
-" Leader
-let mapleader = ","
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,13 +66,6 @@ set hlsearch
 
 " Searches wrap around end-of-file
 set wrapscan
-
-" Use ag for grep
-if executable('ag')
-  set grepprg=ag\ --vimgrep\ $*
-  set grepformat=%f:%l:%c:%m
-  command -nargs=+ -bar Ag silent! grep! <args>|cwindow|redraw!
-endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
@@ -189,25 +179,31 @@ augroup END
 let html_no_rendering = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Commands
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use ag for grep
+if executable('ag')
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+  command! -nargs=+ -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Save visual selection to clipboard (xclip)
+" Save visual selection to clipboard
 vnoremap <Leader>y :w ! xclip -selection c<CR>
 
 " Write buffer to root-owned file
 cnoremap w!! w !sudo tee > /dev/null %
 
-" View Git commit history of the current file
+" Run git command on current file
 nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
-
-" Run Git blame on the current file
 nnoremap <Leader>gb<CR> :!git blame %<CR>
-
-" Run Git diff on the current file
 nnoremap <Leader>gd<CR> :!git diff %<CR>
 
 " Clear search highlight
-nnoremap <Leader>n :nohlsearch<CR>
+nnoremap <Leader>a :nohlsearch<CR>
 
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
@@ -221,7 +217,7 @@ function! ToggleALE()
     echo 'ALE OFF'
   end
 endfunction
-nnoremap <silent> <Leader>l :call ToggleALE()<CR>
+nnoremap <silent> <Leader>w :call ToggleALE()<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
