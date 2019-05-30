@@ -70,6 +70,13 @@ set hlsearch
 " Searches wrap around end-of-file
 set wrapscan
 
+" Use ag for grep
+if executable('ag')
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+  command -nargs=+ -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -208,9 +215,6 @@ nnoremap <Leader>n :nohlsearch<CR>
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
 
-" Start ack.vim - mileszs/ack.vim
-nnoremap <Leader>a :Ack!<Space>
-
 " Repeat last command
 nnoremap <Leader>2 @:<CR>
 
@@ -268,9 +272,3 @@ let g:ale_enabled = 0
 
 "" posva/vim-vue
 let g:vue_disable_pre_processors = 1
-
-"" mileszs/ack.vim
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-cnoreabbrev Ack Ack!
