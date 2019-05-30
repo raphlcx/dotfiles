@@ -206,9 +206,6 @@ nnoremap <Leader>gb<CR> :!git blame %<CR>
 " Run Git diff on the current file
 nnoremap <Leader>gd<CR> :!git diff %<CR>
 
-" Run mix format for Elixir source file
-nnoremap <Leader>mixf<CR> :!mix format %<CR>
-
 " Clear search highlight
 nnoremap <Leader>n :nohlsearch<CR>
 
@@ -266,6 +263,3 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
-
-"" posva/vim-vue
-let g:vue_disable_pre_processors = 1
