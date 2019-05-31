@@ -12,27 +12,36 @@ umask 077
 export EDITOR=vim
 export PAGER=less
 export TERMINAL=xterm
-# fzf include hidden files and exclude certain directories
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# SSH agent
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # Increase bash history saves
 export HISTSIZE=5000
 # Ignore bash history duplicates
 export HISTCONTROL=ignoredups:erasedups
+
+# SSH agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# fzf include hidden files and exclude certain directories
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
 # Disable program history files
 export LESSHISTFILE=-
 export NODE_REPL_HISTORY=""
 export PSQL_HISTORY=/dev/null
+
 # VA-API driver
 export LIBVA_DRIVER_NAME=iHD
+
 # GTK DPI scaling
 export GDK_SCALE=2
+
 # Input method framework
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-# user home bin
+
+# Include local bin directory in PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Source bashrc
 [[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
