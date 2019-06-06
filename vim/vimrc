@@ -7,9 +7,6 @@
 " Explicitly set nocompatible to always use Vim
 set nocompatible
 
-" Pathogen - tpope/vim-pathogen
-execute pathogen#infect()
-
 " The encoding displayed
 set encoding=utf-8
 

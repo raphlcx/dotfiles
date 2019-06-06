@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 usage="
-Install, remove, and list installed vim plugins.
+Vim plugin management using Git sources.
 
 Usage:
 
@@ -9,14 +9,19 @@ Usage:
 
 Subcommands:
 
-  i <url>     Install a plugin. Accepts a Git SSH or HTTPS URL
-  u <name>    Remove an installed plugin. Accepts the name of the plugin,
-              which is the Git repository name
+  i <url>     Install a plugin via a Git SSH or HTTPS URL
+
+  u <name>    Remove an installed plugin using project name.
+              Example https://github.com/foo/bar, 'bar' is
+              the project name.
+
   l           List all installed plugins
 
 Options:
 
   -h    Show this help message"
+
+vimdir="$HOME/.vim/pack/plugins"
 
 _install () {
   local url="$1"
@@ -24,20 +29,19 @@ _install () {
   name=$(basename "$url")
   name=${name%.git}
 
-  git -C "$HOME/.vim" submodule add "$url" "bundle/$name"
+  git -C "$vimdir" submodule add "$url" "start/$name"
 }
 
 _uninstall () {
   local name="$1"
-  local vimdir="$HOME/.vim"
 
-  git -C "$vimdir" submodule deinit -f "$vimdir/bundle/$name"
-  git -C "$vimdir" rm -rf "$vimdir/bundle/$name"
-  rm -rf "$vimdir/.git/modules/bundle/$name"
+  git -C "$vimdir" submodule deinit -f "$vimdir/start/$name"
+  git -C "$vimdir" rm -rf "$vimdir/start/$name"
+  rm -rf "$vimdir/.git/modules/start/$name"
 }
 
 _list () {
-  git -C "$HOME/.vim" submodule
+  git -C "$vimdir" submodule
 }
 
 if [ $# -eq 0 ]
