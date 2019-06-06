@@ -165,6 +165,12 @@ if !isdirectory(&undodir)
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Functionality
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable modeline for stricter security
+set nomodeline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 augroup filetypespecificsettings
