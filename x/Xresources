@@ -12,9 +12,7 @@ XTerm.vt100.color4: DodgerBlue2
 XTerm.vt100.color12: DodgerBlue1
 
 ! cursor
-XTerm.vt100.cursorBlink: true
-XTerm.vt100.cursorUnderLine: true
-XTerm.vt100.cursorOnTime: 300
+XTerm.vt100.cursorColor: black
 
 ! font
 XTerm.vt100.faceName: Hack:size=6
