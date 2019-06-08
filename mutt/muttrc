@@ -25,5 +25,8 @@ bind pager \Ce next-line
 bind pager \Cu half-up
 bind pager \Cd half-down
 
+# Style
+color normal white default
+
 # Server configurations
 source ~/.mutt/account
