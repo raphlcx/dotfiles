@@ -200,4 +200,4 @@ bar {
 ## Startup programs
 #
 # fcitx
-exec --no-startup-id fcitx-autostart
+exec --no-startup-id fcitx
