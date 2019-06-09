@@ -3,7 +3,10 @@ XTerm.vt100.saveLines: 0
 XTerm.vt100.metaSendsEscape: true
 XTerm.vt100.translations: #override \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Ctrl <Btn1Down>: ignore() \n\
+  Ctrl <Btn2Down>: ignore() \n\
+  Ctrl <Btn3Down>: ignore()
 
 ! color
 XTerm.vt100.background: black
