@@ -21,8 +21,8 @@ export HISTCONTROL=ignoredups:erasedups
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-# fzf default command
-export FZF_DEFAULT_COMMAND="find . -mindepth 1 -path '*.git' -prune -o -type f -printf '%P\n'"
+# fzf include hidden files and exclude certain directories
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # Disable program history files
 export LESSHISTFILE=-
