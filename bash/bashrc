@@ -13,10 +13,8 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # Aliases
-alias be='bundle exec'
 alias clip='xclip -selection c'
 alias g='hub'
 alias ll='ls -alv --group-directories-first'
 alias ls='ls --color=never'
-alias ns='sudo netctl start'
 alias pig='ping google.com'
