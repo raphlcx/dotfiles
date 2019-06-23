@@ -4,29 +4,30 @@
 	email = rcxng93@hotmail.com
 	signingkey = F3FCA7B45C2CCD0A
 [alias]
-	c = commit
-	st = stash
 	a = add
-	d = diff
-	r = rebase
-	f = fetch
-	p = push
-	l = log
-	ck = checkout
-	pl = pull
-	cl = clone
-	sw = show
-	stp = stash pop
-	stl = stash list
-	dc = diff --cached
-	lo = log --oneline
-	plr = pull-request --push
 	b = branch
-	s = status --short --branch
 	bb = !git rev-parse --abbrev-ref HEAD
-	ri = rebase -i
+	c = commit
+	ck = checkout
+	cl = clone
 	cp = cherry-pick
+	d = diff
+	dc = diff --cached
+	f = fetch
+	l = log
+	lo = log --oneline
+	p = push
+	pl = pull
+	r = rebase
+	ri = rebase -i
+	s = status --short --branch
+	st = stash
 	sta = stash apply
+	stl = stash list
+	stp = stash pop
+	sw = show
+	# Hub extension
+	plr = pull-request --push
 [push]
 	default = simple
 [commit]
