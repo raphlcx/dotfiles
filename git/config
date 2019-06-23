@@ -6,7 +6,7 @@
 [alias]
 	a = add
 	b = branch
-	bb = !git rev-parse --abbrev-ref HEAD
+	bb = branch --show-current
 	c = commit
 	ck = checkout
 	cl = clone
