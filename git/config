@@ -4,7 +4,6 @@
 	email = rcxng93@hotmail.com
 	signingkey = F3FCA7B45C2CCD0A
 [alias]
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	c = commit
 	st = stash
 	a = add
@@ -24,7 +23,6 @@
 	plr = pull-request --push
 	b = branch
 	s = status --short --branch
-	lg = log --graph --oneline
 	bb = !git rev-parse --abbrev-ref HEAD
 	ri = rebase -i
 	cp = cherry-pick
