@@ -3,13 +3,14 @@ alsa-utils
 android-tools
 android-udev
 bash-completion
+blackarch-keyring
 compton
+crda
 exfat-utils
 fcitx-gtk3
+fd
 firefox
 fzf
-glew
-glfw-x11
 grim
 hsetroot
 hub
@@ -27,7 +28,6 @@ p7zip
 scrot
 slurp
 sway
-swaybg
 the_silver_searcher
 tmux
 tree

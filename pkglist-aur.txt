@@ -4,4 +4,4 @@ google-chrome
 mbpfan-git
 mpv-light
 shellcheck-static
-tldr-cpp-client
+tealdeer
