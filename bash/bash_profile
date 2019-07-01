@@ -29,9 +29,6 @@ export LESSHISTFILE=-
 export NODE_REPL_HISTORY=""
 export PSQL_HISTORY=/dev/null
 
-# VA-API driver
-export LIBVA_DRIVER_NAME=iHD
-
 # GTK DPI scaling
 export GDK_SCALE=2
 
