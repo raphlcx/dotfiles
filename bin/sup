@@ -22,6 +22,7 @@ echo ""
 for dir in "$HOME/.aur/"*;
 do
   echo "Cleaning and checking $(basename "$dir")..."
+  git -C "$dir" checkout .
   git -C "$dir" clean -qf
   git -C "$dir" pull
 done
