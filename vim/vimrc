@@ -7,14 +7,8 @@
 " Explicitly set nocompatible to always use Vim
 set nocompatible
 
-" Pathogen - tpope/vim-pathogen
-execute pathogen#infect()
-
 " The encoding displayed
 set encoding=utf-8
-
-" Leader
-let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
@@ -88,9 +82,6 @@ set number
 " Use relative line mumber
 set relativenumber
 
-" Find the current line quickly
-set cursorline
-
 " Always show statusline
 set laststatus=2
 
@@ -150,22 +141,31 @@ set spelllang=en
 " Temporary files and backups
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Put all temporary files under the same directory
-if exists('*mkdir') && !isdirectory($HOME.'/.vim/files')
-  call mkdir($HOME.'/.vim/files/backup', 'p')
-  call mkdir($HOME.'/.vim/files/swap', 'p')
-  call mkdir($HOME.'/.vim/files/undo', 'p')
-  call mkdir($HOME.'/.vim/files/info', 'p')
-endif
-
 set backup
-set backupdir   =$HOME/.vim/files/backup/
-set backupext   =-vimbackup
+set backupdir   =$HOME/.cache/vim/backup//
+set backupext   =.vimbackup
 set backupskip  =
-set directory   =$HOME/.vim/files/swap//
+set directory   =$HOME/.cache/vim/swap//
 set updatecount =100
 set undofile
-set undodir     =$HOME/.vim/files/undo/
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+set undodir     =$HOME/.cache/vim/undo//
+set viminfo     ='100,n$HOME/.cache/vim/viminfo
+
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, 'p', 0700)
+endif
+if !isdirectory(&directory)
+  call mkdir(&directory, 'p', 0700)
+endif
+if !isdirectory(&undodir)
+  call mkdir(&undodir, 'p', 0700)
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Functionality
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable modeline for stricter security
+set nomodeline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
@@ -174,25 +174,53 @@ augroup filetypespecificsettings
   au!
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
+  au BufRead,BufNewFile *.bats set ft=sh
+  au BufRead,BufNewFile *.vue syntax sync fromstart
 augroup END
+
+" Disable special text rendering on html
+let html_no_rendering = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Commands
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use ag for grep
+if executable('ag')
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+  command! -nargs=+ -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Save visual selection to clipboard
+vnoremap <Leader>y :w ! xclip -selection c<CR>
+
+" Write buffer to root-owned file
+cnoremap w!! w !sudo tee > /dev/null %
+
+" Run git command on current file
+nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
+nnoremap <Leader>gb<CR> :!git blame %<CR>
+nnoremap <Leader>gd<CR> :!git diff %<CR>
+
 " Clear search highlight
-nnoremap <Leader>n :nohlsearch<CR>
+nnoremap <Leader>w :nohlsearch<CR>
 
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
 
-" Start ack.vim - mileszs/ack.vim
-nnoremap <Leader>a :Ack!<Space>
-
-" Repeat last command
-nnoremap <Leader>2 @:<CR>
-
-" Use black hole register
-nnoremap <Leader>' "_
+" Toggle ALE - w0rp/ale
+function! ToggleALE()
+  ALEToggle
+  if g:ale_enabled == 1
+    echo 'ALE ON'
+  else
+    echo 'ALE OFF'
+  end
+endfunction
+nnoremap <silent> <Leader>a :call ToggleALE()<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
@@ -205,12 +233,6 @@ function! ToggleSpellCheck()
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
-" Easily switch between Vim split windows
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-h> <C-W>h
-nnoremap <C-l> <C-W>l
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -221,9 +243,15 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 " Hide netrw banner
 let g:netrw_banner = 0
 
-"" Raphx/nofrils
-let g:nofrils_heavylinenumbers = 1
-colorscheme nofrils-light
+" Suppress netrw history
+let g:netrw_dirhistmax = 0
+
+"" Raphx/modest
+if &term == 'linux'
+  colorscheme modest-dark
+else
+  colorscheme modest-light
+endif
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
@@ -231,34 +259,6 @@ let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
-
-"" takac/vim-hardtime
-let g:hardtime_default_on = 1
-let g:list_of_normal_keys = [
-      \"h",
-      \"j",
-      \"k",
-      \"l",
-      \"-",
-      \"+",
-      \"<c-n>",
-      \"<c-p>",
-      \"<BS>",
-      \"<Enter>",
-      \"<Space>"
-\]
-let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:hardtime_ignore_quickfix = 1
-
-"" posva/vim-vue
-autocmd FileType vue syntax sync fromstart
-let g:vue_disable_pre_processors = 1
-
-"" junegunn/fzf
-set rtp+=/usr/local/opt/fzf
-
-"" mileszs/ack.vim
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-cnoreabbrev Ack Ack!
+let g:ale_lint_on_save = 0
+let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_enabled = 0

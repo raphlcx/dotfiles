@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Test network connection
-ping google.com

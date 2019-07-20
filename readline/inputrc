@@ -1,0 +1,29 @@
+# Disable terminal bell
+set bell-style none
+
+# Use vi key bindings
+set editing-mode vi
+
+# Append slash to symlink directory completion
+set mark-symlinked-directories on
+
+# Disable arrow keys in vi mode
+$if mode=vi
+  "\eOD":""
+  "\e[D":""
+  "\eOC":""
+  "\e[C":""
+  "\eOA":""
+  "\e[A":""
+  "\eOB":""
+  "\e[B":""
+$endif
+
+#
+# vi insert mode
+#
+set keymap vi-insert
+
+\C-l: clear-screen
+\C-p: previous-history
+\C-n: next-history

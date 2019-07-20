@@ -1,0 +1,49 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Raphx
+	email = rcxng93@hotmail.com
+	signingkey = F3FCA7B45C2CCD0A
+[alias]
+	a = add
+	b = branch
+	bb = branch --show-current
+	c = commit
+	ck = checkout
+	cl = clone
+	cp = cherry-pick
+	d = diff
+	dc = diff --cached
+	f = fetch
+	l = log
+	lo = log --oneline
+	p = push
+	pl = pull
+	r = rebase
+	ri = rebase -i
+	s = status --short --branch
+	st = stash
+	sta = stash apply
+	stl = stash list
+	stp = stash pop
+	sw = show
+	# Hub extension
+	plr = pull-request --push
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[core]
+	editor = vim
+[advice]
+	pushUpdateRejected = false
+	statusHints = false
+	commitBeforeMerge = false
+	resolveConflict = false
+	detachedHead = false
+[rebase]
+	autoSquash = true
+	autoStash = true
+[fetch]
+	prune = true
+[diff]
+	tool = vimdiff

@@ -1,34 +1,35 @@
 #!/usr/bin/env bash
 
-cwd=`pwd`
+# Full path of script
+cwd="$(dirname "$(realpath "$0")")"
 
-echo ' [*] Setting up dotfiles ...'
+# Commands
+log='echo'
+create='mkdir -p'
+link='ln -sfn'
 
-echo ' [*] user bin directory ...'
-mkdir -p ~/.local
-ln -s $cwd/bin ~/.local/bin
+# Start setup
+$log 'Setting up dotfiles ...'
 
-echo ' [*] bash ...'
-ln -s $cwd/bash/bash_profile ~/.bash_profile
+$log '  bash'
+$link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
 
-echo ' [*] git ...'
-ln -s $cwd/git/gitconfig ~/.gitconfig
-ln -s $cwd/git/gitignore ~/.gitignore
+$log '  bin directory'
+$create "$HOME/.local"
+$link "$cwd/bin" "$HOME/.local/bin"
 
-echo ' [*] python ...'
-mkdir -p ~/.pip
-ln -s $cwd/python/pip.conf ~/.pip/pip.conf
+$log '  git'
+$create "$HOME/.config/git"
+$link "$cwd/git/config" "$HOME/.config/git/config"
+$link "$cwd/git/ignore" "$HOME/.config/git/ignore"
 
-echo ' [*] ruby ...'
-ln -s $cwd/ruby/gemrc ~/.gemrc
-ln -s $cwd/ruby/irbrc ~/.irbrc
-mkdir -p ~/.bundle
-ln -s $cwd/ruby/bundler-config ~/.bundle/config
+$log '  readline'
+$link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
-echo ' [*] tmux ...'
-ln -s $cwd/tmux/tmux.conf ~/.tmux.conf
+$log '  tmux'
+$link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
 
-echo ' [*] vim ...'
-ln -s $cwd/vim/vimrc ~/.vimrc
+$log '  vim'
+$link "$cwd/vim/vimrc" "$HOME/.vimrc"
 
-echo ' [*] Setup completed!'
+$log 'Done.'

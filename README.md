@@ -1,15 +1,9 @@
 # Dotfiles
 
-This branch contains the dotfiles specific for macOSS.
+dotfiles for macOS.
 
 Setup symlinks:
 
 ```shell
 ./setup
-```
-
-Install system dependencies:
-
-```shell
-brew bundle
 ```
