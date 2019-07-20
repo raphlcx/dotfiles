@@ -3,7 +3,6 @@ alsa-utils
 android-tools
 android-udev
 bash-completion
-blackarch-keyring
 compton
 crda
 exfat-utils
@@ -17,7 +16,6 @@ hub
 hunspell
 i3status
 i3-wm
-intel-media-driver
 intel-ucode
 light
 linux-headers
