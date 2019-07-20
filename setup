@@ -14,6 +14,10 @@ $log 'Setting up dotfiles ...'
 $log '  bash'
 $link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
 
+$log '  bash completions'
+$create "$HOME/.local/share/bash-completion"
+$link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
+
 $log '  bin directory'
 $create "$HOME/.local"
 $link "$cwd/bin" "$HOME/.local/bin"
