@@ -23,6 +23,10 @@ $create "$HOME/.config/git"
 $link "$cwd/git/config" "$HOME/.config/git/config"
 $link "$cwd/git/ignore" "$HOME/.config/git/ignore"
 
+$log '  gnupg'
+$create "$HOME/.gnupg"
+$link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+
 $log '  readline'
 $link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
