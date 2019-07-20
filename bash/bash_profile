@@ -13,6 +13,9 @@ fi
 # Set locale
 export LC_ALL=en_US.UTF-8
 
+# Load bash completion
+[ -r "/usr/local/etc/profile.d/bash_completion.sh" ] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 # Append to history file when shell exits
 shopt -s histappend
 
