@@ -14,7 +14,13 @@ fi
 export LC_ALL=en_US.UTF-8
 
 # Load bash completion
-[ -r "/usr/local/etc/profile.d/bash_completion.sh" ] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[ -r "/usr/local/etc/profile.d/bash_completion.sh" ] && source "/usr/local/etc/profile.d/bash_completion.sh"
+
+for completion in /usr/local/etc/bash_completion.d/*
+do
+  [ -f "$completion" ] && source "$completion"
+done
+unset completion
 
 # Append to history file when shell exits
 shopt -s histappend
