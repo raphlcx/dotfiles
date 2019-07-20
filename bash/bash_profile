@@ -10,6 +10,9 @@ then
   source /etc/profile
 fi
 
+# Set locale
+export LC_ALL=en_US.UTF-8
+
 # Append to history file when shell exits
 shopt -s histappend
 
