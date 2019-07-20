@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 
-# Update brew and cask
+# System upgrade script
+
+echo ""
+echo "======================================"
+echo "   brew and cask"
+echo "======================================"
+echo ""
+
 brew update \
   && brew upgrade \
-  && csc \
-  && brew cleanup -s \
-  && brew prune \
-  && brew cask cleanup
+  && brew cask upgrade \
+  && brew cleanup -s
 
-# Update tldr
-echo 'Updating tldr local database ...'
-tldr -u
+
+echo ""
+echo "======================================"
+echo "   vim plugins"
+echo "======================================"
+echo ""
+
+git -C "$HOME/.vim/pack/plugins" submodule foreach git pull origin master
