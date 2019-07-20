@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Full path of script
-cwd="$(dirname "$(realpath "$0")")"
+cwd="$(dirname "$(grealpath "$0")")"
 
 # Commands
 log='echo'
 create='mkdir -p'
-link='ln -sfn'
+link='ln -sfh'
 
 # Start setup
 $log 'Setting up dotfiles ...'

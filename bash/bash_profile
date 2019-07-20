@@ -2,6 +2,14 @@
 # ~/.bash_profile
 #
 
+# Clear PATH every time profile is sourced.
+# Useful in tmux
+if [ -f /etc/profile ]
+then
+  PATH=""
+  source /etc/profile
+fi
+
 # Append to history file when shell exits
 shopt -s histappend
 
