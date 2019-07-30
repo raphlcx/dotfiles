@@ -187,7 +187,7 @@ bindsym $mod+F2 exec --no-startup-id light -A 5
 # DPMS
 #
 # Turn display off
-bindsym $mod+F3 exec --no-startup-id xset dpms force off
+bindsym $mod+F3 exec --no-startup-id i3lock -c 323232 -u -e && xset dpms force off
 
 ## Status Bar
 #
