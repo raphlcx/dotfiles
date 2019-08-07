@@ -49,6 +49,11 @@ $create "$HOME/.mutt"
 $create "$HOME/.cache/mutt"
 $link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
 
+$log '  newsboat'
+$create "$HOME/.config/newsboat"
+$link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
+$link "$cwd/newsboat/config" "$HOME/.config/newsboat/config"
+
 $log '  pacman'
 $create "$HOME/.config/pacman"
 $link "$cwd/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
