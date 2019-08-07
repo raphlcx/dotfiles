@@ -12,6 +12,7 @@ umask 077
 export EDITOR=vim
 export PAGER=less
 export TERMINAL=xterm
+export BROWSER=firefox
 
 # Increase bash history saves
 export HISTSIZE=5000
