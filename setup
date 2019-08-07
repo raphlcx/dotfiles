@@ -70,8 +70,8 @@ $create "$HOME/.bundle"
 $link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
 
 $log '  systemd'
-$create "$HOME/.config/systemd/user"
-$link "$cwd/systemd/user/ssh-agent.service" "$HOME/.config/systemd/user/ssh-agent.service"
+$create "$HOME/.config/systemd"
+$link "$cwd/systemd/user" "$HOME/.config/systemd/user"
 
 $log '  tmux'
 $link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
