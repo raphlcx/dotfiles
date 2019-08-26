@@ -6,8 +6,8 @@ unbind-key k articlelist
 bind-key j down articlelist
 bind-key k up articlelist
 
-bind-key j down article
-bind-key k up article
+bind-key ^E down article
+bind-key ^Y up article
 
 color info black white
 color listfocus black white
