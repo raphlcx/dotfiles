@@ -3,6 +3,7 @@ set ssl_force_tls
 set sleep_time = 0
 set timeout = 15
 set mail_check = 60
+set wrap = 80
 set header_cache = ~/.cache/mutt
 set message_cachedir = ~/.cache/mutt
 set fast_reply
