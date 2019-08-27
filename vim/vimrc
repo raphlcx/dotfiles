@@ -197,9 +197,6 @@ endif
 " Save visual selection to clipboard
 vnoremap <Leader>y :w ! xclip -selection c<CR>
 
-" Write buffer to root-owned file
-cnoremap w!! w !sudo tee > /dev/null %
-
 " Run git command on current file
 nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
 nnoremap <Leader>gb<CR> :!git blame %<CR>
