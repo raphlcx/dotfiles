@@ -49,6 +49,10 @@ $create "$HOME/.mutt"
 $create "$HOME/.cache/mutt"
 $link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
 
+$log '  neovim'
+$create "$HOME/.config/nvim"
+$link "$cwd/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+
 $log '  newsboat'
 $create "$HOME/.config/newsboat"
 $link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
