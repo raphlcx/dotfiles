@@ -21,7 +21,7 @@ Options:
 
   -h    Show this help message"
 
-vimdir="$HOME/.vim/pack/plugins"
+vimdir="$HOME/.local/share/vim/pack/plugins"
 
 _install () {
   local url="$1"
