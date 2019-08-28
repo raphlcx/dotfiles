@@ -10,6 +10,9 @@ set nocompatible
 " The encoding displayed
 set encoding=utf-8
 
+" Add local share vim directory to packpath
+set packpath+=~/.local/share/vim
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
