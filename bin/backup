@@ -14,9 +14,9 @@ Options:
 
   -h    Show this help message"
 
-for arg in "$@"
+while [ -n "$1" ]
 do
-case $arg in
+case "$1" in
 -m)
   backup_move=1
   shift
