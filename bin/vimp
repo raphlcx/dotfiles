@@ -50,9 +50,9 @@ then
   exit 1
 fi
 
-for arg in "$@"
+while [ -n "$1" ]
 do
-case $arg in
+case "$1" in
 i)
   shift
   [ -z "$1" ] && echo "$usage" && exit 1

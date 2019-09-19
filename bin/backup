@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+usage="
+Backup files to an archive, and optionally move the archive to
+external drive.
+
+Usage:
+
+  $(basename "$0") [options]
+
+Options:
+
+  -m    Move backup files to external drive
+
+  -h    Show this help message"
+
+while [ -n "$1" ]
+do
+case "$1" in
+-m)
+  backup_move=1
+  shift
+  ;;
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+*)
+  echo "$usage"
+  exit 1
+  ;;
+esac
+done
+
+# Directories
+directory='arch-bk'
+source="$HOME/$directory"
+destination='/mnt'
+
+# Create source directory
+mkdir -p "$source"
+
+# Begin backup to source directory
+7z a -mx=0 "$source/documents" \
+  "$HOME/Documents"
+
+7z a -mx=0 "$source/arch" \
+  "$HOME/.gnupg" \
+  "$HOME/.ssh" \
+  "$HOME/.mutt"
+
+if [ $backup_move ]
+then
+  # Remove old backup
+  old="${destination:?}/$directory"
+  [ -d "$old" ] && rm -r "$old"
+
+  # Move backup files to destination
+  mv "$source" "$destination" && sync
+fi
