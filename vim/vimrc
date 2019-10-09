@@ -177,6 +177,7 @@ augroup filetypespecificsettings
   au!
   au BufRead,BufNewFile *.py setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.rs setlocal softtabstop=4 shiftwidth=4
+  au BufRead,BufNewFile *.java setlocal softtabstop=4 shiftwidth=4
   au BufRead,BufNewFile *.bats set ft=sh
   au BufRead,BufNewFile *.vue syntax sync fromstart
 augroup END
