@@ -4,47 +4,55 @@
 cwd="$(dirname "$(realpath "$0")")"
 
 # Commands
-log='echo'
-create='mkdir -p'
-link='ln -sfn'
+_log() {
+  echo "$1"
+}
+
+_create() {
+  mkdir -p "$1"
+}
+
+_link() {
+  ln -sfn "$1" "$2"
+}
 
 # Start setup
-$log 'Setting up dotfiles ...'
+_log 'Setting up dotfiles ...'
 
-$log '  bash'
-$link "$cwd/bash/bashrc" "$HOME/.bashrc"
-$link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
+_log '  bash'
+_link "$cwd/bash/bashrc" "$HOME/.bashrc"
+_link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
 
-$log '  bash completions'
-$create "$HOME/.local/share/bash-completion"
-$link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
+_log '  bash completions'
+_create "$HOME/.local/share/bash-completion"
+_link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
 
-$log '  bin directory'
-$create "$HOME/.local"
-$link "$cwd/bin" "$HOME/.local/bin"
+_log '  bin directory'
+_create "$HOME/.local"
+_link "$cwd/bin" "$HOME/.local/bin"
 
-$log '  fontconfig'
-$create "$HOME/.config/fontconfig"
-$link "$cwd/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
+_log '  fontconfig'
+_create "$HOME/.config/fontconfig"
+_link "$cwd/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 
-$log '  git'
-$create "$HOME/.config/git"
-$link "$cwd/git/config" "$HOME/.config/git/config"
-$link "$cwd/git/ignore" "$HOME/.config/git/ignore"
+_log '  git'
+_create "$HOME/.config/git"
+_link "$cwd/git/config" "$HOME/.config/git/config"
+_link "$cwd/git/ignore" "$HOME/.config/git/ignore"
 
-$log '  gnupg'
-$create "$HOME/.gnupg"
-$link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+_log '  gnupg'
+_create "$HOME/.gnupg"
+_link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
-$log '  i3wm'
-$create "$HOME/.config/i3"
-$link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
+_log '  i3wm'
+_create "$HOME/.config/i3"
+_link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
 
-$log '  i3wm i3status'
-$create "$HOME/.config/i3status"
-$link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
+_log '  i3wm i3status'
+_create "$HOME/.config/i3status"
+_link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
-$log '  mutt'
+_log '  mutt'
 $create "$HOME/.mutt"
 $create "$HOME/.cache/mutt"
 $link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
