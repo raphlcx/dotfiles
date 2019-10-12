@@ -25,11 +25,6 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-# Disable program history files
-export LESSHISTFILE=-
-export NODE_REPL_HISTORY=""
-export PSQL_HISTORY=/dev/null
-
 # GTK DPI scaling
 export GDK_SCALE=2
 
