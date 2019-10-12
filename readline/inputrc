@@ -25,5 +25,3 @@ $endif
 set keymap vi-insert
 
 \C-l: clear-screen
-\C-p: previous-history
-\C-n: next-history
