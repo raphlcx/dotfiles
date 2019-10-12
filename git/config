@@ -2,7 +2,7 @@
 [user]
 	name = Raphx
 	email = rcxng93@hotmail.com
-	signingkey = 62CF5B90D7C4BF65
+	signingkey = F3FCA7B45C2CCD0A
 [alias]
 	a = add
 	b = branch
