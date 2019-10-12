@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 usage="
 Backup files to an archive, and optionally move the archive to
