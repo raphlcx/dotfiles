@@ -33,9 +33,9 @@ esac
 done
 
 # Directories
-directory='arch-bk'
+directory='macos-bk'
 source="$HOME/$directory"
-destination='/mnt'
+destination='/Volumes/RPHXBACKUP'
 
 # Create source directory
 mkdir -p "$source"
@@ -44,10 +44,9 @@ mkdir -p "$source"
 7z a -mx=0 "$source/documents" \
   "$HOME/Documents"
 
-7z a -mx=0 "$source/arch" \
+7z a -mx=0 "$source/macos" \
   "$HOME/.gnupg" \
-  "$HOME/.ssh" \
-  "$HOME/.mutt"
+  "$HOME/.ssh"
 
 if [ $backup_move ]
 then
