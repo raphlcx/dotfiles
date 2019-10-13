@@ -4,6 +4,20 @@ dotfiles for macOS.
 
 Setup symlinks:
 
-```shell
+```
 ./setup
+```
+
+Install dependencies:
+
+```
+brew bundle
+```
+
+## Maintenance
+
+Prepare `Brewfile`:
+
+```
+brew bundle dump -f
 ```
