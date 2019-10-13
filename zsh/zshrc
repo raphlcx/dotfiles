@@ -25,3 +25,7 @@ export GPG_TTY
 alias g='hub'
 alias ll='ls -alv --group-directories-first'
 alias pig='ping google.com'
+
+# Load completion
+autoload -Uz compinit
+compinit
