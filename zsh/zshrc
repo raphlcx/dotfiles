@@ -31,3 +31,6 @@ alias pig='ping google.com'
 # Load completion
 autoload -Uz compinit
 compinit
+
+# Use vi key binding
+bindkey -v
