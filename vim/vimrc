@@ -199,7 +199,7 @@ endif
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Save visual selection to clipboard
-vnoremap <Leader>y :w ! xclip -selection c<CR>
+vnoremap <Leader>y :w ! pbcopy<CR>
 
 " Run git command on current file
 nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
@@ -260,5 +260,5 @@ let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
 
-" fzf
+"" fzf
 set rtp+=/usr/local/opt/fzf
