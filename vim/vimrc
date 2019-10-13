@@ -249,12 +249,6 @@ let g:netrw_dirhistmax = 0
 
 "" Raphx/modest
 colorscheme modest-light
-" Patch for Basic profile macOS terminal
-hi Normal term=none cterm=none ctermfg=black ctermbg=none
-hi ModeMsg term=none cterm=none ctermfg=black ctermbg=none
-hi MoreMsg term=none cterm=none ctermfg=black ctermbg=none
-hi TabLineSel term=none cterm=none ctermfg=black ctermbg=none
-hi WildMenu term=none cterm=none ctermfg=black ctermbg=none
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
