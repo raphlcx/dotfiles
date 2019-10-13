@@ -14,9 +14,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # Include local bin directory in PATH
 export PATH="$HOME/.local/bin:$PATH"
-
 # Use coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# Use user-installed ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
