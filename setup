@@ -46,6 +46,14 @@ _link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
 _log '  readline'
 _link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
+_log '  ruby'
+_link "$cwd/ruby/gemrc" "$HOME/.gemrc"
+_link "$cwd/ruby/irbrc" "$HOME/.irbrc"
+
+_log '  ruby bundler'
+_create "$HOME/.bundle"
+_link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
+
 _log '  tmux'
 _link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
 
