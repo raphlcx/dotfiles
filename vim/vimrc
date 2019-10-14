@@ -47,7 +47,7 @@ set hidden
 set autoread
 
 " Key for toggling paste mode
-set pastetoggle=<F2>
+set pastetoggle=<F12>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
