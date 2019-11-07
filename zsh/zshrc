@@ -12,14 +12,16 @@ export BROWSER=open
 # fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-# Include /usr/local/sbin
-export PATH="/usr/local/sbin:$PATH"
-# Include $HOME/.local/bin
-export PATH="$HOME/.local/bin:$PATH"
+# Reset PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Use coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Use user-installed ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+# Include user-installed python packages
+export PATH="/Users/raphx/Library/Python/3.7/bin:$PATH"
+# Include $HOME/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
