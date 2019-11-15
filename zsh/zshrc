@@ -24,6 +24,9 @@ export PATH="/Users/raphx/Library/Python/3.7/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
+# Include additional user command completion functions
+fpath=($HOME/.local/share/zsh/site-functions $fpath)
+
 # gpg-agent tty
 GPG_TTY=$(tty)
 export GPG_TTY
