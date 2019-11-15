@@ -53,43 +53,43 @@ _create "$HOME/.config/i3status"
 _link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
 _log '  mutt'
-$create "$HOME/.mutt"
-$create "$HOME/.cache/mutt"
-$link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
+_create "$HOME/.mutt"
+_create "$HOME/.cache/mutt"
+_link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
 
-$log '  newsboat'
-$create "$HOME/.config/newsboat"
-$link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
-$link "$cwd/newsboat/config" "$HOME/.config/newsboat/config"
+_log '  newsboat'
+_create "$HOME/.config/newsboat"
+_link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
+_link "$cwd/newsboat/config" "$HOME/.config/newsboat/config"
 
-$log '  pacman'
-$create "$HOME/.config/pacman"
-$link "$cwd/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
+_log '  pacman'
+_create "$HOME/.config/pacman"
+_link "$cwd/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
 
-$log '  readline'
-$link "$cwd/readline/inputrc" "$HOME/.inputrc"
+_log '  readline'
+_link "$cwd/readline/inputrc" "$HOME/.inputrc"
 
-$log '  ruby'
-$link "$cwd/ruby/gemrc" "$HOME/.gemrc"
-$link "$cwd/ruby/irbrc" "$HOME/.irbrc"
+_log '  ruby'
+_link "$cwd/ruby/gemrc" "$HOME/.gemrc"
+_link "$cwd/ruby/irbrc" "$HOME/.irbrc"
 
-$log '  ruby bundler'
-$create "$HOME/.bundle"
-$link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
+_log '  ruby bundler'
+_create "$HOME/.bundle"
+_link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
 
-$log '  systemd'
-$create "$HOME/.config/systemd"
-$link "$cwd/systemd/user" "$HOME/.config/systemd/user"
+_log '  systemd'
+_create "$HOME/.config/systemd"
+_link "$cwd/systemd/user" "$HOME/.config/systemd/user"
 
-$log '  tmux'
-$link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
+_log '  tmux'
+_link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
 
-$log '  vim'
-$link "$cwd/vim/vimrc" "$HOME/.vimrc"
+_log '  vim'
+_link "$cwd/vim/vimrc" "$HOME/.vimrc"
 
-$log '  x'
-$link "$cwd/x/xserverrc" "$HOME/.xserverrc"
-$link "$cwd/x/xinitrc" "$HOME/.xinitrc"
-$link "$cwd/x/Xresources" "$HOME/.Xresources"
+_log '  x'
+_link "$cwd/x/xserverrc" "$HOME/.xserverrc"
+_link "$cwd/x/xinitrc" "$HOME/.xinitrc"
+_link "$cwd/x/Xresources" "$HOME/.Xresources"
 
-$log 'Done.'
+_log 'Done.'
