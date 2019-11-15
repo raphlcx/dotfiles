@@ -20,9 +20,10 @@ Install AUR packages manually, each installation is done with:
 makepkg -sirc
 ```
 
-Start ssh-agent on shell login:
+Enable user systemd services:
 
 ```
+systemctl --user enable newsboat-reload.timer
 systemctl --user enable ssh-agent.service
 ```
 
