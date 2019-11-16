@@ -1,0 +1,73 @@
+#!/usr/bin/env zsh
+
+usage="
+Simple headless VirtualBox VM management.
+
+Usage:
+
+  $(basename "$0") [options] <vmname> <operation>
+
+Operations:
+
+  up          Start the specificed VM in headless mode.
+
+  down        Power off the specified VM.
+
+Options:
+
+  -h    Show this help message"
+
+
+_die () {
+  echo "$usage" && exit 1
+}
+
+_vm_up () {
+  local vmname="$1"
+
+  VBoxManage startvm "$vmname" --type headless
+}
+
+_vm_down () {
+  local vmname="$1"
+
+  VBoxManage controlvm "$vmname" poweroff
+}
+
+[ $# -eq 0 ] && _die
+
+while [ -n "$1" ]
+do
+case "$1" in
+-h)
+  echo "$usage"
+  exit 0
+  ;;
+*)
+  vmname="$1"
+  shift
+
+  [ -z "$1" ] && _die
+
+  while [ -n "$1" ]
+  do
+  case "$1" in
+  up)
+    [ -z "$vmname" ] && _die
+    _vm_up "$vmname"
+    exit 0
+    ;;
+  down)
+    [ -z "$vmname" ] && _die
+    _vm_down "$vmname"
+    exit 0
+    ;;
+  *)
+    echo "$usage"
+    exit 1
+    ;;
+  esac
+  done
+  ;;
+esac
+done
