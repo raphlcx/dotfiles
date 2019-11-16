@@ -5,9 +5,11 @@ Simple headless VirtualBox VM management.
 
 Usage:
 
-  $(basename "$0") [options] <vmname> <operation>
+  $(basename "$0") [options] [vmname] <operation>
 
 Operations:
+
+  list        List all VMs.
 
   up          Start the specificed VM in headless mode.
 
@@ -20,6 +22,10 @@ Options:
 
 _die () {
   echo "$usage" && exit 1
+}
+
+_vm_list () {
+  VBoxManage list vms
 }
 
 _vm_up () {
@@ -39,6 +45,10 @@ _vm_down () {
 while [ -n "$1" ]
 do
 case "$1" in
+list)
+  _vm_list
+  exit 0
+  ;;
 -h)
   echo "$usage"
   exit 0
