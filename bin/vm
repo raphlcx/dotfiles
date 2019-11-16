@@ -11,6 +11,8 @@ Operations:
 
   list        List all VMs.
 
+  runs        List all running VMs.
+
   up          Start the specificed VM in headless mode.
 
   down        Power off the specified VM.
@@ -26,6 +28,10 @@ _die () {
 
 _vm_list () {
   VBoxManage list vms
+}
+
+_vm_runs () {
+  VBoxManage list runningvms
 }
 
 _vm_up () {
@@ -47,6 +53,10 @@ do
 case "$1" in
 list)
   _vm_list
+  exit 0
+  ;;
+runs)
+  _vm_runs
   exit 0
   ;;
 -h)
