@@ -49,6 +49,10 @@ _log '  ruby bundler'
 _create "$HOME/.bundle"
 _link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
 
+_log '  ssh'
+_create "$HOME/.ssh"
+_link "$cwd/ssh/config" "$HOME/.ssh/config"
+
 _log '  tmux'
 _link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
 
