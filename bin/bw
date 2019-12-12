@@ -13,6 +13,13 @@ brew update \
   && brew cask upgrade \
   && brew cleanup -s
 
+echo ""
+echo "======================================"
+echo "   tldr local cache"
+echo "======================================"
+echo ""
+
+tldr -u
 
 echo ""
 echo "======================================"
