@@ -3,6 +3,7 @@ alsa-utils
 android-tools
 android-udev
 aws-cli
+base
 bash-completion
 blackarch-keyring
 compton
@@ -24,6 +25,7 @@ imagemagick
 intel-ucode
 light
 linux
+linux-firmware
 linux-headers
 maven
 mutt
@@ -32,6 +34,7 @@ nmap
 noto-fonts-cjk
 openssh
 p7zip
+polkit
 scrot
 slurp
 sway
