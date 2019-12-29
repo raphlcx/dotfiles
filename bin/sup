@@ -19,6 +19,8 @@ echo "   AUR repositories"
 echo "======================================"
 echo ""
 
+shopt -s nullglob
+
 for dir in "$HOME/.aur/"*;
 do
   echo "Cleaning and checking $(basename "$dir")..."
@@ -26,6 +28,8 @@ do
   git -C "$dir" clean -qf
   git -C "$dir" pull
 done
+
+shopt -u nullglob
 
 echo ""
 echo "======================================"
