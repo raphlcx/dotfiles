@@ -23,6 +23,8 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/raphx/Library/Python/3.7/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
+# Rust toolchain
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Include additional user command completion functions
 fpath=($HOME/.local/share/zsh/site-functions $fpath)
