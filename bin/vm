@@ -43,7 +43,7 @@ _vm_up () {
 _vm_down () {
   local vmname="$1"
 
-  VBoxManage controlvm "$vmname" poweroff
+  VBoxManage controlvm "$vmname" acpipowerbutton
 }
 
 [ $# -eq 0 ] && _die
