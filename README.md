@@ -19,5 +19,5 @@ brew bundle
 Prepare `Brewfile`:
 
 ```
-brew bundle dump -f
+brew bundle dump --force
 ```
