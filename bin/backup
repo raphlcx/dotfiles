@@ -11,8 +11,8 @@ Usage:
 Options:
 
   -m    Move backup files to external drive
-
-  -h    Show this help message"
+  -h    Show this help message
+"
 
 while [ -n "$1" ]
 do
