@@ -10,16 +10,15 @@ Usage:
 Subcommands:
 
   i <url>     Install a plugin via a Git SSH or HTTPS URL
-
   u <name>    Remove an installed plugin using project name.
               Example https://github.com/foo/bar, 'bar' is
               the project name.
-
   l           List all installed plugins
 
 Options:
 
-  -h    Show this help message"
+  -h    Show this help message
+"
 
 vimdir="$HOME/.local/share/vim/pack/plugins"
 
