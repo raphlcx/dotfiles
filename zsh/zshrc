@@ -51,7 +51,3 @@ compinit
 # Use vi key binding
 bindkey -v
 bindkey ^R history-incremental-search-backward
-
-# asdf
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
