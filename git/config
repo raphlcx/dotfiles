@@ -28,6 +28,10 @@
 	sw = show
 	# Hub extension
 	plr = pull-request --push
+	# More complex commands
+	pup = "!f() { \
+		git push origin -u $(git branch --show-current) && hub pull-request --push; \
+	}; f"
 [push]
 	default = simple
 [commit]
