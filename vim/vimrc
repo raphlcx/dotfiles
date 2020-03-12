@@ -137,8 +137,8 @@ set splitright
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spell check
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Set spell check language to English
-set spelllang=en
+" Set spell check language to British English
+set spelllang=en_gb
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Temporary files and backups
