@@ -31,6 +31,16 @@ npm update -d -g npm
 
 echo ""
 echo "======================================"
+echo "   ruby gems"
+echo "======================================"
+echo ""
+
+gem update --system -V
+gem update -V
+gem cleanup -V
+
+echo ""
+echo "======================================"
 echo "   tldr local cache"
 echo "======================================"
 echo ""
