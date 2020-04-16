@@ -23,8 +23,6 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/raphx/Library/Python/3.7/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
-# Rust toolchain
-export PATH="$HOME/.cargo/bin:$PATH"
 # Android development
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
