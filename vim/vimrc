@@ -206,6 +206,7 @@ vnoremap <Leader>y :w ! pbcopy<CR>
 nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
 nnoremap <Leader>gb<CR> :!git blame %<CR>
 nnoremap <Leader>gd<CR> :!git diff %<CR>
+nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
 
 " Clear search highlight
 nnoremap <Leader>w :nohlsearch<CR>
