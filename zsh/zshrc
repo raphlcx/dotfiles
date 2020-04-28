@@ -31,7 +31,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # Aliases
-alias g='hub'
+alias g='git'
 alias ll='ls -alv --group-directories-first'
 alias pig='ping google.com'
 
