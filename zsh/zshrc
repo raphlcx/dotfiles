@@ -1,3 +1,13 @@
+# Skip adding duplicate command lines to history
+setopt histignoredups
+# Write to history file incrementally
+setopt incappendhistory
+
+# Use vi key binding
+bindkey -v
+# Emacs-style search
+bindkey ^R history-incremental-search-backward
+
 # Shell prompt
 export PS1='%~ %# '
 
@@ -38,7 +48,3 @@ alias pig='ping google.com'
 # Load completion
 autoload -Uz compinit
 compinit
-
-# Use vi key binding
-bindkey -v
-bindkey ^R history-incremental-search-backward
