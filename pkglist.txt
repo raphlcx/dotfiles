@@ -27,6 +27,7 @@ light
 linux
 linux-firmware
 linux-headers
+man-db
 maven
 mutt
 newsboat
