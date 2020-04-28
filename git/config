@@ -22,8 +22,6 @@
 	stl = stash list
 	stp = stash pop
 	sw = show
-	# Hub extension
-	plr = pull-request --push
 [push]
 	default = simple
 [commit]

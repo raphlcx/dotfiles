@@ -1,7 +1,7 @@
-# `hub' command completion for the `g' alias
+# `git' command completion for the `g' alias
 _g () {
   if ! declare -F _git > /dev/null && declare -F _completion_loader > /dev/null; then
-    _completion_loader hub
+    _completion_loader git
   fi
   _git
 }

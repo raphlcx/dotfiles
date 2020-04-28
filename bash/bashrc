@@ -14,7 +14,7 @@ export GPG_TTY
 
 # Aliases
 alias clip='xclip -selection c'
-alias g='hub'
+alias g='git'
 alias ll='ls -alv --group-directories-first'
 alias ls='ls --color=never'
 alias pig='ping google.com'

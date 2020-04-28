@@ -14,9 +14,9 @@ fcitx-gtk3
 fd
 firefox
 fzf
+git
 grim
 hsetroot
-hub
 hunspell
 i3lock
 i3status
