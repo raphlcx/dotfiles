@@ -8,6 +8,9 @@ bindkey -v
 # Emacs-style search
 bindkey ^R history-incremental-search-backward
 
+# Reduce zsh key timeout
+export KEYTIMEOUT=1
+
 # Shell prompt
 export PS1='%~ %# '
 
