@@ -9,7 +9,6 @@ blackarch-keyring
 compton
 crda
 docker
-exfat-utils
 fcitx-gtk3
 fd
 firefox
@@ -34,7 +33,6 @@ newsboat
 nmap
 noto-fonts-cjk
 openssh
-p7zip
 polkit
 scrot
 slurp

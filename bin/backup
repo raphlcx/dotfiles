@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-usage="
-Backup files to an archive, and optionally move the archive to
-external drive.
+readonly USAGE="
+Backup files to an archive, and encrypt it.
 
 Usage:
 
@@ -10,51 +9,86 @@ Usage:
 
 Options:
 
-  -m    Move backup files to external drive
   -h    Show this help message
 "
 
-while [ -n "$1" ]
-do
-case "$1" in
--m)
-  backup_move=1
-  shift
-  ;;
--h)
-  echo "$usage"
-  exit 0
-  ;;
-*)
-  echo "$usage"
+readonly KEY=$(\
+  dd if=/dev/urandom bs=1 count=32 2>/dev/null \
+    | base64 -w 0 \
+    | rev \
+    | cut -b 2- \
+    | rev
+  )
+
+# On macOS, use Homebrew-installed OpenSSL over macOS default
+# LibreSSL. The latter is outdated most of the time.
+if [ "$(uname)" == "Darwin" ]; then
+  OPENSSL="/usr/local/Cellar/openssl@1.1/1.1.1g/bin/openssl"
+else
+  OPENSSL="openssl"
+fi
+readonly OPENSSL
+
+# Directories and files to backup
+readonly TARGETS="$HOME/.ssh $HOME/.gnupg $HOME/.mutt $HOME/Documents"
+
+# Output directory
+readonly OUTPUTDIRPATH="$HOME/Downloads"
+
+# Timestamp of the backup
+readonly UNIXEPOCH=$(date +%s)
+
+# Name of encrypted archive
+readonly ARCHIVEFILE="backup-$UNIXEPOCH.tar.gz.enc"
+
+# Name of digest for encrypted archive
+readonly DIGESTFILE="$ARCHIVEFILE.sum"
+
+_die() {
+  local error
+  error="$1"
+  echo "$error"
   exit 1
-  ;;
-esac
+}
+
+_archive_encrypt() {
+  local item
+
+  # Using pushd so sha512sum generates checksum for file without
+  # embedding the full path of the file in the checksum file
+  pushd "$OUTPUTDIRPATH" >/dev/null || _die "pushd failed"
+
+  echo "Archiving files and directories:"
+  for item in $TARGETS; do
+    echo "  $item"
+  done
+
+  echo "Key: $KEY"
+  echo "Encrypting to $OUTPUTDIRPATH/$ARCHIVEFILE ..."
+
+  #shellcheck disable=SC2086
+  tar cz $TARGETS 2>/dev/null \
+    | "$OPENSSL" enc -aes-256-cbc -e -md sha512 -pbkdf2 -iter 20000 -pass "pass:$KEY" > "$ARCHIVEFILE"
+
+  echo "Generating checksum ..."
+
+  sha512sum "$ARCHIVEFILE" > "$DIGESTFILE"
+
+  popd >/dev/null || _die "popd failed"
+
+  echo "Done."
+}
+
+while [ -n "$1" ]; do
+  case "$1" in
+    -h)
+      echo "$USAGE"
+      exit 0
+      ;;
+    *)
+      _die "$USAGE"
+      ;;
+  esac
 done
 
-# Directories
-directory='arch-bk'
-source="$HOME/$directory"
-destination='/mnt'
-
-# Create source directory
-mkdir -p "$source"
-
-# Begin backup to source directory
-7z a -mx=0 "$source/documents" \
-  "$HOME/Documents"
-
-7z a -mx=0 "$source/arch" \
-  "$HOME/.gnupg" \
-  "$HOME/.ssh" \
-  "$HOME/.mutt"
-
-if [ $backup_move ]
-then
-  # Remove old backup
-  old="${destination:?}/$directory"
-  [ -d "$old" ] && rm -r "$old"
-
-  # Move backup files to destination
-  mv "$source" "$destination" && sync
-fi
+_archive_encrypt
