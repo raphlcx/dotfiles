@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-usage="
+readonly USAGE="
 Simple headless VirtualBox VM management.
 
 Usage:
@@ -21,7 +21,7 @@ Options:
 
 
 _die () {
-  echo "$usage" && exit 1
+  echo "$USAGE" && exit 1
 }
 
 _vm_list () {
@@ -46,46 +46,43 @@ _vm_down () {
 
 [ $# -eq 0 ] && _die
 
-while [ -n "$1" ]
-do
-case "$1" in
-list)
-  _vm_list
-  exit 0
-  ;;
-runs)
-  _vm_runs
-  exit 0
-  ;;
--h)
-  echo "$usage"
-  exit 0
-  ;;
-*)
-  vmname="$1"
-  shift
-
-  [ -z "$1" ] && _die
-
-  while [ -n "$1" ]
-  do
+while [ -n "$1" ]; do
   case "$1" in
-  up)
-    [ -z "$vmname" ] && _die
-    _vm_up "$vmname"
-    exit 0
-    ;;
-  down)
-    [ -z "$vmname" ] && _die
-    _vm_down "$vmname"
-    exit 0
-    ;;
-  *)
-    echo "$usage"
-    exit 1
-    ;;
+    list)
+      _vm_list
+      exit 0
+      ;;
+    runs)
+      _vm_runs
+      exit 0
+      ;;
+    -h)
+      echo "$USAGE"
+      exit 0
+      ;;
+    *)
+      vmname="$1"
+      shift
+
+      [ -z "$1" ] && _die
+
+      while [ -n "$1" ]; do
+        case "$1" in
+          up)
+            [ -z "$vmname" ] && _die
+            _vm_up "$vmname"
+            exit 0
+            ;;
+          down)
+            [ -z "$vmname" ] && _die
+            _vm_down "$vmname"
+            exit 0
+            ;;
+          *)
+            _die
+            ;;
+        esac
+      done
+      ;;
   esac
-  done
-  ;;
-esac
 done

@@ -3,7 +3,7 @@
 # Commands assuming coreutils package is used
 
 # Full path of script
-cwd="$(dirname "$(realpath "$0")")"
+readonly CWD="$(dirname "$(realpath "$0")")"
 
 # Commands
 _log() {
@@ -23,43 +23,43 @@ _log 'Setting up dotfiles ...'
 
 _log '  alacritty'
 _create "$HOME/.config/alacritty"
-_link "$cwd/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+_link "$CWD/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 
 _log '  bin directory'
 _create "$HOME/.local"
-_link "$cwd/bin" "$HOME/.local/bin"
+_link "$CWD/bin" "$HOME/.local/bin"
 
 _log '  git'
 _create "$HOME/.config/git"
-_link "$cwd/git/config" "$HOME/.config/git/config"
-_link "$cwd/git/ignore" "$HOME/.config/git/ignore"
+_link "$CWD/git/config" "$HOME/.config/git/config"
+_link "$CWD/git/ignore" "$HOME/.config/git/ignore"
 
 _log '  gnupg'
 _create "$HOME/.gnupg"
-_link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+_link "$CWD/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
 _log '  readline'
-_link "$cwd/readline/inputrc" "$HOME/.inputrc"
+_link "$CWD/readline/inputrc" "$HOME/.inputrc"
 
 _log '  ruby'
-_link "$cwd/ruby/gemrc" "$HOME/.gemrc"
-_link "$cwd/ruby/irbrc" "$HOME/.irbrc"
+_link "$CWD/ruby/gemrc" "$HOME/.gemrc"
+_link "$CWD/ruby/irbrc" "$HOME/.irbrc"
 
 _log '  ruby bundler'
 _create "$HOME/.bundle"
-_link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
+_link "$CWD/ruby/bundler-config" "$HOME/.bundle/config"
 
 _log '  ssh'
 _create "$HOME/.ssh"
-_link "$cwd/ssh/config" "$HOME/.ssh/config"
+_link "$CWD/ssh/config" "$HOME/.ssh/config"
 
 _log '  tmux'
-_link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
+_link "$CWD/tmux/tmux.conf" "$HOME/.tmux.conf"
 
 _log '  vim'
-_link "$cwd/vim/vimrc" "$HOME/.vimrc"
+_link "$CWD/vim/vimrc" "$HOME/.vimrc"
 
 _log '  zsh'
-_link "$cwd/zsh/zshrc" "$HOME/.zshrc"
+_link "$CWD/zsh/zshrc" "$HOME/.zshrc"
 
 _log 'Done.'
