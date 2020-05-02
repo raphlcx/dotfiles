@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Full path of script
-cwd="$(dirname "$(realpath "$0")")"
+readonly CWD="$(dirname "$(realpath "$0")")"
 
 # Commands
 _log() {
@@ -20,80 +20,80 @@ _link() {
 _log 'Setting up dotfiles ...'
 
 _log '  bash'
-_link "$cwd/bash/bashrc" "$HOME/.bashrc"
-_link "$cwd/bash/bash_profile" "$HOME/.bash_profile"
+_link "$CWD/bash/bashrc" "$HOME/.bashrc"
+_link "$CWD/bash/bash_profile" "$HOME/.bash_profile"
 
 _log '  bash completions'
 _create "$HOME/.local/share/bash-completion"
-_link "$cwd/bash/completions" "$HOME/.local/share/bash-completion/completions"
+_link "$CWD/bash/completions" "$HOME/.local/share/bash-completion/completions"
 
 _log '  bin directory'
 _create "$HOME/.local"
-_link "$cwd/bin" "$HOME/.local/bin"
+_link "$CWD/bin" "$HOME/.local/bin"
 
 _log '  fontconfig'
 _create "$HOME/.config/fontconfig"
-_link "$cwd/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
+_link "$CWD/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 
 _log '  git'
 _create "$HOME/.config/git"
-_link "$cwd/git/config" "$HOME/.config/git/config"
-_link "$cwd/git/ignore" "$HOME/.config/git/ignore"
+_link "$CWD/git/config" "$HOME/.config/git/config"
+_link "$CWD/git/ignore" "$HOME/.config/git/ignore"
 
 _log '  gnupg'
 _create "$HOME/.gnupg"
-_link "$cwd/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+_link "$CWD/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
 _log '  i3wm'
 _create "$HOME/.config/i3"
-_link "$cwd/i3wm/i3-config" "$HOME/.config/i3/config"
+_link "$CWD/i3wm/i3-config" "$HOME/.config/i3/config"
 
 _log '  i3wm i3status'
 _create "$HOME/.config/i3status"
-_link "$cwd/i3wm/i3status-config" "$HOME/.config/i3status/config"
+_link "$CWD/i3wm/i3status-config" "$HOME/.config/i3status/config"
 
 _log '  mutt'
 _create "$HOME/.mutt"
 _create "$HOME/.cache/mutt"
-_link "$cwd/mutt/muttrc" "$HOME/.mutt/muttrc"
+_link "$CWD/mutt/muttrc" "$HOME/.mutt/muttrc"
 
 _log '  newsboat'
 _create "$HOME/.config/newsboat"
-_link "$cwd/newsboat/urls" "$HOME/.config/newsboat/urls"
-_link "$cwd/newsboat/config" "$HOME/.config/newsboat/config"
+_link "$CWD/newsboat/urls" "$HOME/.config/newsboat/urls"
+_link "$CWD/newsboat/config" "$HOME/.config/newsboat/config"
 
 _log '  pacman'
 _create "$HOME/.config/pacman"
-_link "$cwd/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
+_link "$CWD/pacman/makepkg.conf" "$HOME/.config/pacman/makepkg.conf"
 
 _log '  readline'
-_link "$cwd/readline/inputrc" "$HOME/.inputrc"
+_link "$CWD/readline/inputrc" "$HOME/.inputrc"
 
 _log '  ruby'
-_link "$cwd/ruby/gemrc" "$HOME/.gemrc"
-_link "$cwd/ruby/irbrc" "$HOME/.irbrc"
+_link "$CWD/ruby/gemrc" "$HOME/.gemrc"
+_link "$CWD/ruby/irbrc" "$HOME/.irbrc"
 
 _log '  ruby bundler'
 _create "$HOME/.bundle"
-_link "$cwd/ruby/bundler-config" "$HOME/.bundle/config"
+_link "$CWD/ruby/bundler-config" "$HOME/.bundle/config"
 
 _log '  ssh'
 _create "$HOME/.ssh"
-_link "$cwd/ssh/config" "$HOME/.ssh/config"
+_link "$CWD/ssh/config" "$HOME/.ssh/config"
 
 _log '  systemd'
 _create "$HOME/.config/systemd"
-_link "$cwd/systemd/user" "$HOME/.config/systemd/user"
+_link "$CWD/systemd/user" "$HOME/.config/systemd/user"
 
 _log '  tmux'
-_link "$cwd/tmux/tmux.conf" "$HOME/.tmux.conf"
+_link "$CWD/tmux/tmux.conf" "$HOME/.tmux.conf"
 
 _log '  vim'
-_link "$cwd/vim/vimrc" "$HOME/.vimrc"
+_link "$CWD/vim/vimrc" "$HOME/.vimrc"
 
 _log '  x'
-_link "$cwd/x/xserverrc" "$HOME/.xserverrc"
-_link "$cwd/x/xinitrc" "$HOME/.xinitrc"
-_link "$cwd/x/Xresources" "$HOME/.Xresources"
+_link "$CWD/x/xserverrc" "$HOME/.xserverrc"
+_link "$CWD/x/xinitrc" "$HOME/.xinitrc"
+_link "$CWD/x/Xresources" "$HOME/.Xresources"
 
 _log 'Done.'

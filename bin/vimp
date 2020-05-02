@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-usage="
+readonly USAGE="
 Vim plugin management using Git sources.
 
 Usage:
@@ -20,61 +20,60 @@ Options:
   -h    Show this help message
 "
 
-vimdir="$HOME/.local/share/vim/pack/plugins"
+readonly VIMDIR="$HOME/.local/share/vim/pack/plugins"
 
-_install () {
+_die() {
+  echo "$USAGE"
+  exit 1
+}
+
+_install() {
   local url="$1"
   local name
   name=$(basename "$url")
   name=${name%.git}
 
-  git -C "$vimdir" submodule add "$url" "start/$name"
+  git -C "$VIMDIR" submodule add "$url" "start/$name"
 }
 
-_uninstall () {
+_uninstall() {
   local name="$1"
 
-  git -C "$vimdir" submodule deinit -f "$vimdir/start/$name"
-  git -C "$vimdir" rm -rf "$vimdir/start/$name"
-  rm -rf "$vimdir/.git/modules/start/$name"
+  git -C "$VIMDIR" submodule deinit -f "$VIMDIR/start/$name"
+  git -C "$VIMDIR" rm -rf "$VIMDIR/start/$name"
+  rm -rf "$VIMDIR/.git/modules/start/$name"
 }
 
-_list () {
-  git -C "$vimdir" submodule
+_list() {
+  git -C "$VIMDIR" submodule
 }
 
-if [ $# -eq 0 ]
-then
-  echo "$usage"
-  exit 1
-fi
+[ $# -eq 0 ] && _die
 
-while [ -n "$1" ]
-do
-case "$1" in
-i)
-  shift
-  [ -z "$1" ] && echo "$usage" && exit 1
-  _install "$1"
-  exit 0
-  ;;
-u)
-  shift
-  [ -z "$1" ] && echo "$usage" && exit 1
-  _uninstall "$1"
-  exit 0
-  ;;
-l)
-  _list
-  exit 0
-  ;;
--h)
-  echo "$usage"
-  exit 0
-  ;;
-*)
-  echo "$usage"
-  exit 1
-  ;;
-esac
+while [ -n "$1" ]; do
+  case "$1" in
+    i)
+      shift
+      [ -z "$1" ] && _die
+      _install "$1"
+      exit 0
+      ;;
+    u)
+      shift
+      [ -z "$1" ] && _die
+      _uninstall "$1"
+      exit 0
+      ;;
+    l)
+      _list
+      exit 0
+      ;;
+    -h)
+      echo "$USAGE"
+      exit 0
+      ;;
+    *)
+      _die
+      ;;
+  esac
 done

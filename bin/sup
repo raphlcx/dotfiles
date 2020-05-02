@@ -19,10 +19,8 @@ echo "   AUR repositories"
 echo "======================================"
 echo ""
 
-if [ "$(ls -A $HOME/.aur)" ]
-then
-  for dir in "$HOME/.aur/"*;
-  do
+if [ "$(ls -A "$HOME/.aur")" ]; then
+  for dir in "$HOME/.aur/"*; do
     echo "Cleaning and checking $(basename "$dir")..."
     git -C "$dir" checkout .
     git -C "$dir" clean -qf
