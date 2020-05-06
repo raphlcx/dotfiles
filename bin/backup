@@ -12,14 +12,6 @@ Options:
   -h    Show this help message
 "
 
-readonly KEY=$(\
-  dd if=/dev/urandom bs=1 count=32 2>/dev/null \
-    | base64 -w 0 \
-    | rev \
-    | cut -b 2- \
-    | rev
-  )
-
 # On macOS, use Homebrew-installed OpenSSL over macOS default
 # LibreSSL. The latter is outdated most of the time.
 if [ "$(uname)" == "Darwin" ]; then
@@ -29,20 +21,11 @@ else
 fi
 readonly OPENSSL
 
-# Directories and files to backup
-readonly TARGETS="$HOME/.ssh $HOME/.gnupg $HOME/.mutt $HOME/Documents"
-
 # Output directory
 readonly OUTPUTDIRPATH="$HOME/Downloads"
 
-# Timestamp of the backup
+# Timestamp for backup
 readonly UNIXEPOCH=$(date +%s)
-
-# Name of encrypted archive
-readonly ARCHIVEFILE="backup-$UNIXEPOCH.tar.gz.enc"
-
-# Name of digest for encrypted archive
-readonly DIGESTFILE="$ARCHIVEFILE.sum"
 
 _die() {
   local error
@@ -51,32 +34,68 @@ _die() {
   exit 1
 }
 
-_archive_encrypt() {
+_prepare() {
+  mkdir -p "$OUTPUTDIRPATH"
+}
+
+_backup_documents() {
+  local TARGETS
+  local ARCHIVEFILEPATH
   local item
 
-  # Using pushd so sha512sum generates checksum for file without
-  # embedding the full path of the file in the checksum file
-  pushd "$OUTPUTDIRPATH" >/dev/null || _die "pushd failed"
+  TARGETS="$HOME/Documents"
+  ARCHIVEFILEPATH="$OUTPUTDIRPATH/backup-$UNIXEPOCH.tar.gz.gpg"
 
   echo "Archiving files and directories:"
   for item in $TARGETS; do
     echo "  $item"
   done
 
-  echo "Key: $KEY"
-  echo "Encrypting to $OUTPUTDIRPATH/$ARCHIVEFILE ..."
-
+  echo "Storing archive to $ARCHIVEFILEPATH ..."
   #shellcheck disable=SC2086
   tar cz $TARGETS 2>/dev/null \
-    | "$OPENSSL" enc -aes-256-cbc -e -md sha512 -pbkdf2 -iter 20000 -pass "pass:$KEY" > "$ARCHIVEFILE"
+    | gpg -se -r 07422797E98CA677D988A98D7C0FB9ABA36DC65A > "$ARCHIVEFILEPATH"
+}
+
+_backup_keys() {
+  local GNUPGPATH
+  local TARGETS
+  local ARCHIVEFILE
+  local item
+
+  echo "Exporting GPG keys ..."
+
+  GNUPGPATH="$HOME/.gnupg-export"
+  mkdir -p "$GNUPGPATH"
+  gpg --export-secret-keys > "$GNUPGPATH/priv.asc"
+  gpg --export > "$GNUPGPATH/pub.asc"
+  gpg --export-ownertrust > "$GNUPGPATH/trust.asc"
+
+  TARGETS="$GNUPGPATH $HOME/.keys $HOME/.mutt $HOME/.ssh"
+  ARCHIVEFILE="keys-$UNIXEPOCH.tar.gz.enc"
+  DIGESTFILE="$ARCHIVEFILE.sum"
+
+  # Using pushd so sha512sum generates checksum for file without
+  # embedding the full path of the file in the checksum file
+  pushd "$OUTPUTDIRPATH" >/dev/null || _die "pushd failed"
+
+  echo "Archiving keys:"
+  for item in $TARGETS; do
+    echo "  $item"
+  done
+
+  echo "Storing archive to $OUTPUTDIRPATH/$ARCHIVEFILE ..."
+  #shellcheck disable=SC2086
+  tar cz $TARGETS 2>/dev/null \
+    | "$OPENSSL" enc -aes-256-cbc -e -md sha512 -pbkdf2 -iter 20000 > "$ARCHIVEFILE"
 
   echo "Generating checksum ..."
 
   sha512sum "$ARCHIVEFILE" > "$DIGESTFILE"
 
-  popd >/dev/null || _die "popd failed"
+  rm -r "$GNUPGPATH"
 
-  echo "Done."
+  popd >/dev/null || _die "popd failed"
 }
 
 while [ -n "$1" ]; do
@@ -91,4 +110,8 @@ while [ -n "$1" ]; do
   esac
 done
 
-_archive_encrypt
+_prepare
+_backup_keys
+_backup_documents
+
+echo "Done."
