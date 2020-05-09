@@ -9,7 +9,9 @@ Usage:
 
 Options:
 
-  -h    Show this help message
+  -skipdoc      Skip backing up documents
+  -skipkey      Skip backing up keys
+  -h            Show this help message
 "
 
 # On macOS, use Homebrew-installed OpenSSL over macOS default
@@ -100,6 +102,14 @@ _backup_keys() {
 
 while [ -n "$1" ]; do
   case "$1" in
+    -skipdoc)
+      FLAG_SKIP_DOC=1
+      shift
+      ;;
+    -skipkey)
+      FLAG_SKIP_KEY=1
+      shift
+      ;;
     -h)
       echo "$USAGE"
       exit 0
@@ -111,7 +121,13 @@ while [ -n "$1" ]; do
 done
 
 _prepare
-_backup_keys
-_backup_documents
+
+if [ -z $FLAG_SKIP_KEY ]; then
+  _backup_keys
+fi
+
+if [ -z $FLAG_SKIP_DOC ]; then
+  _backup_documents
+fi
 
 echo "Done."
