@@ -44,6 +44,7 @@ _backup_documents() {
   local TARGETS
   local ARCHIVEFILEPATH
   local item
+  local keyid
 
   TARGETS="$HOME/Documents"
   ARCHIVEFILEPATH="$OUTPUTDIRPATH/backup-$UNIXEPOCH.tar.gz.gpg"
@@ -53,10 +54,11 @@ _backup_documents() {
     echo "  $item"
   done
 
+  keyid=C79BB264798E212BBE44768BC62C4934FE552616
+
   echo "Storing archive to $ARCHIVEFILEPATH ..."
   #shellcheck disable=SC2086
-  tar cz $TARGETS 2>/dev/null \
-    | gpg -se -r 07422797E98CA677D988A98D7C0FB9ABA36DC65A > "$ARCHIVEFILEPATH"
+  tar cz $TARGETS 2>/dev/null | gpg -se -r "$keyid" > "$ARCHIVEFILEPATH"
 }
 
 _backup_keys() {
