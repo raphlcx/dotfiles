@@ -58,7 +58,8 @@ _backup_documents() {
 
   echo "Storing archive to $ARCHIVEFILEPATH ..."
   #shellcheck disable=SC2086
-  tar cz $TARGETS 2>/dev/null | gpg -se -r "$keyid" > "$ARCHIVEFILEPATH"
+  tar cz $TARGETS 2>/dev/null \
+    | gpg --default-key "$keyid" -se -r "$keyid" > "$ARCHIVEFILEPATH"
 }
 
 _backup_keys() {
