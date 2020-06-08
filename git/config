@@ -44,3 +44,5 @@
 [user]
 	useConfigOnly = true
 	name = Ling Cong Xiang
+[pull]
+	ff = only
