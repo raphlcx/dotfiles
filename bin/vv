@@ -9,11 +9,11 @@ Usage:
 
 Subcommands:
 
-  i <url>     Install a plugin via a Git SSH or HTTPS URL
-  u <name>    Remove an installed plugin using project name.
+  add <url>   Install a plugin via a Git SSH or HTTPS URL
+  rm <name>   Remove an installed plugin using project name.
               Example https://github.com/foo/bar, 'bar' is
               the project name.
-  l           List all installed plugins
+  ls          List all installed plugins
 
 Options:
 
@@ -52,19 +52,19 @@ _list() {
 
 while [ -n "$1" ]; do
   case "$1" in
-    i)
+    add)
       shift
       [ -z "$1" ] && _die
       _install "$1"
       exit 0
       ;;
-    u)
+    rm)
       shift
       [ -z "$1" ] && _die
       _uninstall "$1"
       exit 0
       ;;
-    l)
+    ls)
       _list
       exit 0
       ;;
