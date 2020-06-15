@@ -14,6 +14,9 @@ Subcommands:
               Example https://github.com/foo/bar, 'bar' is
               the project name.
   ls          List all installed plugins
+  dump        Dump all plugins' Git sources
+  install     Read a list of Git sources from stdin and install
+              the plugin
 
 Options:
 
@@ -27,7 +30,7 @@ _die() {
   exit 1
 }
 
-_install() {
+_add() {
   local url="$1"
   local name
   name=$(basename "$url")
@@ -36,7 +39,7 @@ _install() {
   git -C "$VIMDIR" submodule add "$url" "start/$name"
 }
 
-_uninstall() {
+_rm() {
   local name="$1"
 
   git -C "$VIMDIR" submodule deinit -f "$VIMDIR/start/$name"
@@ -44,8 +47,22 @@ _uninstall() {
   rm -rf "$VIMDIR/.git/modules/start/$name"
 }
 
-_list() {
+_ls() {
   git -C "$VIMDIR" submodule
+}
+
+_dump() {
+  git -C "$VIMDIR" submodule foreach --quiet git remote get-url --all origin
+}
+
+_install() {
+  mkdir -p "$VIMDIR"
+
+  git init "$VIMDIR"
+
+  while read -r url; do
+    _add "$url"
+  done < /dev/stdin
 }
 
 [ $# -eq 0 ] && _die
@@ -55,17 +72,25 @@ while [ -n "$1" ]; do
     add)
       shift
       [ -z "$1" ] && _die
-      _install "$1"
+      _add "$1"
       exit 0
       ;;
     rm)
       shift
       [ -z "$1" ] && _die
-      _uninstall "$1"
+      _rm "$1"
       exit 0
       ;;
     ls)
-      _list
+      _ls
+      exit 0
+      ;;
+    dump)
+      _dump
+      exit 0
+      ;;
+    install)
+      _install
       exit 0
       ;;
     -h)

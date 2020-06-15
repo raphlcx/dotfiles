@@ -27,6 +27,12 @@ systemctl --user enable newsboat-reload.timer
 systemctl --user enable ssh-agent.service
 ```
 
+Install vim plugins:
+
+```
+bin/vv install < vim/plugins
+```
+
 ## Maintenance
 
 ### pacman packages
@@ -49,3 +55,11 @@ Font configurations are found in multiple locations:
 
  - `fontconfig/fonts.conf` contains global serif, sans-serif, and monospace font configurations for applications that support fontconfig
  - `i3wm/i3-config` for i3 font
+
+### vim plugins
+
+Prepare `vim/plugins`:
+
+```
+bin/vv dump > vim/plugins
+```
