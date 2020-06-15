@@ -29,6 +29,10 @@ _log '  bin directory'
 _create "$HOME/.local"
 _link "$CWD/bin" "$HOME/.local/bin"
 
+_log '  gh'
+_create "$HOME/.config/gh"
+_link "$CWD/gh/config.yml" "$HOME/.config/gh/config.yml"
+
 _log '  git'
 _create "$HOME/.config/git"
 _link "$CWD/git/config" "$HOME/.config/git/config"
