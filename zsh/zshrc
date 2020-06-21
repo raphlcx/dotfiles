@@ -43,6 +43,8 @@ export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 # Rust toolchain
 export PATH="$HOME/.cargo/bin:$PATH"
+# MongoDB 3.6
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
 
 # Include additional user command completion functions
 fpath=($HOME/.local/share/zsh/site-functions $fpath)
