@@ -54,6 +54,7 @@ set pastetoggle=<F12>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Case-insensitive search
 set ignorecase
+
 " Intelligently switch between case sensitivity in search
 set smartcase
 
@@ -74,9 +75,6 @@ filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
-
-" Set colour scheme
-colorscheme ron
 
 " Show ruler
 set ruler
@@ -251,6 +249,9 @@ let g:netrw_banner = 0
 
 " Suppress netrw history
 let g:netrw_dirhistmax = 0
+
+"" Raphx/modest
+colorscheme modest-light
 
 "" w0rp/ale
 let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
