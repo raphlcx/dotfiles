@@ -265,3 +265,6 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
+
+"" fzf
+let g:fzf_layout = { 'down': '40%' }
