@@ -17,7 +17,7 @@ Options:
 # On macOS, use Homebrew-installed OpenSSL over macOS default
 # LibreSSL. The latter is outdated most of the time.
 if [ "$(uname)" == "Darwin" ]; then
-  OPENSSL="/usr/local/Cellar/openssl@1.1/1.1.1g/bin/openssl"
+  OPENSSL="/usr/local/Cellar/openssl@1.1/1.1.1h/bin/openssl"
 else
   OPENSSL="openssl"
 fi
