@@ -38,7 +38,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Use user-installed ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Include user-installed python packages
-export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
