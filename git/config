@@ -34,6 +34,7 @@
 	commitBeforeMerge = false
 	resolveConflict = false
 	detachedHead = false
+	addEmptyPathspec = false
 [rebase]
 	autoSquash = true
 	autoStash = true
