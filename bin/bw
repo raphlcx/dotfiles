@@ -23,14 +23,6 @@ pip3 install -U pip setuptools wheel
 
 echo ""
 echo "======================================"
-echo "   node npm"
-echo "======================================"
-echo ""
-
-npm update -d -g npm
-
-echo ""
-echo "======================================"
 echo "   ruby gems"
 echo "======================================"
 echo ""
