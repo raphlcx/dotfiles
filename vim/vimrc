@@ -46,9 +46,6 @@ set hidden
 " Automatically load file on change
 set autoread
 
-" Key for toggling paste mode
-set pastetoggle=<F12>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""
