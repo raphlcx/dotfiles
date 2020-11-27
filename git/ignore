@@ -34,3 +34,6 @@ Temporary Items
 ## IntelliJ
 .idea/
 *.iml
+
+## ctags
+tags
