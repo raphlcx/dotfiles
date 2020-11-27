@@ -208,9 +208,6 @@ nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
 nnoremap <Leader>gb<CR> :!git blame %<CR>
 nnoremap <Leader>gd<CR> :!git diff %<CR>
 
-" Clear search highlight
-nnoremap <Leader>w :nohlsearch<CR>
-
 " Toggle ALE - w0rp/ale
 function! ToggleALE()
   ALEToggle
