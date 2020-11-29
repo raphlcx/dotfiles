@@ -61,9 +61,6 @@ set incsearch
 " Keep matches highlighted
 set hlsearch
 
-" Searches wrap around end-of-file
-set wrapscan
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,10 +94,8 @@ set showcmd
 " Always report changed lines
 set report=0
 
-" Turn off audio and visual bells
-set noerrorbells
-set visualbell
-set t_vb=
+" No beep and no flash
+set visualbell t_vb=
 
 " Show non-printable characters
 set list
@@ -112,11 +107,8 @@ set wildmenu
 " Only highlight the first 200 columns
 set synmaxcol=200
 
-" Faster redrawing
-set ttyfast
-
-" Only redraw when necessary
-set lazyredraw
+" Better performance
+set ttyfast lazyredraw
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Windowing
