@@ -190,7 +190,7 @@ let html_no_rendering = 1
 if executable('ag')
   set grepprg=ag\ --vimgrep\ $*
   set grepformat=%f:%l:%c:%m
-  command! -nargs=+ -bar Ag silent! grep! <args>|cwindow|redraw!
+  command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
