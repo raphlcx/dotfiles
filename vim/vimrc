@@ -1,14 +1,41 @@
 " Modified from
 " https://github.com/mhinz/vim-galore/blob/master/static/minimal-vimrc.vim
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Prelude
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Explicitly set nocompatible to always use Vim
+" No Vi-compatibility
 set nocompatible
 
 " The encoding displayed
 set encoding=utf-8
+
+" Disable modeline for stricter security
+set nomodeline
+
+" Load plugins according to detected file type
+filetype plugin indent on
+
+" Enable syntax highlighting
+syntax on
+
+" Better performance
+set ttyfast lazyredraw
+
+" No bell at all
+set belloff=all
+
+" Set spell check language to British English
+set spelllang=en_gb
+
+" Automatically load file on change
+set autoread
+
+" Switch between buffers without having to save first
+set hidden
+
+" Sane window split, bottom and right of current window
+set splitbelow splitright
+
+" Enhance command-line completion
+set wildmenu
 
 " Add local share vim directory to packpath
 set packpath+=~/.local/share/vim
@@ -34,17 +61,8 @@ set shiftwidth=2
 " >> indents to next multiple of 'shiftwidth'
 set shiftround
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Editing
-""""""""""""""""""""""""""""""""""""""""""""""""""
 " Make backspace work as you would expect
 set backspace=indent,eol,start
-
-" Switch between buffers without having to save first
-set hidden
-
-" Automatically load file on change
-set autoread
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
@@ -62,24 +80,18 @@ set incsearch
 set hlsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Appearance
+" Visual
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Load plugins according to detected filetype
-filetype plugin indent on
-
-" Enable syntax highlighting
-syntax on
-
 " Show ruler
 set ruler
 
 " Show line number
 set number
 
-" Use relative line mumber
+" Use relative line number
 set relativenumber
 
-" Always show statusline
+" Always show status line
 set laststatus=2
 
 " Show as much as possible of the last line
@@ -94,41 +106,16 @@ set showcmd
 " Always report changed lines
 set report=0
 
-" No beep and no flash
-set visualbell t_vb=
-
 " Show non-printable characters
 set list
 let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:+,trail:.'
 
-" Enhance command-line completion
-set wildmenu
-
-" Only highlight the first 200 columns
-set synmaxcol=200
-
-" Better performance
-set ttyfast lazyredraw
+" Disable special text rendering on html
+let html_no_rendering = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Windowing
+" Vim files
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Open new windows below the current window
-set splitbelow
-
-" Open new windows right of the current window
-set splitright
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Spell check
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set spell check language to British English
-set spelllang=en_gb
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Temporary files and backups
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Put all temporary files under the same directory
 set backup
 set backupdir   =$HOME/.cache/vim/backup//
 set backupext   =.vimbackup
@@ -150,12 +137,6 @@ if !isdirectory(&undodir)
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Functionality
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable modeline for stricter security
-set nomodeline
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 augroup filetypespecificsettings
@@ -168,9 +149,6 @@ augroup filetypespecificsettings
   au BufRead,BufNewFile *.bats set ft=sh
   au BufRead,BufNewFile *.vue syntax sync fromstart
 augroup END
-
-" Disable special text rendering on html
-let html_no_rendering = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Commands
