@@ -177,17 +177,6 @@ nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
 
-" Toggle ALE - w0rp/ale
-function! ToggleALE()
-  ALEToggle
-  if g:ale_enabled == 1
-    echo 'ALE ON'
-  else
-    echo 'ALE OFF'
-  end
-endfunction
-nnoremap <silent> <Leader>a :call ToggleALE()<CR>
-
 " Toggle spell check
 function! ToggleSpellCheck()
   set spell!
@@ -214,16 +203,6 @@ let g:netrw_dirhistmax = 0
 
 "" Raphx/modest
 colorscheme modest-light
-
-"" w0rp/ale
-let g:ale_linters = { 'vue': ['eslint', 'stylelint'] }
-let g:ale_linter_aliases = { 'vue': ['vue', 'javascript', 'css'] }
-let g:ale_set_highlights = 0
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_save = 0
-let g:ale_ruby_rubocop_executable = 'bundle'
-let g:ale_enabled = 0
 
 "" fzf
 set rtp+=/usr/local/opt/fzf
