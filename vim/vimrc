@@ -13,9 +13,6 @@ set encoding=utf-8
 " Add local share vim directory to packpath
 set packpath+=~/.local/share/vim
 
-" Enable recursive directory search
-set path+=**
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -205,6 +202,9 @@ nnoremap <Leader>gb<CR> :!git blame %<CR>
 nnoremap <Leader>gd<CR> :!git diff %<CR>
 nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
 
+" Start fzf - junegunn/fzf
+nnoremap <Leader>q :FZF<CR>
+
 " Toggle ALE - w0rp/ale
 function! ToggleALE()
   ALEToggle
@@ -252,3 +252,7 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_enabled = 0
+
+"" fzf
+set rtp+=/usr/local/opt/fzf
+let g:fzf_layout = { 'down': '40%' }
