@@ -148,7 +148,7 @@ augroup filetypespecificsettings
   au BufRead,BufNewFile *.go setlocal noexpandtab
   au BufRead,BufNewFile *.bats set ft=sh
   au BufRead,BufNewFile *.vue syntax sync fromstart
-  au FileType help syntax off
+  au FileType help setlocal syntax=off
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
