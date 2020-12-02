@@ -44,4 +44,4 @@ echo "   vim plugins"
 echo "======================================"
 echo ""
 
-git -C "$HOME/.local/share/vim/pack/plugins" submodule foreach git pull origin master
+git -C "$HOME/.local/share/vim/pack/plugins" submodule foreach git pull
