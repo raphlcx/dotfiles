@@ -161,6 +161,9 @@ if executable('ag')
   command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
 
+" Organise imports in current buffer - neoclide/coc.nvim
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
