@@ -208,6 +208,9 @@ endfunction
 " GoTo code navigation. - neoclide/coc.nvim
 nmap <silent> gd <Plug>(coc-definition)
 
+" Rename symbol - neoclide/coc.nvim
+nmap <leader>rn <Plug>(coc-rename)
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
