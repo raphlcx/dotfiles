@@ -38,8 +38,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Use coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-# Use user-installed ruby
+# Use Homebrew-installed ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+# Include Homebrew-installed ruby gem executables
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 # Include user-installed python packages
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 # Include $HOME/.local/bin
