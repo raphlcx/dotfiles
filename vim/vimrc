@@ -232,4 +232,4 @@ set rtp+=/usr/local/opt/fzf
 let g:fzf_layout = { 'down': '40%' }
 
 "" neoclide/coc.nvim
-let g:coc_global_extensions = ['coc-go', 'coc-java']
+let g:coc_global_extensions = ['coc-go', 'coc-java', 'coc-tsserver']
