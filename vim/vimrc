@@ -40,6 +40,9 @@ set wildmenu
 " Add local share vim directory to packpath
 set packpath+=~/.local/share/vim
 
+" Reduce delay - neoclide/coc.nvim
+set updatetime=300
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
