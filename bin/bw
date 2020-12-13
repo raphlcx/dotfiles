@@ -11,6 +11,7 @@ echo ""
 brew update \
   && brew upgrade \
   && brew upgrade --cask \
+  && brew autoremove \
   && brew cleanup -s
 
 echo ""
