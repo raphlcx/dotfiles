@@ -40,9 +40,6 @@ set wildmenu
 " Add local share vim directory to packpath
 set packpath+=~/.local/share/vim
 
-" Reduce delay - neoclide/coc.nvim
-set updatetime=300
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -164,9 +161,6 @@ if executable('ag')
   command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
 
-" Organise imports in current buffer - neoclide/coc.nvim
-command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -195,25 +189,6 @@ function! ToggleSpellCheck()
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
-" Use K to show documentation - neoclide/coc.nvim
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-" GoTo code navigation. - neoclide/coc.nvim
-nmap <silent> gd <Plug>(coc-definition)
-
-" Rename symbol - neoclide/coc.nvim
-nmap <leader>rn <Plug>(coc-rename)
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -233,6 +208,3 @@ colorscheme modest-light
 "" fzf
 set rtp+=/usr/local/opt/fzf
 let g:fzf_layout = { 'down': '40%' }
-
-"" neoclide/coc.nvim
-let g:coc_global_extensions = ['coc-go', 'coc-java', 'coc-tsserver']
