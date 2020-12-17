@@ -73,12 +73,6 @@ set ignorecase
 " Intelligently switch between case sensitivity in search
 set smartcase
 
-" Highlight while searching with / or ?
-set incsearch
-
-" Keep matches highlighted
-set hlsearch
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual
 """"""""""""""""""""""""""""""""""""""""""""""""""
