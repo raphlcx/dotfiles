@@ -17,11 +17,8 @@ Options:
 # On macOS, use Homebrew-installed OpenSSL over macOS default
 # LibreSSL. The latter is outdated most of the time.
 if [ "$(uname)" == "Darwin" ]; then
-  OPENSSL="/usr/local/Cellar/openssl@1.1/1.1.1h/bin/openssl"
-else
-  OPENSSL="openssl"
+  export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 fi
-readonly OPENSSL
 
 # Output directory
 readonly OUTPUTDIRPATH="$HOME/Downloads"
@@ -92,7 +89,7 @@ _backup_keys() {
   echo "Storing archive to $OUTPUTDIRPATH/$ARCHIVEFILE ..."
   #shellcheck disable=SC2086
   tar cz $TARGETS 2>/dev/null \
-    | "$OPENSSL" enc -aes-256-cbc -e -md sha512 -pbkdf2 -iter 20000 > "$ARCHIVEFILE"
+    | openssl enc -aes-256-cbc -e -md sha512 -pbkdf2 -iter 20000 > "$ARCHIVEFILE"
 
   echo "Generating checksum ..."
 
