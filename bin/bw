@@ -16,14 +16,6 @@ brew update \
 
 echo ""
 echo "======================================"
-echo "   python3 pip setuptools wheel"
-echo "======================================"
-echo ""
-
-pip3 install -U pip setuptools wheel
-
-echo ""
-echo "======================================"
 echo "   tldr local cache"
 echo "======================================"
 echo ""
