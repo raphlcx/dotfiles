@@ -24,16 +24,6 @@ pip3 install -U pip setuptools wheel
 
 echo ""
 echo "======================================"
-echo "   ruby gems"
-echo "======================================"
-echo ""
-
-gem update --system -V
-gem update -V
-gem cleanup -V
-
-echo ""
-echo "======================================"
 echo "   tldr local cache"
 echo "======================================"
 echo ""

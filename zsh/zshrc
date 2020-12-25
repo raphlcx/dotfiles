@@ -40,8 +40,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Use Homebrew-installed ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-# Include Homebrew-installed ruby gem executables
+# Include Homebrew-installed ruby gems
 export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+# Include user-installed ruby gems
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 # Include user-installed python packages
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 # Include $HOME/.local/bin
