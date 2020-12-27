@@ -34,6 +34,9 @@ export DOCKER_MACHINE_NAME="default"
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+_PYTHON_VERSION=3.9
+_RUBY_VERSION=3.0.0
+
 # Reset PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Use coreutils
@@ -41,11 +44,11 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Use Homebrew-installed ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Include Homebrew-installed ruby gems
-export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/$_RUBY_VERSION/bin:$PATH"
 # Include user-installed ruby gems
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/$_RUBY_VERSION/bin:$PATH"
 # Include user-installed python packages
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PATH="$HOME/Library/Python/$_PYTHON_VERSION/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
