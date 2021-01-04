@@ -34,6 +34,7 @@ export DOCKER_MACHINE_NAME="default"
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Program versions
 _PYTHON_VERSION=3.9
 _RUBY_VERSION=3.0.0
 
@@ -49,6 +50,8 @@ export PATH="/usr/local/lib/ruby/gems/$_RUBY_VERSION/bin:$PATH"
 export PATH="$HOME/.gem/ruby/$_RUBY_VERSION/bin:$PATH"
 # Include user-installed python packages
 export PATH="$HOME/Library/Python/$_PYTHON_VERSION/bin:$PATH"
+# Include user-installed go packages
+export PATH="$HOME/go/bin:$PATH"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
