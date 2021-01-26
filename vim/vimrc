@@ -73,6 +73,9 @@ set ignorecase
 " Intelligently switch between case sensitivity in search
 set smartcase
 
+" Keep matches highlighted
+set hlsearch
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual
 """"""""""""""""""""""""""""""""""""""""""""""""""
