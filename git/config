@@ -49,3 +49,5 @@
 	ff = only
 [tag]
 	gpgSign = true
+[init]
+	defaultBranch = master
