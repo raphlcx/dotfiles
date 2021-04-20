@@ -100,6 +100,9 @@ set showmode
 " Show already typed keys when more are expected
 set showcmd
 
+" Always hide tab pages line
+set showtabline=0
+
 " Always report changed lines
 set report=0
 
