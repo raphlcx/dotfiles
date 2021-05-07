@@ -10,14 +10,21 @@ interval=1
 ssid=$($airport -I | grep -w 'SSID' | xargs)
 
 count=0
-total=0
+total_signal=0
+total_noise=0
+total_snr=0
 start=$(date)
 
 while [ $count -lt $max ]; do
-  snr=$($airport -I | grep -iE 'ctlrssi|ctlnoise' | awk '{print $2}' | xargs | sed 's/ / - /' | bc)
-  (( total += snr ))
+  numbers=$($airport -I | grep -iE 'ctlrssi|ctlnoise' | awk '{print $2}' | xargs)
+  signal=$(cut -d ' ' -f 1 <<< "$numbers")
+  noise=$(cut -d ' ' -f 2 <<< "$numbers")
+  snr=$(echo "$signal - $noise" | bc)
+  (( total_signal += signal ))
+  (( total_noise += noise ))
+  (( total_snr += snr ))
   (( count += 1 ))
-  echo "Count $count: SNR $snr"
+  echo "Count $count: signal $signal, noise $noise, SNR ${snr}db"
   sleep $interval
 done
 
@@ -25,7 +32,7 @@ end=$(date)
 
 echo ""
 echo "$ssid"
-echo "Average SNR: $(( total / max ))db"
-echo "Sampled in $interval seconds interval over $max seconds,"
+echo "Average: signal $(( total_signal / max )), noise $(( total_noise / max )), SNR $(( total_snr / max ))db"
+echo "Sampled in $interval seconds interval over $max intervals,"
 echo "from: $start"
 echo "to: $end"
