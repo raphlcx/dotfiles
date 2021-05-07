@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# macOS WiFi SNR
+
+airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport'
+
+max=60
+interval=1
+
+ssid=$($airport -I | grep -w 'SSID' | xargs)
+
+count=0
+total=0
+start=$(date)
+
+while [ $count -lt $max ]; do
+  snr=$($airport -I | grep -iE 'ctlrssi|ctlnoise' | awk '{print $2}' | xargs | sed 's/ / - /' | bc)
+  (( total += snr ))
+  (( count += 1 ))
+  echo "Count $count: SNR $snr"
+  sleep $interval
+done
+
+end=$(date)
+
+echo ""
+echo "$ssid"
+echo "Average SNR: $(( total / max ))db"
+echo "Sampled in $interval seconds interval over $max seconds,"
+echo "from: $start"
+echo "to: $end"
