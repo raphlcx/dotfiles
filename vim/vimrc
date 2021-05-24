@@ -204,6 +204,3 @@ if &term == 'linux'
 else
   colorscheme modest-light
 endif
-
-"" fzf
-let g:fzf_layout = { 'down': '40%' }
