@@ -40,6 +40,9 @@ set wildmenu
 " Add local share vim directory to packpath
 set packpath+=~/.local/share/vim
 
+" No delay when pressing ESC key
+set ttimeoutlen=0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
