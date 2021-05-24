@@ -206,4 +206,3 @@ colorscheme modest-light
 
 "" fzf
 set rtp+=/usr/local/opt/fzf
-let g:fzf_layout = { 'down': '40%' }
