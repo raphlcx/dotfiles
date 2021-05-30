@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readonly USAGE="
+USAGE="
 Backup files to an archive, and encrypt it.
 
 Usage:
@@ -13,6 +13,7 @@ Options:
   -skipkey      Skip backing up keys
   -h            Show this help message
 "
+readonly USAGE
 
 # On macOS, use Homebrew-installed OpenSSL over macOS default
 # LibreSSL. The latter is outdated most of the time.
@@ -24,7 +25,8 @@ fi
 readonly OUTPUTDIRPATH="$HOME/Downloads"
 
 # Timestamp for backup
-readonly UNIXEPOCH=$(date +%s)
+UNIXEPOCH=$(date +%s)
+readonly UNIXEPOCH
 
 _die() {
   local error

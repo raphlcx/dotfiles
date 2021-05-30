@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readonly USAGE="
+USAGE="
 Get GPG info for a specified key.
 
 Usage:
@@ -18,6 +18,7 @@ Options:
   -sk   Get signing subkey ID
   -h    Show this help message
 "
+readonly USAGE
 
 _die() {
   echo "$USAGE"
