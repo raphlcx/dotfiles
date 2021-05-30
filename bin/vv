@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readonly USAGE="
+USAGE="
 Vim plugin management using Git sources.
 
 Usage:
@@ -22,6 +22,7 @@ Options:
 
   -h    Show this help message
 "
+readonly USAGE
 
 readonly VIMDIR="$HOME/.local/share/vim/pack/plugins"
 
