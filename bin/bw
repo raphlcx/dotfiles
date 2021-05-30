@@ -12,7 +12,7 @@ brew update \
   && brew upgrade --formula \
   && brew upgrade --cask \
   && brew autoremove \
-  && brew cleanup -s
+  && brew cleanup --prune=all -s --prune-prefix
 
 echo ""
 echo "======================================"
