@@ -9,8 +9,7 @@ Usage:
 
 Arguments:
 
-  <key>       Identifier for which key to retrieve info
-              from
+  <key>       The key identifier
 
 Options:
 
