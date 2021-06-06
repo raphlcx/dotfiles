@@ -161,7 +161,7 @@ endif
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Save visual selection to clipboard
-vnoremap <Leader>y :w ! xclip -selection c<CR>
+vnoremap <Leader>c :w ! xclip -selection c<CR>
 
 " Run git command on current file
 nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
