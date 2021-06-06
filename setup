@@ -21,10 +21,6 @@ _link() {
 # Start setup
 _log 'Setting up dotfiles ...'
 
-_log '  alacritty'
-_create "$HOME/.config/alacritty"
-_link "$CWD/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
-
 _log '  bin directory'
 _create "$HOME/.local"
 _link "$CWD/bin" "$HOME/.local/bin"
