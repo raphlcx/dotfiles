@@ -26,6 +26,11 @@ readonly USAGE
 
 readonly VIMDIR="$HOME/.local/share/vim/pack/plugins"
 
+if ! [ -d "$VIMDIR" ]; then
+  mkdir -p "$VIMDIR"
+  git init "$VIMDIR"
+fi
+
 _die() {
   echo "$USAGE"
   exit 1
@@ -57,10 +62,6 @@ _dump() {
 }
 
 _install() {
-  mkdir -p "$VIMDIR"
-
-  git init "$VIMDIR"
-
   while read -r url; do
     _add "$url"
   done < /dev/stdin
