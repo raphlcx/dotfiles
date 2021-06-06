@@ -28,7 +28,7 @@
 [commit]
 	gpgsign = true
 [core]
-	editor = vim
+	editor = nvim
 [advice]
 	pushUpdateRejected = false
 	statusHints = false

@@ -17,7 +17,7 @@ brew bundle
 Install vim plugins:
 
 ```
-bin/vv install < vim/plugins
+bin/vv install < nvim/plugins
 ```
 
 ## Maintenance
@@ -28,8 +28,8 @@ Prepare `Brewfile`:
 brew bundle dump --force
 ```
 
-Prepare `vim/plugins`:
+Prepare `nvim/plugins`:
 
 ```
-bin/vv dump > vim/plugins
+bin/vv dump > nvim/plugins
 ```

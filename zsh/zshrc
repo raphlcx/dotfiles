@@ -19,7 +19,7 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
 # Standard programs
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 # fzf include hidden files and exclude certain directories

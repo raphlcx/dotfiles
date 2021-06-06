@@ -24,11 +24,11 @@ Options:
 "
 readonly USAGE
 
-readonly VIMDIR="$HOME/.local/share/vim/pack/plugins"
+readonly PLUGINDIR="$HOME/.local/share/nvim/site/pack/plugins"
 
-if ! [ -d "$VIMDIR" ]; then
-  mkdir -p "$VIMDIR"
-  git init "$VIMDIR"
+if ! [ -d "$PLUGINDIR" ]; then
+  mkdir -p "$PLUGINDIR"
+  git init "$PLUGINDIR"
 fi
 
 _die() {
@@ -42,23 +42,23 @@ _add() {
   name=$(basename "$url")
   name=${name%.git}
 
-  git -C "$VIMDIR" submodule add "$url" "start/$name"
+  git -C "$PLUGINDIR" submodule add "$url" "start/$name"
 }
 
 _rm() {
   local name="$1"
 
-  git -C "$VIMDIR" submodule deinit -f "$VIMDIR/start/$name"
-  git -C "$VIMDIR" rm -rf "$VIMDIR/start/$name"
-  rm -rf "$VIMDIR/.git/modules/start/$name"
+  git -C "$PLUGINDIR" submodule deinit -f "$PLUGINDIR/start/$name"
+  git -C "$PLUGINDIR" rm -rf "$PLUGINDIR/start/$name"
+  rm -rf "$PLUGINDIR/.git/modules/start/$name"
 }
 
 _ls() {
-  git -C "$VIMDIR" submodule
+  git -C "$PLUGINDIR" submodule
 }
 
 _dump() {
-  git -C "$VIMDIR" submodule foreach --quiet git remote get-url --all origin
+  git -C "$PLUGINDIR" submodule foreach --quiet git remote get-url --all origin
 }
 
 _install() {

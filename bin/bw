@@ -28,4 +28,4 @@ echo "   vim plugins"
 echo "======================================"
 echo ""
 
-git -C "$HOME/.local/share/vim/pack/plugins" submodule foreach git pull
+git -C "$HOME/.local/share/nvim/site/pack/plugins" submodule foreach git pull
