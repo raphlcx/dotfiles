@@ -97,12 +97,6 @@ set laststatus=2
 " Show as much as possible of the last line
 set display=lastline
 
-" Show current mode in command-line
-set showmode
-
-" Show already typed keys when more are expected
-set showcmd
-
 " Always hide tab pages line
 set showtabline=0
 
