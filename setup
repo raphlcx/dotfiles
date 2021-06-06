@@ -73,6 +73,7 @@ _log '  tmux'
 _link "$CWD/tmux/tmux.conf" "$HOME/.tmux.conf"
 
 _log '  zsh'
+_link "$CWD/zsh/zshenv" "$HOME/.zshenv"
 _link "$CWD/zsh/zshrc" "$HOME/.zshrc"
 
 _log 'Done.'
