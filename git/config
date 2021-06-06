@@ -40,8 +40,6 @@
 	autoStash = true
 [fetch]
 	prune = true
-[diff]
-	tool = vimdiff
 [user]
 	useConfigOnly = true
 	name = Ling Cong Xiang
