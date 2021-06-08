@@ -64,7 +64,7 @@ endif
 vnoremap <Leader>c :w ! pbcopy<CR>
 
 " Copy current file path to clipboard
-nnoremap <Leader>p<CR> :let @+ = expand("%")<CR>
+nnoremap <Leader>p :let @+ = expand("%")<CR>
 
 " Format Terraform file
 nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
