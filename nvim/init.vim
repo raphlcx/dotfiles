@@ -83,6 +83,9 @@ function! ToggleSpellCheck()
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
+" Open item from quickfix window in vertical split
+autocmd! FileType qf nnoremap <buffer> <C-v> <C-w><Enter><C-w>L
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
