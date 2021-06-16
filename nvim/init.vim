@@ -58,6 +58,16 @@ if executable('ag')
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype
+""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup filetype
+	au!
+	au FileType markdown setlocal sw=2 et
+	au FileType json setlocal sw=2 et
+	au FileType yaml setlocal sw=2
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Save visual selection to clipboard
