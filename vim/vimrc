@@ -43,6 +43,9 @@ set packpath+=~/.local/share/vim
 " No delay when pressing ESC key
 set ttimeoutlen=0
 
+" Enable undo persistence
+set undofile
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,29 +109,6 @@ let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:+,trail:.'
 
 " Disable special text rendering on html
 let html_no_rendering = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim files
-""""""""""""""""""""""""""""""""""""""""""""""""""
-set backup
-set backupdir   =$HOME/.cache/vim/backup//
-set backupext   =.vimbackup
-set backupskip  =
-set directory   =$HOME/.cache/vim/swap//
-set updatecount =100
-set undofile
-set undodir     =$HOME/.cache/vim/undo//
-set viminfo     ='100,n$HOME/.cache/vim/viminfo
-
-if !isdirectory(&backupdir)
-  call mkdir(&backupdir, 'p', 0700)
-endif
-if !isdirectory(&directory)
-  call mkdir(&directory, 'p', 0700)
-endif
-if !isdirectory(&undodir)
-  call mkdir(&undodir, 'p', 0700)
-endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype-specific settings
