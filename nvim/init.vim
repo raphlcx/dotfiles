@@ -66,10 +66,10 @@ let html_no_rendering = 1
 " Filetype
 """"""""""""""""""""""""""""""""""""""""""""""""""
 augroup filetype
-	au!
-	au FileType python setlocal ts=4 sw=4
-	au FileType java setlocal ts=4 sw=4
-	au FileType go setlocal noet
+  au!
+  au FileType python setlocal ts=4 sw=4
+  au FileType java setlocal ts=4 sw=4
+  au FileType go setlocal noet
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,9 +77,9 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Use ag for grep
 if executable('ag')
-	set grepprg=ag\ --vimgrep\ $*
-	set grepformat=%f:%l:%c:%m
-	command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+  command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,12 +99,12 @@ nnoremap <Leader>q :FZF<CR>
 
 " Toggle spell check
 function! ToggleSpellCheck()
-	set spell!
-	if &spell
-		echo "Spellcheck ON"
-	else
-		echo "Spellcheck OFF"
-	endif
+  set spell!
+  if &spell
+    echo "Spellcheck ON"
+  else
+    echo "Spellcheck OFF"
+  endif
 endfunction
 nnoremap <silent> <Leader>s :call ToggleSpellCheck()<CR>
 
