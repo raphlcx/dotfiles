@@ -55,14 +55,8 @@ set expandtab
 " Display tab as 2 spaces
 set tabstop=2
 
-" Tab key indents by 2 spaces
-set softtabstop=2
-
 " >> indents by 2 spaces
 set shiftwidth=2
-
-" >> indents to next multiple of 'shiftwidth'
-set shiftround
 
 " Make backspace work as you would expect
 set backspace=indent,eol,start
