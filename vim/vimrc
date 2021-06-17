@@ -138,7 +138,6 @@ augroup filetypespecificsettings
   au BufRead,BufNewFile *.java setlocal softtabstop=4 shiftwidth=4 tabstop=4
   au BufRead,BufNewFile *.go setlocal noexpandtab
   au BufRead,BufNewFile *.bats set ft=sh
-  au FileType help setlocal syntax=off
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
