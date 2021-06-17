@@ -17,6 +17,18 @@ set splitbelow splitright
 set undofile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Spacing and indent
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Display tab as 2 spaces
+set tabstop=2
+
+" >> indents by 2 spaces
+set shiftwidth=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Case-insensitive search
@@ -48,6 +60,16 @@ set listchars=tab:>\ ,trail:.,nbsp:+
 let html_no_rendering = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype
+""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup filetype
+	au!
+	au FileType python setlocal ts=4 sw=4
+	au FileType java setlocal ts=4 sw=4
+	au FileType go setlocal noet
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Commands
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Use ag for grep
@@ -56,16 +78,6 @@ if executable('ag')
 	set grepformat=%f:%l:%c:%m
 	command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Filetype
-""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup filetype
-	au!
-	au FileType markdown setlocal sw=2 et
-	au FileType json setlocal sw=2 et
-	au FileType yaml setlocal sw=2
-augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
