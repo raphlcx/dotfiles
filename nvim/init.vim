@@ -28,6 +28,9 @@ set tabstop=2
 " >> indents by 2 spaces
 set shiftwidth=2
 
+" >> indents to next multiple of 'shiftwidth'
+set shiftround
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""
