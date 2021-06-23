@@ -45,6 +45,16 @@ set ttimeoutlen=0
 
 " Enable undo persistence
 set undofile
+set undodir=$HOME/.vim/undo//
+if !isdirectory(&undodir)
+  call mkdir(&undodir, 'p', 0700)
+endif
+
+" Set swap file location
+set directory=$HOME/.vim/swap//
+if !isdirectory(&directory)
+  call mkdir(&directory, 'p', 0700)
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
