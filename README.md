@@ -30,7 +30,7 @@ systemctl --user enable ssh-agent.service
 Install vim plugins:
 
 ```
-bin/vv install < vim/plugins
+bin/vv install < vim-plugins
 ```
 
 ## Maintenance
@@ -58,8 +58,8 @@ Font configurations are found in multiple locations:
 
 ### vim plugins
 
-Prepare `vim/plugins`:
+Prepare `vim-plugins`:
 
 ```
-bin/vv dump > vim/plugins
+bin/vv dump > vim-plugins
 ```
