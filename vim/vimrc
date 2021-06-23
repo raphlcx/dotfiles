@@ -1,11 +1,32 @@
+" Modified from
+" https://github.com/mhinz/vim-galore/blob/master/static/minimal-vimrc.vim
+
+" No Vi-compatibility
+set nocompatible
+
+" The encoding displayed
+set encoding=utf-8
+
 " Disable modeline for stricter security
 set nomodeline
 
+" Load plugins according to detected file type
+filetype plugin indent on
+
+" Enable syntax highlighting
+syntax on
+
 " Better performance
-set lazyredraw
+set ttyfast lazyredraw
+
+" No bell at all
+set belloff=all
 
 " Set spell check language to British English
 set spelllang=en_gb
+
+" Automatically load file on change
+set autoread
 
 " Switch between buffers without having to save first
 set hidden
@@ -13,12 +34,24 @@ set hidden
 " Sane window split, bottom and right of current window
 set splitbelow splitright
 
+" Enhance command-line completion
+set wildmenu
+
+" Add local share vim directory to packpath
+set packpath+=~/.local/share/vim
+
+" No delay when pressing ESC key
+set ttimeoutlen=0
+
 " Enable undo persistence
 set undofile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing and indent
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Indent according to previous line
+set autoindent
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -31,6 +64,9 @@ set shiftwidth=2
 " >> indents to next multiple of 'shiftwidth'
 set shiftround
 
+" Make backspace work as you would expect
+set backspace=indent,eol,start
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,14 +76,26 @@ set ignorecase
 " Intelligently switch between case sensitivity in search
 set smartcase
 
+" Keep matches highlighted
+set hlsearch
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Show ruler
+set ruler
+
 " Show line number
 set number
 
 " Use relative line number
 set relativenumber
+
+" Always show status line
+set laststatus=2
+
+" Show as much as possible of the last line
+set display=lastline
 
 " Always hide tab pages line
 set showtabline=0
@@ -57,7 +105,7 @@ set report=0
 
 " Show non-printable characters
 set list
-set listchars=tab:>\ ,trail:.,nbsp:+
+let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:+,trail:.'
 
 " Disable special text rendering on html
 let html_no_rendering = 1
@@ -88,8 +136,10 @@ endif
 " Save visual selection to clipboard
 vnoremap <Leader>c :w ! pbcopy<CR>
 
-" Copy current file path to clipboard
-nnoremap <Leader>p :let @+ = expand("%")<CR>
+" Run git command on current file
+nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
+nnoremap <Leader>gb<CR> :!git blame %<CR>
+nnoremap <Leader>gd<CR> :!git diff %<CR>
 
 " Format Terraform file
 nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>

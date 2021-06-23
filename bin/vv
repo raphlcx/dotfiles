@@ -24,7 +24,7 @@ Options:
 "
 readonly USAGE
 
-readonly PLUGINDIR="$HOME/.local/share/nvim/site/pack/plugins"
+readonly PLUGINDIR="$HOME/.local/share/vim/pack/plugins"
 
 if ! [ -d "$PLUGINDIR" ]; then
   mkdir -p "$PLUGINDIR"
