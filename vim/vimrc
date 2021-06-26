@@ -76,6 +76,9 @@ set ignorecase
 " Intelligently switch between case sensitivity in search
 set smartcase
 
+" Search incrementally
+set incsearch
+
 " Keep matches highlighted
 set hlsearch
 
