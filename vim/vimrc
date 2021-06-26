@@ -58,6 +58,9 @@ set expandtab
 " Display tab as 2 spaces
 set tabstop=2
 
+" Tab key indents by 2 spaces
+set softtabstop=2
+
 " >> indents by 2 spaces
 set shiftwidth=2
 
@@ -118,8 +121,8 @@ let html_no_rendering = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""
 augroup filetype
   au!
-  au FileType python setlocal ts=4 sw=4
-  au FileType java setlocal ts=4 sw=4
+  au FileType python setlocal ts=4 sts=4 sw=4
+  au FileType java setlocal ts=4 sts=4 sw=4
   au FileType go setlocal noet
 augroup END
 
