@@ -131,7 +131,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Use ag for grep
 if executable('ag')
-  set grepprg=ag\ --vimgrep\ $*
+  set grepprg=ag\ --hidden\ --ignore\ .git\ --vimgrep\ $*
   set grepformat=%f:%l:%c:%m
   command! -nargs=+ -bar G silent! grep! <args>|cwindow|redraw!
 endif
