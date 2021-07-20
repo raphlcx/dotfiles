@@ -8,11 +8,9 @@ echo "   brew and cask"
 echo "======================================"
 echo ""
 
-brew update \
-  && brew upgrade --formula \
-  && brew upgrade --cask \
-  && brew autoremove \
-  && brew cleanup --prune=all -s --prune-prefix
+brew update && brew upgrade
+brew autoremove
+brew cleanup --prune=all -s --prune-prefix
 
 echo ""
 echo "======================================"
