@@ -5,11 +5,9 @@
 	bb = branch --show-current
 	c = commit
 	ck = checkout
-	cl = clone
 	cp = cherry-pick
 	d = diff
 	dc = diff --cached
-	f = fetch
 	l = log
 	lpf = log -p --follow
 	lo = log --oneline
@@ -18,10 +16,6 @@
 	r = rebase
 	ri = rebase -i
 	s = status --short --branch
-	st = stash
-	sta = stash apply
-	stl = stash list
-	stp = stash pop
 	sw = show
 [push]
 	default = simple
