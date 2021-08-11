@@ -9,10 +9,8 @@
 	d = diff
 	dc = diff --cached
 	l = log
-	lpf = log -p --follow
 	lo = log --oneline
 	p = push
-	pl = pull
 	r = rebase
 	ri = rebase -i
 	s = status --short --branch
