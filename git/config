@@ -15,7 +15,6 @@
 	ri = rebase -i
 	s = status --short --branch
 	sw = show
-	ru = remote update
 [push]
 	default = simple
 [commit]
