@@ -1,5 +1,11 @@
 Include config.local
 
+# Host example.com
+#   HostName example.com
+#   User user
+#   IdentityFile ~/.ssh/key
+
+# Wildcard, generic configuration at the end
 Host *
   AddKeysToAgent yes
   IdentitiesOnly yes
