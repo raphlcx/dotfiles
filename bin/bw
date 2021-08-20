@@ -10,7 +10,7 @@ echo ""
 
 brew update && brew upgrade
 brew autoremove
-brew cleanup --prune=all -s --prune-prefix
+brew cleanup
 
 echo ""
 echo "======================================"
