@@ -49,8 +49,8 @@ _index_jdk() {
       | grep -v META-INF \
       | grep -v 'sun/launcher/resources/' \
       | grep -v '\.gif$' \
-      | sed 's/classes\///' \
-      | sed 's/.class//' \
+      | sed 's/^classes\///' \
+      | sed 's/\.class$//' \
       | tr '/' '.' \
       | tee -a "$IDX_FILE_JDK"
   done
@@ -62,7 +62,7 @@ _index_m2() {
       | grep -v '\$' \
       | grep -v META-INF \
       | grep '\.class' \
-      | sed 's/.class//' \
+      | sed 's/\.class$//' \
       | tr '/' '.' \
       | tee -a "$IDX_FILE_M2"
   done
