@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+
+USAGE="
+Index Java JDK and Maven packages.
+
+Usage:
+
+  $(basename "$0") [options] [subcommands]
+
+Subcommands:
+
+  index     Index packages. Implicitly implied when there are
+            no subcommands.
+  cat       View the indexed packages
+  rm        Remove the index file
+
+Options:
+
+  -jdk      Operate only on JDK packages
+  -m2       Operate only on Maven packages
+  -h        Show this help message
+"
+readonly USAGE
+
+readonly IDX_FILE_JDK="$HOME/.local/share/javaidx-jdk"
+readonly IDX_FILE_M2="$HOME/.local/share/javaidx-m2"
+
+if [ "$(uname)" == "Darwin" ]; then
+  JMOD="/usr/local/opt/openjdk/bin/jmod"
+  JAR="/usr/local/opt/openjdk/bin/jar"
+  JDK_JMODS="/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/jmods"
+  M2="$HOME/.m2/repository"
+else
+  echo "Script only supports running on macOS for now."
+  exit 0
+fi
+
+_die() {
+  echo "$USAGE"
+  exit 1
+}
+
+_index_jdk() {
+  for mod in "$JDK_JMODS/"*; do
+    "$JMOD" list "$mod" \
+      | grep classes/ \
+      | grep -v module-info \
+      | grep -v '\$' \
+      | grep -v META-INF \
+      | grep -v 'sun/launcher/resources/' \
+      | grep -v '\.gif$' \
+      | sed 's/classes\///' \
+      | sed 's/.class//' \
+      | tr '/' '.' \
+      | tee -a "$IDX_FILE_JDK"
+  done
+}
+
+_index_m2() {
+  find "$M2" -name "*.jar" | while read -r jar; do
+    "$JAR" -tf "$jar" \
+      | grep -v '\$' \
+      | grep -v META-INF \
+      | grep '\.class' \
+      | sed 's/.class//' \
+      | tr '/' '.' \
+      | tee -a "$IDX_FILE_M2"
+  done
+}
+
+_postprocess_index() {
+  local idx="$1"
+  sort < "$idx" | uniq > "$idx-1"
+  mv "$idx-1" "$idx"
+}
+
+OPERATION_INDEX=1
+OPERATION_CAT=0
+OPERATION_RM=0
+FLAG_JDK=0
+FLAG_M2=0
+
+while [ -n "$1" ]; do
+  case "$1" in
+    index)
+      shift
+      ;;
+    cat)
+      shift
+      OPERATION_CAT=1
+      ;;
+    rm)
+      shift
+      OPERATION_RM=1
+      ;;
+    -jdk)
+      shift
+      FLAG_JDK=1
+      ;;
+    -m2)
+      shift
+      FLAG_M2=1
+      ;;
+    -h)
+      echo "$USAGE"
+      exit 0
+      ;;
+    *)
+      _die
+      ;;
+  esac
+done
+
+if [ "$FLAG_JDK" -eq 0 ] && [ "$FLAG_M2" -eq 0 ]; then
+  FLAG_JDK=1
+  FLAG_M2=1
+fi
+
+if [ "$OPERATION_CAT" -eq 1 ]; then
+
+  [ "$FLAG_JDK" -eq 1 ] && cat "$IDX_FILE_JDK" 2>/dev/null
+  [ "$FLAG_M2" -eq 1 ] && cat "$IDX_FILE_M2" 2>/dev/null
+
+elif [ "$OPERATION_RM" -eq 1 ]; then
+
+  [ "$FLAG_JDK" -eq 1 ] && echo "Removing $IDX_FILE_JDK" && rm -f "$IDX_FILE_JDK"
+  [ "$FLAG_M2" -eq 1 ] && echo "Removing $IDX_FILE_M2" &&  rm -f "$IDX_FILE_M2"
+
+elif [ "$OPERATION_INDEX" -eq 1 ]; then
+
+  if [ "$FLAG_JDK" -eq 1 ]; then
+    _index_jdk
+    _postprocess_index "$IDX_FILE_JDK"
+  fi
+
+  if [ "$FLAG_M2" -eq 1 ]; then
+    _index_m2
+    _postprocess_index "$IDX_FILE_M2"
+  fi
+fi
