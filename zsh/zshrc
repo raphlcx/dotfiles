@@ -29,6 +29,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
 
+# Docker
+export DOCKER_HOST=tcp://3.1.239.5:2376
+export DOCKER_TLS_VERIFY=1
+
 # Program versions
 _PYTHON_VERSION=3.9
 
