@@ -33,15 +33,10 @@ export HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
 export DOCKER_HOST=tcp://3.1.239.5:2376
 export DOCKER_TLS_VERIFY=1
 
-# Program versions
-_PYTHON_VERSION=3.8
-
 # Reset PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Use coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-# Include user-installed python packages
-export PATH="$HOME/Library/Python/$_PYTHON_VERSION/bin:$PATH"
 # Include user-installed go packages
 export PATH="$HOME/go/bin:$PATH"
 # Include $HOME/.local/bin
