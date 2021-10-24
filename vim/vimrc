@@ -177,7 +177,7 @@ let g:netrw_banner = 0
 " Suppress netrw history
 let g:netrw_dirhistmax = 0
 
-"" Raphx/modest
+"" raphlcx/modest
 if &term == 'linux'
   colorscheme modest-dark
 else
