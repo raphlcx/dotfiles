@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# Commands assuming coreutils package is used
+if ! command -v realpath &> /dev/null; then
+  echo "Please install coreutils package for realpath command."
+  exit 1
+fi
 
 # Full path of script
 readonly CWD="$(dirname "$(realpath "$0")")"
