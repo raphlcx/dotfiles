@@ -35,8 +35,6 @@ export DOCKER_TLS_VERIFY=1
 
 # Reset PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-# Use coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Include user-installed go packages
 export PATH="$HOME/go/bin:$PATH"
 # Include $HOME/.local/bin
@@ -52,7 +50,7 @@ export GPG_TTY
 # Aliases
 alias g='git'
 alias k='kubectl'
-alias ll='ls -alv --group-directories-first'
+alias ll='gls -alv --group-directories-first'
 alias pig='ping google.com'
 
 # Functions
