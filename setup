@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Full path of script
-readonly CWD="$(dirname "$(realpath "$0")")"
+CWD="$(dirname "$(realpath "$0")")"
+readonly CWD
 
 # Commands
 _log() {
