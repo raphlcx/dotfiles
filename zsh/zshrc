@@ -1,7 +1,7 @@
 # Skip adding duplicate command lines to history
-setopt histignoredups
+setopt HIST_IGNORE_DUPS
 # Write to history file incrementally
-setopt incappendhistory
+setopt INC_APPEND_HISTORY
 
 # Use vi key binding
 bindkey -v
