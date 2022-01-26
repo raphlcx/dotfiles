@@ -112,6 +112,8 @@ window:
 
   # Scrolling distance multiplier.
   #multiplier: 3
+scrolling:
+  history: 0
 
 # Font configuration
 #font:
