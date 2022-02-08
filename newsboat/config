@@ -15,6 +15,7 @@ color listfocus_unread black white
 
 history-limit 0
 max-items 20
+refresh-on-startup yes
 reload-threads 20
 show-keymap-hint no
 swap-title-and-hints yes
