@@ -18,5 +18,7 @@ max-items 20
 refresh-on-startup yes
 reload-threads 20
 show-keymap-hint no
+show-read-articles no
+show-read-feeds no
 swap-title-and-hints yes
 text-width 72
