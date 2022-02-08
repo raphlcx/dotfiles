@@ -21,6 +21,7 @@ export LC_ALL=en_GB.UTF-8
 # Standard programs
 export EDITOR=vim
 export PAGER=less
+export BROWSER=/Applications/Firefox.app/Contents/MacOS/firefox
 
 # fzf include hidden files and exclude certain directories
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
