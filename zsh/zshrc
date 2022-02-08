@@ -52,6 +52,7 @@ export GPG_TTY
 alias g='git'
 alias k='kubectl'
 alias ll='gls -alv --group-directories-first'
+alias nw='newsboat'
 alias pig='ping google.com'
 
 # Functions
