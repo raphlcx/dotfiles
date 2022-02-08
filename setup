@@ -50,6 +50,11 @@ _log '  gnupg gpg-agent'
 _create "$HOME/.gnupg"
 _link "$CWD/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
+_log '  newsboat'
+_create "$HOME/.config/newsboat"
+_link "$CWD/newsboat/urls" "$HOME/.config/newsboat/urls"
+_link "$CWD/newsboat/config" "$HOME/.config/newsboat/config"
+
 _log '  python pip'
 _create "$HOME/.config/pip"
 _link "$CWD/python/pip.conf" "$HOME/.config/pip/pip.conf"
