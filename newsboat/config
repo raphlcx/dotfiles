@@ -13,6 +13,8 @@ color info black white
 color listfocus black white
 color listfocus_unread black white
 
+confirm-mark-all-feeds-read no
+confirm-mark-feed-read no
 history-limit 0
 max-items 20
 refresh-on-startup yes
