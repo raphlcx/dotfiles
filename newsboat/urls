@@ -1,23 +1,18 @@
 #
-# Tech: Bulletin
-#
 https://hnrss.org/newest?points=100
-https://www.reddit.com/r/netsec/.rss
-#https://lwn.net/headlines/rss
-#https://www.phoronix.com/rss.php
-#https://distrowatch.com/news/dw.xml
-https://feeds.feedburner.com/AmazonWebServicesBlog
-#
-# Tech: Individual
-#
-#https://tisiphone.net/feed
-https://danielmiessler.com/feed/
-https://feeds.feedburner.com/TroyHunt
-#https://rachelbythebay.com/w/atom.xml
-#
-# Non-tech
-#
+https://aws.amazon.com/blogs/aws/feed/
+https://archlinux.org/feeds/news/
+https://staysaasy.com/feed.xml
 https://stratechery.com/feed
-#https://waitbutwhy.com/feed
-#https://nesslabs.com/feed
-#https://photographylife.com/feed
+https://github.blog/feed
+https://blog.cloudflare.com/rss/
+https://go.dev/blog/feed.atom
+#
+https://boringappsec.substack.com/feed
+https://tldrsec.com/feed.xml
+#
+https://www.benkuhn.net/index.xml
+https://danielmiessler.com/feed/
+https://drewdevault.com/blog/index.xml
+https://jayriverlong.github.io/feed.xml
+https://swagitda.com/blog/posts/index.xml
