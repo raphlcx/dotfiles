@@ -16,7 +16,7 @@ color listfocus_unread black white
 confirm-mark-all-feeds-read no
 confirm-mark-feed-read no
 history-limit 0
-max-items 20
+max-items 75
 refresh-on-startup yes
 reload-threads 20
 show-keymap-hint no
