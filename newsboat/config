@@ -17,7 +17,7 @@ color listfocus black white
 color listfocus_unread black white
 
 feedlist-format "%4i %11u %t"
-articlelist-format "%4i %D %?T?|%-17T| ?%t"
+articlelist-format "%4i %=8D %?T?|%-17T| ?%t"
 
 confirm-mark-all-feeds-read no
 confirm-mark-feed-read no
