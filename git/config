@@ -28,6 +28,7 @@
 	resolveConflict = false
 	detachedHead = false
 	addEmptyPathspec = false
+	skippedCherryPicks = false
 [rebase]
 	autoSquash = true
 	autoStash = true
