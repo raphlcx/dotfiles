@@ -123,6 +123,9 @@ set report=0
 set list
 let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:+,trail:.'
 
+" Wrap long lines without breaking up a complete word
+set linebreak
+
 " Disable special text rendering on html
 let html_no_rendering = 1
 
