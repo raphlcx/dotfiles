@@ -39,9 +39,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# Include additional user command completion functions
-fpath=($HOME/.local/share/zsh/site-functions $fpath)
-
 # gpg-agent tty
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -56,6 +53,12 @@ alias pig='ping google.com'
 # Functions
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
+# Include additional user command completion functions
+fpath=($HOME/.local/share/zsh/site-functions $fpath)
+
 # Load completion
-autoload -Uz compinit
-compinit
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+# Completion for AWS CLI
+complete -C "$(which aws_completer)" aws
