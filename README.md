@@ -53,6 +53,7 @@ On a fresh macOS install, perform these changes in System Preferences:
   - Sharing: Update computer's name as needed.
   - Security & Privacy: Require password immediately after sleep.
   - Security & Privacy: Turn on firewall. Enable stealth mode in firewall options.
+  - Security & Privacy: Under Privacy tab, disable personalised ads under advertising.
 
 On Desktop:
 
