@@ -15,6 +15,7 @@
 	ri = rebase -i
 	s = status --short --branch
 	sw = show
+	can = commit --amend --no-edit
 [push]
 	default = simple
 [commit]
