@@ -54,6 +54,7 @@ On a fresh macOS install, perform these changes in System Preferences:
   - Security & Privacy: Require password immediately after sleep.
   - Security & Privacy: Turn on firewall. Enable stealth mode in firewall options.
   - Security & Privacy: Under Privacy tab, disable personalised ads under advertising.
+  - Security & Privacy: Under Privacy tab, disable everything under analytics.
 
 On Desktop:
 
