@@ -44,6 +44,8 @@ On a fresh macOS install, perform these changes in System Preferences:
   - Trackpad: Disable smart zoom.
   - Keyboard: Set key repeat to fastest and repeat delay to shortest.
   - Keyboard: Under modifier keys, set Caps Lock as Escape key.
+  - Keyboard: Under input sources, add simplified Chinese Pinyin.
+  - Keyboard: Under input sources, set to always show input menu in menu bar.
   - Accessibility: Under Pointer Control, enable three finger drag on trackpad.
   - Language & Region: Use 24-hour time format.
   - Dock: Enable automatic hide and show dock.
@@ -83,11 +85,15 @@ Removing Terminal artefacts:
   - In System Preferences, Security & Privacy, Privacy tab, Files and Folders sidebar, remove Terminal.
   - From favoured terminal application, remove `$HOME/.zsh_sessions`.
 
+Restore Documents:
+
+  - Download Documents backup. Decrypt and extract it. Place the content in `$HOME/Documents`, as appropriate.
+
 On Mail preferences:
 
   - Under Fonts & Colours, use fixed-width font for plain text messages.
   - Under Composing, use plain text for message format.
 
-Restore Documents:
+On Activity Monitor view:
 
-  - Download Documents backup. Decrypt and extract it. Place the content in `$HOME/Documents`, as appropriate.
+  - Set update frequency to very often (1 sec).
