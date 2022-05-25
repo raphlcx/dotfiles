@@ -46,6 +46,7 @@ On a fresh macOS install, perform these changes in System Preferences:
   - Keyboard: Under modifier keys, set Caps Lock as Escape key.
   - Keyboard: Under input sources, add simplified Chinese Pinyin.
   - Keyboard: Under input sources, set to always show input menu in menu bar.
+  - Keyboard: Under shortcuts, for input sources, enable select next source in input menu (Ctrl+Alt+Space).
   - Accessibility: Under Pointer Control, enable three finger drag on trackpad.
   - Language & Region: Use 24-hour time format.
   - Dock: Enable automatic hide and show dock.
