@@ -24,7 +24,7 @@ export PAGER=less
 export BROWSER=/Applications/Firefox.app/Contents/MacOS/firefox
 
 # fzf include hidden files and exclude certain directories
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
