@@ -89,6 +89,7 @@ Removing Terminal artefacts:
 Restore Documents:
 
   - Download Documents backup. Decrypt and extract it. Place the content in `$HOME/Documents`, as appropriate.
+  - `chmod 700` on `$HOME/Documents` directory.
 
 On Mail preferences:
 
