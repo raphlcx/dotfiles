@@ -41,6 +41,8 @@ For macOS Monterey 12.3.1.
 On a fresh macOS install, perform these changes in System Preferences:
 
   - Trackpad: Set tap to click.
+  - Trackpad: Set click to "light".
+  - Trackpad: Set tracking speed until there are only 4 vertical bars visible to the right.
   - Trackpad: Disable smart zoom.
   - Keyboard: Set key repeat to fastest and repeat delay to shortest.
   - Keyboard: Under modifier keys, set Caps Lock as Escape key.
