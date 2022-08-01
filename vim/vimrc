@@ -198,4 +198,4 @@ let g:netrw_dirhistmax = 0
 colorscheme modest-light
 
 "" fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
