@@ -54,6 +54,7 @@ On a fresh macOS install, perform these changes in System Settings:
   - General: Under Date & Time, use 24-hour time format.
   - General: Under Sharing, update computer's name as needed.
   - Control Centre: Set to always show Sound in menu bar.
+  - Control Centre: Set to show Focus when active in menu bar.
   - Control Centre: Set to always hide Spotlight in menu bar.
   - Privacy & Security: Disable personalised ads under advertising.
   - Privacy & Security: Disable everything under analytics.
