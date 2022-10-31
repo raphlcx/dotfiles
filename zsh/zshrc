@@ -43,6 +43,8 @@ export DOCKER_TLS_VERIFY=1
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/opt/homebrew/sbin:/usr/local/sbin:/usr/sbin:/sbin"
 # Include $HOME/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
+# Python
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
