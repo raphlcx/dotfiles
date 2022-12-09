@@ -49,6 +49,7 @@ On a fresh macOS install, perform these changes in System Settings:
   - Keyboard: Under keyboard shortcuts > input sources, set to always show input menu in menu bar.
   - Keyboard: Under keyboard shortcuts > input sources, enable select next source in input menu (Ctrl+Alt+Space).
   - Keyboard: Under input sources, add simplified Chinese Pinyin.
+  - Keyboard: Under input sources, disable automatic spelling correction.
   - Accessibility: Under Pointer Control > trackpad options, enable three finger drag.
   - Network: Turn on firewall. Enable stealth mode in firewall options.
   - General: Under Date & Time, use 24-hour time format.
