@@ -75,7 +75,7 @@ _backup_keys() {
   gpg --export > "$GNUPGPATH/pub.asc"
   gpg --export-ownertrust > "$GNUPGPATH/trust.asc"
 
-  TARGETS="$GNUPGPATH $HOME/.keys $HOME/.ssh"
+  TARGETS="$GNUPGPATH $HOME/.ssh"
   ARCHIVEFILE="keys-$UNIXEPOCH.tar.gz.enc"
   DIGESTFILE="$ARCHIVEFILE.sum"
 
