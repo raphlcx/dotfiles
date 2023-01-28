@@ -85,18 +85,16 @@ On Terminal:
   - Remove the PGP keys backup.
   - Remove the backup artefacts.
   - Close Terminal.
-
-Removing Terminal artefacts:
-
-  - In System Preferences, Security & Privacy, Privacy tab, Files and Folders sidebar, remove Terminal.
-  - From favoured terminal application, remove `$HOME/.zsh_sessions`.
+  - Removing Terminal artefacts:
+      - In System Settings > Privacy & Security > Files and Folders, remove Terminal.
+      - From favoured terminal application, remove `$HOME/.zsh_sessions`.
 
 Restore Documents:
 
   - Download Documents backup. Decrypt and extract it. Place the content in `$HOME/Documents`, as appropriate.
   - `chmod 700` on `$HOME/Documents` directory.
 
-On Mail preferences:
+On Mail settings:
 
   - Under Fonts & Colours, use fixed-width font for plain text messages.
   - Under Composing, use plain text for message format.
@@ -104,3 +102,11 @@ On Mail preferences:
 On Activity Monitor view:
 
   - Set update frequency to very often (1 sec).
+
+On Finder settings:
+
+  - Under General, set new Finder window to show "Downloads".
+  - Under Tags, uncheck all tags and remove all favourite tags.
+  - Under Sidebar, check only "Desktop", "Documents", and "Downloads" and home directory under Favourites.
+  - Under Sidebar, uncheck everything under iCloud and Tags.
+  - Under Advanced, allow showing all filename extensions.
