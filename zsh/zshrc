@@ -41,6 +41,8 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/opt/homebrew/sbin:/
 export PATH="$HOME/.local/bin:$PATH"
 # Python
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
