@@ -1,8 +1,6 @@
 tap "cloudquery/tap"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "raphlcx/tap"
 tap "sass/sass"
