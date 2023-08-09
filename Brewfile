@@ -20,7 +20,6 @@ brew "jq"
 brew "kubernetes-cli"
 brew "openjdk"
 brew "maven"
-brew "newsboat"
 brew "node"
 brew "postgresql@14", restart_service: true
 brew "pg_partman"
