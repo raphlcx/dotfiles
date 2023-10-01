@@ -36,7 +36,7 @@ bin/vv dump > vim-plugins
 
 ## Fresh install
 
-For macOS Ventura 13.0.
+For macOS Sonoma 14.
 
 On a fresh macOS install, perform these changes in System Settings:
 
@@ -46,8 +46,8 @@ On a fresh macOS install, perform these changes in System Settings:
   - Trackpad: Disable smart zoom.
   - Keyboard: Set key repeat to fastest and repeat delay to shortest.
   - Keyboard: Under keyboard shortcuts > modifier keys, set Caps Lock as Escape key.
-  - Keyboard: Under keyboard shortcuts > input sources, set to always show input menu in menu bar.
   - Keyboard: Under keyboard shortcuts > input sources, enable select next source in input menu (Ctrl+Alt+Space).
+  - Keyboard: Under input sources, set to always show input menu in menu bar.
   - Keyboard: Under input sources, add simplified Chinese Pinyin.
   - Keyboard: Under input sources, disable automatic spelling correction.
   - Accessibility: Under Pointer Control > trackpad options, enable three finger drag.
