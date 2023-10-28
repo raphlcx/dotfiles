@@ -18,7 +18,7 @@ readonly USAGE
 # On macOS, use Homebrew-installed OpenSSL over macOS default
 # LibreSSL. The latter is outdated most of the time.
 if [ "$(uname)" == "Darwin" ]; then
-  export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+  export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 fi
 
 # Output directory
