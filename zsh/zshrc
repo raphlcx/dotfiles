@@ -55,6 +55,7 @@ alias k='kubectl'
 alias ll='gls -alv --group-directories-first'
 alias nw='newsboat'
 alias pig='ping google.com'
+alias mlsso='aws sso login --sso-session cling'
 
 # Functions
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
