@@ -50,6 +50,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # Aliases
+alias ap='amplify'
 alias g='git'
 alias k='kubectl'
 alias ll='gls -alv --group-directories-first'
