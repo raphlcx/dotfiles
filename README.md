@@ -111,3 +111,54 @@ On Finder settings:
   - Under Sidebar, check only "Desktop", "Documents", and "Downloads" and home directory under Favourites.
   - Under Sidebar, uncheck everything under iCloud and Tags.
   - Under Advanced, allow showing all filename extensions.
+
+## Firefox customisation
+
+Windowing:
+
+  - Ensure window take up whole screen
+
+Customise toolbar:
+
+  - Remove "Firefox View"
+  - Remove "Save to Pocket"
+  - Remove "Account"
+  - Remove "Import bookmarks..." on bookmark bar
+  - Remove spacers beside address bar
+
+Bookmarks:
+
+  - Remove all items under Bookmarks Toolbar and Bookmarks Menu
+  - Visit "about:profiles" on address bar and bookmark that page
+
+Settings:
+
+  - General
+
+    - Under Language, uncheck "Check your spelling as you type"
+    - Under Browsing, uncheck "Recommend extensions as you browse"
+    - Under Browsing, uncheck "Recommend features as you browse"
+
+  - Home
+
+    - Under New Windows and Tabs, set both homepage and new tabs to "Blank page"
+
+  - Search
+
+    - Under Search Suggestions, uncheck "Show search suggestions"
+    - Under Address Bar, uncheck everything except "Bookmarks"
+    - Under Search Shortcuts, uncheck everything, and remove all search engines except Google.
+
+  - Privacy & Security
+
+    - Under Enhanced Tracking Protection, select "Strict"
+    - Under Web Site Privacy Preferences, check "Tell web site not to sell or share my data"
+    - Under Web Site Privacy Preferences, check "Send web sites a "Do Not Track" request"
+    - Under Passwords, uncheck "Ask to save passwords"
+    - Under Passwords, uncheck "Show alerts about passwords for breached web sites"
+    - Under History, select "Use custom settings for history", and uncheck all boxes
+    - Under HTTPS-Only Mode, select "Enable HTTPS-Only Mode in all windows"
+
+Extensions:
+
+  - Install "uBlock Origin" as necessary
