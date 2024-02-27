@@ -124,7 +124,7 @@ Customise toolbar:
   - Remove "Save to Pocket"
   - Remove "Account"
   - Remove "Import bookmarks..." on bookmark bar
-  - Remove spacers beside address bar
+  - Remove spacers around address bar
 
 Bookmarks:
 
@@ -159,6 +159,7 @@ Settings:
     - Under History, select "Use custom settings for history", and uncheck all boxes
     - Under HTTPS-Only Mode, select "Enable HTTPS-Only Mode in all windows"
 
-Extensions:
+Recommended, relies on third party services:
 
-  - Install "uBlock Origin" as necessary
+  - [Extension] Install "uBlock Origin"
+  - [Privacy & Security] Enable DNS over HTTPS using "Increased Protection"
