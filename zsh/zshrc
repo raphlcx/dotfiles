@@ -27,7 +27,7 @@ export BROWSER=/Applications/Firefox.app/Contents/MacOS/firefox
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 
 # Homebrew
-export HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=7
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
 export HOMEBREW_REPOSITORY="/opt/homebrew";
