@@ -72,3 +72,7 @@ autoload -Uz compinit && compinit
 
 # Completion for AWS CLI
 complete -C "$(which aws_completer)" aws
+
+# SDKMAN!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
