@@ -73,13 +73,14 @@ On Desktop:
 On Terminal:
 
   - Install Homebrew.
-  - Install openssl via `brew install openssl@1.1`.
+  - Install SDKMAN!.
+  - Install openssl via `brew install openssl@3`.
   - Retrieve keys backup, decrypt with openssl and extract it. Place the content in `$HOME`, as appropriate.
   - Clone dotfiles repository to `$HOME` using HTTPS protocol.
   - Navigate into the repository, run the `setup` script.
   - Update repository's remote to use SSH protocol.
   - Remove openssl.
-  - Install dependencies.
+  - Install system packages via Homebrew bundle.
   - Install vim plugins.
   - Amend permission on GnuPG directory, `chmod 700 $HOME/.gnupg`.
   - Import PGP private keys, public keys, and owner trust from keys backup.
