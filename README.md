@@ -54,6 +54,8 @@ On a fresh macOS install, perform these changes in System Settings:
   - Network: Turn on firewall. Enable stealth mode in firewall options.
   - General: Under Date & Time, use 24-hour time format.
   - General: Under Sharing, update computer's name as needed.
+  - General: Under Storage, enable Optimise Storage.
+  - General: Under Storage, enable Empty Bin automatically.
   - Control Centre: Set to always show Sound in menu bar.
   - Control Centre: Set to show Focus when active in menu bar.
   - Control Centre: Set to always hide Spotlight in menu bar.
