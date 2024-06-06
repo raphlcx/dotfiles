@@ -63,9 +63,6 @@ alias clsso='aws sso login --sso-session raphlcx'
 # Functions
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# Include additional user command completion functions
-fpath=($HOME/.local/share/zsh/site-functions $fpath)
-
 # Load completion
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
