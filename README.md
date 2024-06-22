@@ -77,7 +77,6 @@ On Desktop:
 On Terminal:
 
   - Install Homebrew.
-  - Install SDKMAN!.
   - Install openssl via `brew install openssl@3`.
   - Retrieve keys backup, decrypt with openssl and extract it. Place the content in `$HOME`, as appropriate.
   - Clone dotfiles repository to `$HOME` using HTTPS protocol.
