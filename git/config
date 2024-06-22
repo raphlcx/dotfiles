@@ -38,6 +38,8 @@
 [user]
 	useConfigOnly = true
 	name = Ling Cong Xiang
+	email = ralcx@outlook.com
+	signingKey = 12E3A7EA80190C85
 [pull]
 	ff = only
 [tag]
