@@ -174,6 +174,10 @@ Windowing:
 
   - Ensure window take up whole screen
 
+New tab page:
+
+  - Under customisation, uncheck shortcuts display.
+
 You and Google:
 
   - Uncheck Allow Chrome sign-in
