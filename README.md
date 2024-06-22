@@ -181,6 +181,7 @@ You and Google:
 
 Autofill and passwords:
 
+  - Under Google Password Manager > Settings, disable offer to save passwords and automatic sign in.
   - Uncheck save and fill payment methods
   - Uncheck save and fill addresses
 
