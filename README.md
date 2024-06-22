@@ -46,7 +46,6 @@ On a fresh macOS install, perform these changes in System Settings:
   - Trackpad: Disable smart zoom.
   - Keyboard: Set key repeat to fastest and repeat delay to shortest.
   - Keyboard: Under keyboard shortcuts > modifier keys, set Caps Lock as Escape key.
-  - Keyboard: Under keyboard shortcuts > input sources, enable select next source in input menu (Ctrl+Alt+Space).
   - Keyboard: Under input sources, set to always show input menu in menu bar.
   - Keyboard: Under input sources, add simplified Chinese Pinyin.
   - Keyboard: Under input sources, disable automatic spelling correction.
@@ -63,6 +62,9 @@ On a fresh macOS install, perform these changes in System Settings:
   - Privacy & Security: Disable everything under analytics.
   - Desktop & Dock: Enable automatic hide and show dock.
   - Desktop & Dock: Disable recent applications in dock.
+  - Lock Screen: Never start screen saver.
+  - Lock Screen: Turn display off on battery - 1 hour.
+  - Lock Screen: Turn display off on power adapter - 1 hour.
   - Lock Screen: Never start screen saver.
   - Lock Screen: Require password immediately after sleep.
   - Lock Screen: Login windows to show list of users.
@@ -166,3 +168,42 @@ Recommended, relies on third party services:
 
   - [Extension] Install "uBlock Origin"
   - [Privacy & Security] Enable DNS over HTTPS using "Increased Protection"
+
+## Google Chrome customisation
+
+Windowing:
+
+  - Ensure window take up whole screen
+
+You and Google:
+
+  - Uncheck Allow Chrome sign-in
+  - Uncheck Improve search suggestions
+
+Autofill and passwords:
+
+  - Uncheck save and fill payment methods
+  - Uncheck save and fill addresses
+
+Privacy and security:
+
+  - Under third-party cookies, select block third-party cookies (in all mode). Disallow related sites to see activity in group.
+  - Under third-party cookies, check send "Do Not Track".
+  - Under ad privacy, uncheck everything.
+  - Under security, check always use secure connections.
+
+Performance:
+
+  - Uncheck preload pages.
+
+Search engine:
+
+  - Remove all search engines except Google.
+
+Languages:
+
+  - Use only English (United Kingdom).
+
+Downloads:
+
+  - Uncheck show downloads when done.
