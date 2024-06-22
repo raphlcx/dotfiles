@@ -45,8 +45,6 @@ fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
 # Python
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
-# PostgreSQL 15
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
@@ -57,7 +55,6 @@ alias g='git'
 alias ll='gls -alv --group-directories-first'
 alias pig='ping google.com'
 alias ra='rain download --torrent'
-alias mlsso='aws sso login --sso-session cling'
 alias clsso='aws sso login --sso-session raphlcx'
 
 # Functions
