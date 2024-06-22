@@ -129,6 +129,7 @@ Customise toolbar:
   - Remove "Account"
   - Remove "Import bookmarks..." on bookmark bar
   - Remove spacers around address bar
+  - Right click toolbar, set it to only show on new tab.
 
 Bookmarks:
 
