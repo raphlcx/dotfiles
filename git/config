@@ -16,6 +16,7 @@
 	s = status --short --branch
 	sw = show
 	can = commit --amend --no-edit
+	ct = commit --allow-empty --message \"Initial commit\"
 [push]
 	default = simple
 [commit]
