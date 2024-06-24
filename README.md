@@ -115,6 +115,11 @@ On Finder settings:
   - Under Sidebar, check only "Desktop", "Documents", and "Downloads" and home directory under Favourites.
   - Under Sidebar, uncheck everything under iCloud and Tags.
   - Under Advanced, allow showing all filename extensions.
+  - On the Finder window's sidebar, order the sidebar items in the following order:
+      - Home directory
+      - Documents
+      - Desktop
+      - Downloads
 
 ## Firefox customisation
 
