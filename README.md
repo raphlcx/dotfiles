@@ -62,6 +62,7 @@ On a fresh macOS install, perform these changes in System Settings:
   - Privacy & Security: Disable everything under analytics.
   - Desktop & Dock: Enable automatic hide and show dock.
   - Desktop & Dock: Disable recent applications in dock.
+  - Displays: Disable automatic brightness adjustment.
   - Lock Screen: Never start screen saver.
   - Lock Screen: Turn display off on battery - 1 hour.
   - Lock Screen: Turn display off on power adapter - 1 hour.
