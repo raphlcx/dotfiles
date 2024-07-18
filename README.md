@@ -51,6 +51,7 @@ On a fresh macOS install, perform these changes in System Settings:
   - Keyboard: Under input sources, disable automatic spelling correction.
   - Accessibility: Under Pointer Control > trackpad options, enable three finger drag.
   - Network: Turn on firewall. Enable stealth mode in firewall options.
+  - General: Under Language & Region, ensure only "English (UK)" and "Simplified Chinese" are listed under preferred languages, in that order.
   - General: Under Date & Time, use 24-hour time format.
   - General: Under Sharing, update computer's name as needed.
   - General: Under Storage, enable Optimise Storage.
