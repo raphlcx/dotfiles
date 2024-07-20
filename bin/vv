@@ -13,6 +13,7 @@ Subcommands:
   rm <name>   Remove an installed plugin using project name.
               Example https://github.com/foo/bar, 'bar' is
               the project name.
+  update      Update all installed plugins
   ls          List all installed plugins
   dump        Dump all plugins' Git sources
   install     Read a list of Git sources from stdin and install
@@ -53,6 +54,10 @@ _rm() {
   rm -rf "$PLUGINDIR/.git/modules/start/$name"
 }
 
+_update() {
+  git -C "$PLUGINDIR" submodule foreach git pull
+}
+
 _ls() {
   git -C "$PLUGINDIR" submodule
 }
@@ -81,6 +86,10 @@ while [ -n "$1" ]; do
       shift
       [ -z "$1" ] && _die
       _rm "$1"
+      exit 0
+      ;;
+    update)
+      _update
       exit 0
       ;;
     ls)
