@@ -36,7 +36,7 @@ bin/vv dump > vim-plugins
 
 ## Fresh install
 
-For macOS Sonoma 14.
+For macOS Sequoia.
 
 On a fresh macOS install, perform these changes in System Settings:
 
@@ -68,14 +68,13 @@ On a fresh macOS install, perform these changes in System Settings:
   - Lock Screen: Never start screen saver.
   - Lock Screen: Turn display off on battery - 1 hour.
   - Lock Screen: Turn display off on power adapter - 1 hour.
-  - Lock Screen: Never start screen saver.
   - Lock Screen: Require password immediately after sleep.
   - Lock Screen: Login windows to show list of users.
 
 On Desktop:
 
   - Remove all items on Dock.
-  - On menu bar, use control centre to turn off AirDrop.
+  - On menu bar, use control centre to turn on AirDrop for contacts only.
 
 On Terminal:
 
