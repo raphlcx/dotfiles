@@ -168,6 +168,7 @@ Settings:
     - Under Web Site Privacy Preferences, check "Send web sites a "Do Not Track" request"
     - Under Passwords, uncheck "Ask to save passwords"
     - Under Passwords, uncheck "Show alerts about passwords for breached web sites"
+    - Under Autofill, uncheck "Save and fill payment methods"
     - Under History, select "Use custom settings for history", and uncheck all boxes
     - Under HTTPS-Only Mode, select "Enable HTTPS-Only Mode in all windows"
 
