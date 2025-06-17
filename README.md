@@ -79,27 +79,16 @@ On Desktop:
 On Terminal:
 
   - Install Homebrew.
-  - Install openssl via `brew install openssl@3`.
-  - Retrieve keys backup, decrypt with openssl and extract it. Place the content in `$HOME`, as appropriate.
   - Clone dotfiles repository to `$HOME` using HTTPS protocol.
   - Navigate into the repository, run the `setup` script.
   - Update repository's remote to use SSH protocol.
-  - Remove openssl.
   - Install system packages via Homebrew bundle.
   - Install vim plugins.
   - Amend permission on GnuPG directory, `chmod 700 $HOME/.gnupg`.
-  - Import PGP private keys, public keys, and owner trust from keys backup.
-  - Remove the PGP keys backup.
-  - Remove the backup artefacts.
   - Close Terminal.
   - Removing Terminal artefacts:
       - In System Settings > Privacy & Security > Files and Folders, remove Terminal.
       - From favoured terminal application, remove `$HOME/.zsh_sessions`.
-
-Restore Documents:
-
-  - Download Documents backup. Decrypt and extract it. Place the content in `$HOME/Documents`, as appropriate.
-  - `chmod 700` on `$HOME/Documents` directory.
 
 On Mail settings:
 
