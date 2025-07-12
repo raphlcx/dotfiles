@@ -14,24 +14,12 @@ Install dependencies:
 brew bundle
 ```
 
-Install vim plugins:
-
-```
-bin/vv install < vim-plugins
-```
-
 ## Maintenance
 
 Prepare `Brewfile`:
 
 ```
 brew bundle dump --force
-```
-
-Prepare `vim-plugins`:
-
-```
-bin/vv dump > vim-plugins
 ```
 
 ## Fresh install
@@ -83,7 +71,6 @@ On Terminal:
   - Navigate into the repository, run the `setup` script.
   - Update repository's remote to use SSH protocol.
   - Install system packages via Homebrew bundle.
-  - Install vim plugins.
   - Amend permission on GnuPG directory, `chmod 700 $HOME/.gnupg`.
   - Close Terminal.
   - Removing Terminal artefacts:

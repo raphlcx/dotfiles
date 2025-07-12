@@ -11,11 +11,3 @@ echo ""
 brew update && brew upgrade
 brew autoremove
 brew cleanup
-
-echo ""
-echo "======================================"
-echo "   vim plugins"
-echo "======================================"
-echo ""
-
-vv update
