@@ -55,6 +55,7 @@ alias g='git'
 alias ll='gls -alv --group-directories-first'
 alias pig='ping google.com'
 alias ra='rain download --torrent'
+alias v='nvim'
 
 # Functions
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
