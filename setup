@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
-# Full path of script
-CWD="$(dirname "$(readlink -f "$0")")"
-readonly CWD
-
 # Commands
 _log() {
   echo "$1"
-}
-
-_create() {
-  mkdir -p "$1"
 }
 
 _link() {
@@ -20,58 +12,26 @@ _link() {
 # Start setup
 _log 'Setting up dotfiles ...'
 
-_log '  alacritty'
-_create "$HOME/.config/alacritty"
-_link "$CWD/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
+# Navigate into the directory containing files to setup
+pushd home >/dev/null || exit
 
-_log '  bin directory'
-_create "$HOME/.local"
-_link "$CWD/bin" "$HOME/.local/bin"
+while read -r f
+do
+  # Omit the preceding ./ in file path
+  f=$(echo "$f" | cut -d '/' -f2-)
 
-_log '  gh'
-_create "$HOME/.config/gh"
-_link "$CWD/gh/config.yml" "$HOME/.config/gh/config.yml"
+  # The absolute file path
+  fp=$(readlink -f "$f")
 
-_log '  git'
-_create "$HOME/.config/git"
-_link "$CWD/git/config" "$HOME/.config/git/config"
-_link "$CWD/git/ignore" "$HOME/.config/git/ignore"
+  _log "linking $HOME/$f -> $fp"
 
-_log '  gnupg'
-_create "$HOME/.gnupg"
-_link "$CWD/gnupg/gpg.conf" "$HOME/.gnupg/gpg.conf"
+  mkdir -p  "$(dirname "$HOME/$f")"
 
-_log '  gnupg gpg-agent'
-_create "$HOME/.gnupg"
-_link "$CWD/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+  _link "$fp" "$HOME/$f"
 
-_log '  python pip'
-_create "$HOME/.config/pip"
-_link "$CWD/python/pip.conf" "$HOME/.config/pip/pip.conf"
+done < <(find . -type f)
 
-_log '  readline'
-_link "$CWD/readline/inputrc" "$HOME/.inputrc"
-
-_log '  ruby'
-_link "$CWD/ruby/gemrc" "$HOME/.gemrc"
-_link "$CWD/ruby/irbrc" "$HOME/.irbrc"
-
-_log '  ruby bundler'
-_create "$HOME/.bundle"
-_link "$CWD/ruby/bundler-config" "$HOME/.bundle/config"
-
-_log '  ssh'
-_create "$HOME/.ssh"
-_link "$CWD/ssh/config" "$HOME/.ssh/config"
-
-_log '  tmux'
-_link "$CWD/tmux/tmux.conf" "$HOME/.tmux.conf"
-
-_log '  vim'
-_link "$CWD/vim/vimrc" "$HOME/.vimrc"
-
-_log '  zsh'
-_link "$CWD/zsh/zshenv" "$HOME/.zshenv"
-_link "$CWD/zsh/zshrc" "$HOME/.zshrc"
+# Restore original working directory
+popd >/dev/null || exit
 
 _log 'Done.'
