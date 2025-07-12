@@ -1,9 +1,6 @@
 " Disable syntax highlighting
 syntax off
 
-" Use light background
-set background=light
-
 " Disable modeline for stricter security
 set nomodeline
 
@@ -89,9 +86,9 @@ endif
 vnoremap <Leader>c :w ! pbcopy<CR>
 
 " Run git command on current file
-nnoremap <Leader>gl<CR> :!git log -p --follow %<CR>
-nnoremap <Leader>gb<CR> :!git blame %<CR>
-nnoremap <Leader>gd<CR> :!git diff %<CR>
+nnoremap <Leader>gl<CR> :term git log -p --follow %<CR>
+nnoremap <Leader>gb<CR> :term git blame %<CR>
+nnoremap <Leader>gd<CR> :term git diff %<CR>
 
 " Format Terraform file
 nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
