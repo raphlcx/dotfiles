@@ -55,7 +55,6 @@ alias g='git'
 alias ll='gls -alv --group-directories-first'
 alias pig='ping google.com'
 alias ra='rain download --torrent'
-alias clsso='aws sso login --sso-session raphlcx'
 
 # Functions
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
@@ -63,6 +62,3 @@ function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$
 # Load completion
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
-
-# Completion for AWS CLI
-complete -C "$(which aws_completer)" aws
