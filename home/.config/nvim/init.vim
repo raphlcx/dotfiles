@@ -1,6 +1,3 @@
-" Disable syntax highlighting
-syntax off
-
 " Disable modeline for stricter security
 set nomodeline
 
@@ -119,6 +116,9 @@ let g:netrw_banner = 0
 
 " Suppress netrw history
 let g:netrw_dirhistmax = 0
+
+"" colorscheme patch for minimal syntax highlight
+source $HOME/.config/nvim/colors.lua
 
 "" fzf
 set rtp+=/opt/homebrew/opt/fzf
