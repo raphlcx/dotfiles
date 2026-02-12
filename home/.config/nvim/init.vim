@@ -87,9 +87,6 @@ nnoremap <Leader>gl<CR> :term git log -p --follow %<CR>
 nnoremap <Leader>gb<CR> :term git blame %<CR>
 nnoremap <Leader>gd<CR> :term git diff %<CR>
 
-" Format Terraform file
-nnoremap <Leader>tfmt<CR> :!terraform fmt %<CR>
-
 " Start fzf - junegunn/fzf
 nnoremap <Leader>q :FZF<CR>
 
