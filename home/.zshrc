@@ -28,8 +28,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 
 # Reset PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# Include user binary path
-export PATH="$HOME/.local/bin:$PATH"
 
 # Homebrew
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=7
@@ -45,6 +43,8 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 # Python
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+# User bin with highest precedence
+export PATH="$HOME/.local/bin:$PATH"
 
 # gpg-agent tty
 GPG_TTY=$(tty)
