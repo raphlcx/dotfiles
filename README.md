@@ -72,10 +72,6 @@ On Terminal:
   - Update repository's remote to use SSH protocol.
   - Install system packages via Homebrew bundle.
   - Amend permission on GnuPG directory, `chmod 700 $HOME/.gnupg`.
-  - Close Terminal.
-  - Removing Terminal artefacts:
-      - In System Settings > Privacy & Security > Files and Folders, remove Terminal.
-      - From favoured terminal application, remove `$HOME/.zsh_sessions`.
 
 On Mail settings:
 
