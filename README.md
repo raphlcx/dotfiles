@@ -66,6 +66,7 @@ On Desktop:
 
 On Terminal:
 
+  - Import "Pro 2" profile and set the profile as default.
   - Install Homebrew.
   - Clone dotfiles repository to `$HOME` using HTTPS protocol.
   - Navigate into the repository, run the `setup` script.
