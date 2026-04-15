@@ -37,11 +37,11 @@ export HOMEBREW_CLEANUP_MAX_AGE_DAYS=7
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
 export HOMEBREW_REPOSITORY="/opt/homebrew";
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
-export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+export FPATH;
+eval "$(/usr/bin/env PATH_HELPER_ROOT="/opt/homebrew" /usr/libexec/path_helper -s)"
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
-## Include homebrew shell completions
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
 # Python
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
