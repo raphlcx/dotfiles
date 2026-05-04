@@ -24,7 +24,7 @@ brew bundle dump --force
 
 ## Fresh install
 
-For macOS Sequoia.
+For macOS Tahoe.
 
 On a fresh macOS install, perform these changes in System Settings:
 
@@ -37,6 +37,7 @@ On a fresh macOS install, perform these changes in System Settings:
   - Keyboard: Under input sources, set to always show input menu in menu bar.
   - Keyboard: Under input sources, add simplified Chinese Pinyin.
   - Keyboard: Under input sources, disable automatic spelling correction.
+  - Keyboard: Under input sources, disable capitalise words automatically.
   - Notification: Allow notifications when mirroring / sharing display (if mirroring to an external display).
   - Accessibility: Under Pointer Control > trackpad options, enable three finger drag.
   - Network: Turn on firewall. Enable stealth mode in firewall options.
@@ -45,19 +46,17 @@ On a fresh macOS install, perform these changes in System Settings:
   - General: Under Sharing, update computer's name as needed.
   - General: Under Storage, enable Optimise Storage.
   - General: Under Storage, enable Empty Bin automatically.
-  - Control Centre: Set to always show Sound in menu bar.
-  - Control Centre: Set to show Focus when active in menu bar.
-  - Control Centre: Set to always hide Spotlight in menu bar.
+  - Menu bar: Set to always show Sound in menu bar.
+  - Menu bar: Set to always hide Spotlight in menu bar.
   - Privacy & Security: Disable personalised ads under advertising.
   - Privacy & Security: Disable everything under analytics.
   - Desktop & Dock: Enable automatic hide and show dock.
-  - Desktop & Dock: Disable recent applications in dock.
+  - Desktop & Dock: Disable suggested and recent applications in dock.
   - Displays: Disable automatic brightness adjustment.
   - Lock Screen: Never start screen saver.
   - Lock Screen: Turn display off on battery - 1 hour.
   - Lock Screen: Turn display off on power adapter - 1 hour.
   - Lock Screen: Require password immediately after sleep.
-  - Lock Screen: Login windows to show list of users.
 
 On Desktop:
 
@@ -66,13 +65,14 @@ On Desktop:
 
 On Terminal:
 
-  - Import "Pro 2" profile and set the profile as default.
+  - Install Xcode command-line tools.
   - Install Homebrew.
   - Clone dotfiles repository to `$HOME` using HTTPS protocol.
   - Navigate into the repository, run the `setup` script.
   - Update repository's remote to use SSH protocol.
   - Install system packages via Homebrew bundle.
   - Amend permission on GnuPG directory, `chmod 700 $HOME/.gnupg`.
+  - Import "Pro 2" Terminal profile and set the profile as default.
 
 On Mail settings:
 
@@ -87,11 +87,6 @@ On Finder settings:
 
   - Under General, set new Finder window to show "Downloads".
   - Under Tags, uncheck all tags and remove all favourite tags.
-  - Under Sidebar, check only "Desktop", "Documents", and "Downloads" and home directory under Favourites.
-  - Under Sidebar, uncheck everything under iCloud and Tags.
+  - Under Sidebar, check only "Desktop", "Documents", and "Downloads" under Favourites.
+  - Under Sidebar, uncheck everything under Tags.
   - Under Advanced, allow showing all filename extensions.
-  - On the Finder window's sidebar, order the sidebar items in the following order:
-      - Home directory
-      - Documents
-      - Desktop
-      - Downloads
