@@ -19,7 +19,7 @@ brew bundle
 Prepare `Brewfile`:
 
 ```
-brew bundle dump --force
+brew bundle dump --force --no-describe
 ```
 
 ## Fresh install
