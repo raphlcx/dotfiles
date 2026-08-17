@@ -1,4 +1,3 @@
-tap "cenkalti/rain"
 brew "coreutils"
 brew "fd"
 brew "fzf"
@@ -10,6 +9,4 @@ brew "neovim"
 brew "the_silver_searcher"
 brew "tmux"
 brew "tree"
-brew "cenkalti/rain/rain", trusted: true
 cask "firefox"
-cask "iina"
